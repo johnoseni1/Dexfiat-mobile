@@ -1,0 +1,122 @@
+.mnemonic{
+    margin-top: 50px;
+}
+
+.helper{
+    text-align: center;
+}
+
+.arroeleft{
+    margin-top: 30px;
+    margin-right: 160px;
+}
+
+.helper span{
+    color: #009506;
+    font-size: 14px;
+    position: relative;
+    bottom: 3px;
+}
+
+.little-text{
+    text-align: center;
+    /* width: 500px; */
+}
+
+.createwallet-btner button{
+    padding: 11px 90px;
+    font-size: 18px;
+    background-color: #009506;
+    border: none;
+    border-radius: 9px;
+    color: #DAAA02;
+    font-weight: bold;
+}
+
+.createwallet-btner{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.createwallet-btner span,
+.createwallet-btner a{
+    color: #009706;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+span:hover{
+    cursor: pointer;
+}
+
+.input-phrase span{
+    padding-top: 30px;
+    /* margin-top: 50px; */
+    color: #009506;
+    font-size: 12px;
+}
+
+.input-phraser span{
+    padding-top: 30px;
+    /* margin-top: 50px; */
+    text-align: center;
+    margin: 0 auto;
+    color: #009506;
+    font-size: 12px;
+}
+
+.input-phrase{
+    text-align: center;
+}
+
+
+
+
+.input-phraser{
+    text-align: center;
+    width: 400px;
+    line-height: 40px;
+}
+
+.input-phraser input {
+    margin-left: 20px;
+    width: 80px;
+    text-align: center;
+    background: #E5E5E5;
+    opacity: 0.3;
+    border: 1px solid #000000;
+    /* box-sizing: border-box; */
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+.input-phrase input{
+    padding: 60px;
+    background: rgba(196, 196, 196, 0.17);
+border: 2px solid #000000;
+box-sizing: border-box; 
+}
+
+.little-text p{
+    color: #494949;
+    font-size: 25px;
+}
+
+.little-text span{
+    color: #494949;
+    font-size: 14px;
+
+}
+
+.helper span:hover{
+    cursor: pointer;
+}
+
+
+
+.slidery span{
+    color: #009506;
+    position: relative;
+    bottom: 90px;
+}
