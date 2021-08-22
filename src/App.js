@@ -6,6 +6,7 @@ import CreateWallet from './pages/Create-wallet';
 import Mnemonic from './pages/Import-Wallet';
 import CreateRecovery from './pages/Create-Recovery';
 import Index from './pages/index';
+import Index2 from './pages/index2';
 // import AppContext from './Contexts/context';
 
 
@@ -23,6 +24,7 @@ function App() {
                   <Route path="/importwallet" component={Mnemonic} />
                   <Route path="/createrecoveryphrase" component={CreateRecovery} />
                   <Route path="/index" component={Index} />
+                  <Route path="/fiatbalance" component={Index2} />
                 </Switch>
             </div>
           {/* </TableContextProvider> */}

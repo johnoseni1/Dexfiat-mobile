@@ -1,0 +1,11 @@
+.sec-info{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* font-size: 18px; */
+}
+
+.sec-info span{
+    font-size: 14px;
+    color: #666;
+    margin-left: 40px;
+}
