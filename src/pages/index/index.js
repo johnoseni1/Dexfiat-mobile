@@ -25,12 +25,13 @@ const Index = () => {
                             <span style={{color: "#009506", fontSize: "30px"}}>Dexfiat</span>
                           </div>
                           <div style={{marginLeft: "100px"}}>
+                            <a href="/liquidity">
                             <button style={{color: "#009506", fontSize: "15px", backgroundColor: "#ceebcf", border :"none", padding:"7px 18px", borderRadius: "5px"}}><svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.1249 6.74993C15.7168 6.74993 20.2499 5.23891 20.2499 3.37497C20.2499 1.51102 15.7168 0 10.1249 0C4.53309 0 0 1.51102 0 3.37497C0 5.23891 4.53309 6.74993 10.1249 6.74993Z" fill="#009506"/>
 <path d="M17.9247 7.68242C15.8113 8.38685 13.0413 8.77484 10.1249 8.77484C7.20856 8.77484 4.43856 8.38685 2.32518 7.68242C1.35801 7.36004 0.596699 6.99364 0 6.60498V8.03232C0 8.93379 1.05311 9.78136 2.96554 10.4188C4.87785 11.0562 7.42043 11.4073 10.1249 11.4073C12.8294 11.4073 15.372 11.0563 17.2843 10.4188C19.1967 9.78136 20.2499 8.93379 20.2499 8.03232V6.60498C19.6532 6.99364 18.8919 7.35996 17.9247 7.68242Z" fill="#009506"/>
 <path d="M17.9247 12.3403C15.8114 13.0448 13.0413 13.4328 10.1249 13.4328C7.20856 13.4328 4.43852 13.0448 2.32518 12.3403C1.35797 12.0179 0.596659 11.6516 0 11.2629V12.8253C0 14.6892 4.53309 16.2002 10.1249 16.2002C15.7168 16.2002 20.2499 14.6892 20.2499 12.8253V11.263C19.6533 11.6516 18.8919 12.018 17.9247 12.3403Z" fill="#009506"/>
 </svg>
-<span style={{marginLeft: "10px", position: "relative", bottom: "2px"}}>Earn</span></button>
+<span style={{marginLeft: "10px", position: "relative", bottom: "2px"}}>Earn</span></button></a>
                           </div>
                           <div style={{marginLeft: "20px"}}>
                             <BiUserCircle size="30px" color="#009506" />
@@ -52,7 +53,7 @@ const Index = () => {
             <span>45,193,612.8 DNGN</span><br />
           </div>
           <div style={{marginTop: "10px"}} className="button-card">
-            <button>Send</button>
+           <a href="send"> <button>Send</button></a>
             <button>Deposit</button>
             <button>Swap</button>
           </div>

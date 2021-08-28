@@ -72,9 +72,9 @@ code {
   }
   
   .box {
-      text-align: center;
+      /* text-align: center; */
     position: relative;
-    width: 18%;
+    width: 20%;
     margin: 0 auto;
     height: auto;
     max-height: 70vh;

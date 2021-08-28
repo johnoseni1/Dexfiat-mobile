@@ -23,8 +23,21 @@ const CreateWallet = () => {
     {isOpen && <Popup
       content={<>
         <b>Back up your wallet now</b>
+        <img style={{marginLeft : "20px"}} src={caution} alt="caution" /><br /><br />
+        <span style={{fontSize: "14px", color: "#494949"}}>
+        Please understand that we can't...<br />
+          Access your funds for you
+          Recover, reset, or modify ANY of your information
+          Reverse, cancel, or refund transactions
+          Freeze accounts
+          You're responsible for...
+          Keeping your information safe. This includes:
+          Private Keys/Mnemonic Phrases, JSON files. wallet PINs
+          Making sure you're not on a phishing site
+          Reducing risk by using the Dexfiat downloadable app
+        </span>
         <p style={{color: "#494949", fontSize: "16px"}}>You will be given 12 words/phrases Write down or copy these words in the right other keep them somewhere safe</p>
-        <img src={caution} alt="caution" /><br />
+        {/* <img src={caution} alt="caution" /><br /> */}
         <p style={{fontSize: "17px"}}>Ensure that you are alone and not 
                 one or visual device can see your device</p><br />
         <div style={{display : "flex"}} className="checkman">
