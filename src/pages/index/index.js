@@ -19,9 +19,10 @@ const Index = () => {
                       <div className="content">
                           <div className="manny">
                           <div style={{marginLeft: "30px"}}>
-                          <svg width="21" height="28" viewBox="0 0 19 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.000431981 3.25408C-0.00854612 3.80932 0.122553 4.35787 0.381618 4.84904C0.640682 5.34022 1.01936 5.75819 1.48266 6.06433L11.1879 12.4763C11.4466 12.65 11.6584 12.8849 11.8042 13.1603C11.95 13.4357 12.0255 13.7428 12.0237 14.0544C12.022 14.366 11.9432 14.6723 11.7944 14.9461C11.6455 15.2198 11.4312 15.4525 11.1706 15.6233L1.65889 21.7599C1.19112 22.0615 0.807108 22.4763 0.542486 22.966C0.277864 23.4556 0.141206 24.0041 0.145193 24.5607V24.718C0.170369 27.6447 3.706 29.0955 5.77985 27.0311L17.4724 15.3872C17.6479 15.2127 17.7872 15.0051 17.8822 14.7765C17.9773 14.5479 18.0262 14.3028 18.0262 14.0553C18.0262 13.8077 17.9773 13.5626 17.8822 13.334C17.7872 13.1055 17.6479 12.8979 17.4724 12.7233L5.63037 0.96623C3.56595 -1.0856 0.0492101 0.343129 0.000431981 3.25408Z" fill="#009506"/>
-                            </svg>
+                          <svg width="19" height="28" viewBox="0 0 19 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.000431981 3.25408C-0.00854612 3.80932 0.122553 4.35787 0.381618 4.84904C0.640682 5.34022 1.01936 5.75819 1.48266 6.06433L11.1879 12.4763C11.4466 12.65 11.6584 12.8849 11.8042 13.1603C11.95 13.4357 12.0255 13.7428 12.0237 14.0544C12.022 14.366 11.9432 14.6723 11.7944 14.9461C11.6455 15.2198 11.4312 15.4525 11.1706 15.6233L1.65889 21.7599C1.19112 22.0615 0.807108 22.4763 0.542486 22.966C0.277864 23.4556 0.141206 24.0041 0.145193 24.5607V24.718C0.170369 27.6447 3.706 29.0955 5.77985 27.0311L17.4724 15.3872C17.6479 15.2127 17.7872 15.0051 17.8822 14.7765C17.9773 14.5479 18.0262 14.3028 18.0262 14.0553C18.0262 13.8077 17.9773 13.5626 17.8822 13.334C17.7872 13.1055 17.6479 12.8979 17.4724 12.7233L5.63037 0.96623C3.56595 -1.0856 0.0492101 0.343129 0.000431981 3.25408Z" fill="#009506"/>
+<path d="M2.53868 9.90527H1.90141C1.25661 9.90527 0.733887 10.428 0.733887 11.0728V16.934C0.733887 17.5789 1.25661 18.1016 1.90141 18.1016H2.53868C3.18348 18.1016 3.7062 17.5789 3.7062 16.934V11.0728C3.7062 10.428 3.18348 9.90527 2.53868 9.90527Z" fill="#009506"/>
+</svg>
                             <span style={{color: "#009506", fontSize: "30px"}}>Dexfiat</span>
                           </div>
                           <div style={{marginLeft: "100px"}}>
@@ -55,7 +56,7 @@ const Index = () => {
           <div style={{marginTop: "10px"}} className="button-card">
            <a href="send"> <button>Send</button></a>
             <button>Deposit</button>
-            <button>Swap</button>
+            <a href="/swap"><button>Swap</button></a>
           </div>
           <div style={{position : "relative", left: "110px", top: "30px", display: "flex" }}>
          <div>
@@ -89,6 +90,7 @@ const Index = () => {
                     <div className="">
                     <div className="line-function">
                       <div className="">
+                        <a href="/chainlinks">
                       <div className="lines">
                       <div style={{marginLeft: "45px"}}>
                       <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,6 +116,7 @@ const Index = () => {
                       <div style={{backgroundColor: "#E7E7E7", height : "2px", width : "340px", margin : "10px auto"}}>
 
                       </div>
+                      </a>
                       
                     </div>
 
@@ -123,20 +126,26 @@ const Index = () => {
                       <div style={{marginLeft: "45px"}}>
                       <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#009706"/>
+<path d="M29.4958 2.39429C31.5322 5.52694 32.7162 9.26483 32.7162 13.2798C32.7162 24.3255 23.7619 33.2798 12.7162 33.2798C9.27943 33.2798 6.04537 32.4125 3.22021 30.8855C6.78647 36.3715 12.969 40.0001 19.9999 40.0001C31.0456 40.0001 39.9999 31.0458 39.9999 20.0001C39.9999 12.3912 35.7506 5.77499 29.4958 2.39429Z" fill="#009506"/>
+<path d="M20.0002 37.4152C29.6184 37.4152 37.4154 29.6181 37.4154 20C37.4154 10.3818 29.6184 2.58472 20.0002 2.58472C10.382 2.58472 2.58496 10.3818 2.58496 20C2.58496 29.6181 10.382 37.4152 20.0002 37.4152Z" fill="#D8F6EF"/>
+<path d="M31.7596 7.15564C32.3798 9.08587 32.7161 11.1434 32.7161 13.2797C32.7161 24.3254 23.7618 33.2797 12.7161 33.2797C11.1424 33.2797 9.61148 33.0974 8.14258 32.7537C11.2517 35.6456 15.4188 37.4153 19.9998 37.4153C29.6181 37.4153 37.4151 29.6181 37.4151 20C37.4151 14.915 35.2352 10.3395 31.7596 7.15564Z" fill="#C6F2E7"/>
+<path d="M15.0003 11.5568C14.9934 11.993 15.0952 12.424 15.2964 12.81C15.4976 13.1959 15.7917 13.5243 16.1515 13.7648L23.6891 18.8028C23.89 18.9392 24.0544 19.1239 24.1677 19.3402C24.281 19.5566 24.3395 19.7979 24.3382 20.0428C24.3369 20.2876 24.2757 20.5283 24.1601 20.7433C24.0445 20.9584 23.878 21.1412 23.6756 21.2754L16.2884 26.097C15.9251 26.334 15.6268 26.66 15.4213 27.0447C15.2158 27.4294 15.1097 27.8604 15.1128 28.2977V28.4213C15.1323 30.7208 17.8783 31.8607 19.4889 30.2387L28.5699 21.09C28.7062 20.9528 28.8144 20.7897 28.8882 20.6101C28.962 20.4305 29 20.2379 29 20.0434C29 19.8489 28.962 19.6564 28.8882 19.4768C28.8144 19.2971 28.7062 19.1341 28.5699 18.9969L19.3728 9.75918C17.7695 8.14703 15.0382 9.2696 15.0003 11.5568Z" fill="#009506"/>
+<path d="M16.2144 17H15.7856C15.3517 17 15 17.3827 15 17.8547V22.1453C15 22.6173 15.3517 23 15.7856 23H16.2144C16.6483 23 17 22.6173 17 22.1453V17.8547C17 17.3827 16.6483 17 16.2144 17Z" fill="#009506"/>
 </svg>
+
 
 
                       </div>
                       <div style={{display : "flex", flexDirection: "column"}}>
-                        <span style={{color: "#333", marginLeft: "10px"}}>Link</span>
-                        <span style={{fontSize: "12px", color: "#333", marginLeft: "10px"}}>$27.77</span>
+                        <span style={{color: "#333", marginLeft: "10px"}}>DFT</span>
+                        <span style={{fontSize: "12px", color: "#333", marginLeft: "10px"}}>$1.45</span>
                       </div>
                       <div>
-                      <span style={{marginLeft : "65px", fontSize : "12px", color : "#009706"}}>4% </span>
+                      <span style={{marginLeft : "65px", fontSize : "12px", color : "#009706"}}>+0.01%</span>
                       </div>
                       <div style={{display : "flex", flexDirection: "column", marginLeft: "80px"}}>
-                        <span style={{marginLeft : "15px"}}>10.5</span>
-                        <span style={{fontSize: "12px", color: "#333"}}>$277.5070</span>
+                        <span style={{marginLeft : "5px"}}>300</span>
+                        <span style={{fontSize: "12px", color: "#333"}}>$435</span>
                       </div>
                       </div>
                       <div style={{backgroundColor: "#E7E7E7", height : "2px", width : "340px", margin : "10px auto"}}>
@@ -170,15 +179,15 @@ const Index = () => {
 
                       </div>
                       <div style={{display : "flex", flexDirection: "column"}}>
-                        <span style={{color: "#333", marginLeft: "10px"}}>Link</span>
-                        <span style={{fontSize: "12px", color: "#333", marginLeft: "10px"}}>$27.77</span>
+                        <span style={{color: "#333", marginLeft: "10px"}}>BTC</span>
+                        <span style={{fontSize: "12px", color: "#333", marginLeft: "10px"}}>$58,020</span>
                       </div>
                       <div>
-                      <span style={{marginLeft : "65px", fontSize : "12px", color : "#009706"}}>4% </span>
+                      <span style={{marginLeft : "65px", fontSize : "12px", color : "#970000"}}>-0.6% </span>
                       </div>
                       <div style={{display : "flex", flexDirection: "column", marginLeft: "80px"}}>
-                        <span style={{marginLeft : "15px"}}>10.5</span>
-                        <span style={{fontSize: "12px", color: "#333"}}>$277.5070</span>
+                        <span style={{marginLeft : "4px"}}>1.95</span>
+                        <span style={{fontSize: "12px", color: "#333"}}>$107</span>
                       </div>
                       </div>
                       <div style={{backgroundColor: "#E7E7E7", height : "2px", width : "340px", margin : "10px auto"}}>
@@ -188,37 +197,46 @@ const Index = () => {
                     <div>
                       <div className="lines">
                       <div style={{marginLeft: "55px"}}>
-                      <img src={boy} />
+                    <img src={boy} />
+
 
                       </div>
                       <div style={{display : "flex", flexDirection: "column"}}>
-                        <span style={{color: "#333", marginLeft: "10px"}}>Link</span>
-                        <span style={{fontSize: "12px", color: "#333", marginLeft: "10px"}}>$27.77</span>
+                        <span style={{color: "#333", marginLeft: "10px"}}>ONE</span>
+                        <span style={{fontSize: "12px", color: "#333", marginLeft: "10px"}}>$1.371</span>
                       </div>
                       <div>
-                      <span style={{marginLeft : "65px", fontSize : "12px", color : "#009706"}}>4% </span>
+                      <span style={{marginLeft : "65px", fontSize : "12px", color : "#009706"}}>+14%</span>
                       </div>
                       <div style={{display : "flex", flexDirection: "column", marginLeft: "80px"}}>
-                        <span style={{marginLeft : "15px"}}>10.5</span>
-                        <span style={{fontSize: "12px", color: "#333"}}>$277.5070</span>
+                        <span style={{marginLeft : "15px"}}>1000</span>
+                        <span style={{fontSize: "12px", color: "#333"}}>$137.1142</span>
                       </div>
                       </div>
                       
                       <div style={{backgroundColor: "#E7E7E7", height : "2px", width : "340px", margin : "10px auto"}}>
                       <div className="lines">
-                      <div style={{marginLeft: "15px", marginTop : "20px"}}>
-                      <img src={boy} />
+                      <div style={{marginLeft: "10px", marginTop : "20px"}}>
+                      <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.5 41C31.8218 41 41 31.8218 41 20.5C41 9.17816 31.8218 0 20.5 0C9.17816 0 0 9.17816 0 20.5C0 31.8218 9.17816 41 20.5 41Z" fill="#8AC9FE"/>
+<path d="M29.3812 2.01855C31.7873 5.37799 33.2041 9.49417 33.2041 13.9416C33.2041 25.2635 24.0259 34.4416 12.7041 34.4416C9.52223 34.4416 6.50978 33.7167 3.82275 32.423C7.5419 37.6158 13.6254 40.9999 20.4999 40.9999C31.8218 40.9999 40.9999 31.8218 40.9999 20.4999C40.9999 12.3599 36.2556 5.3281 29.3812 2.01855Z" fill="#60B7FF"/>
+<path d="M20.5 38.3506C30.3587 38.3506 38.3506 30.3587 38.3506 20.5C38.3506 10.6414 30.3587 2.64941 20.5 2.64941C10.6414 2.64941 2.64941 10.6414 2.64941 20.5C2.64941 30.3587 10.6414 38.3506 20.5 38.3506Z" fill="#EAF6FF"/>
+<path d="M31.9167 6.77795C32.7486 9.00813 33.2044 11.4215 33.2044 13.9417C33.2044 25.2636 24.0263 34.4417 12.7044 34.4417C11.4156 34.4417 10.155 34.3215 8.93213 34.094C12.0479 36.748 16.0866 38.3507 20.5002 38.3507C30.3589 38.3507 38.3508 30.3586 38.3508 20.5001C38.3508 14.9837 35.8481 10.0523 31.9167 6.77795Z" fill="#D8ECFE"/>
+<path d="M20.2598 9.78908L14.5024 19.0739C14.4329 19.186 14.4668 19.3332 14.5783 19.4036L20.4516 23.113C20.5308 23.1631 20.632 23.1624 20.7106 23.1114L26.4245 19.4052C26.5346 19.3337 26.567 19.1871 26.4972 19.0759L20.6675 9.78788C20.573 9.63741 20.3535 9.63805 20.2598 9.78908Z" fill="#60B7FF"/>
+<path d="M20.6633 26.3253L25.7099 23.1865C25.9287 23.0505 26.1791 23.3075 26.0374 23.5226L20.9527 31.2463C20.86 31.3871 20.6549 31.3912 20.5568 31.2542L15.0547 23.5768C14.902 23.3638 15.1524 23.0949 15.3757 23.2322L20.4106 26.3259C20.4882 26.3737 20.586 26.3734 20.6633 26.3253Z" fill="#60B7FF"/>
+</svg>
+
 
                       </div>
-                      <div style={{display : "flex", flexDirection: "column"}}>
-                        <span style={{color: "#333", marginLeft: "10px"}}>Link</span>
+                      <div style={{display : "flex", flexDirection: "column", marginTop: "20px"}}>
+                        <span style={{color: "#333", marginLeft: "10px"}}>ETH</span>
                         <span style={{fontSize: "12px", color: "#333", marginLeft: "10px"}}>$27.77</span>
                       </div>
-                      <div>
-                      <span style={{marginLeft : "65px", fontSize : "12px", color : "#009706"}}>4% </span>
+                      <div style={{marginTop: "20px"}}>
+                      <span style={{marginLeft : "65px", fontSize : "12px", color : "#009706"}}>+14% </span>
                       </div>
-                      <div style={{display : "flex", flexDirection: "column", marginLeft: "80px"}}>
-                        <span style={{marginLeft : "15px"}}>10.5</span>
+                      <div style={{display : "flex", marginTop : "20px", flexDirection: "column", marginLeft: "80px"}}>
+                        <span style={{marginLeft : "5px"}}>0.000123</span>
                         <span style={{fontSize: "12px", color: "#333"}}>$277.5070</span>
                       </div>
                       </div>

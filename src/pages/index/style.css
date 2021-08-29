@@ -164,12 +164,29 @@ padding-bottom: 10px;
     /* margin-top: 20px; */
     /* padding-bottom: 30px; */
 }
+.input-sending input{
+    border: 1px solid #009706;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 13px 50px 13px 20px;
+    margin-top: 5px;
+    margin-left: 20px; 
+}
 
-.form-for-transfer input{
+.form-for-transfer .inputer{
+    border: 1px solid #009706;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 13px 150px 13px 20px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.form-for-transfer .input{
     border: 1px solid #009706;
 box-sizing: border-box;
 border-radius: 10px;
-padding: 13px 150px 13px 20px;
+padding: 13px 1px 13px 10px;
 margin-top: 5px;
 margin-left: 20px;
 }
@@ -191,6 +208,161 @@ border: none;
     font-size: 13px;
     padding-left: 80px;
     padding-right: 80px;
+}
+
+.search-in-send{
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.inside-search {
+    display: flex;
+    position: relative;
+    left: 330px;
+    bottom: 25px;
+}
+
+.textty-send{
+    margin-left: 15px;
+    position: relative;
+    top: 7px;
+    font-size: 13px;
+}
+
+.svg-in-copy{
+    background: #009706;
+    width: 40px;
+    padding: 7px;
+    position: relative;
+    left: 23px;
+    /* justify-content: flex-end; */
+    border-radius: 0;
+}
+.svg-in-copyer{
+    background: #009706;
+    width: 40px;
+    padding: 7px;
+    position: relative;
+    left: 144px;
+    /* justify-content: flex-end; */
+    border-radius: 0;
+}
+
+.lineoo{
+    border: 1px solid #E7E7E7;
+    width: 370px;
+    /* text-align: center; */
+    /* justify-content: center; */
+    margin: 0 auto;
+}
+
+.textty-na{
+    text-align: center;
+    margin-top: 40px;
+}
+.copy-text {
+    font-size: 14px;
+    color: #999;
+    margin-left: 20px;
+    margin-top: 7px;
+}
+
+.svg-in-copy:hover,
+.svg-in-copyer:hover{
+    cursor: pointer;
+}
+
+.svg-in-copy svg,
+.svg-in-copyer svg{
+    margin-left: 13px;
+    /* justify-content: center; */
+    /* margin: 0 auto; */
+    /* text-align: center/; */
+}
+
+.copy-now{
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+    display: flex;
+    margin: 0 auto;
+    border: 1px solid #009506;
+box-sizing: border-box;
+border-radius: 5px;
+width: 350px;
+}
+
+.before-qur{
+    justify-content: center;
+    margin: 80px auto;
+    padding: 20px;
+    border: 1px solid #C4C4C4;
+box-sizing: border-box;
+border-radius: 20px;
+width: 290px;
+}
+
+.share-btn{
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.share-btn button{
+    padding: 11px 90px;
+    background: #009706;
+border-radius: 10px;
+border: none;
+color: #fff;
+/* justify-content: center; */
+/* margin: 0 auto; */
+/* text-align: center; */
+
+}
+
+
+.before-qurer{
+    justify-content: center;
+    margin: 80px auto;
+    padding: 10px;
+    border: 1px solid #C4C4C4;
+box-sizing: border-box;
+border-radius: 20px;
+width: 325px;
+}
+.downny{
+    border: 1px solid #E7E7E7;
+    height: 0.1px;
+    width: 350px;
+    /* justify-content: center; */
+    /* text-align: center; */
+    margin: 15px auto;
+}
+
+.toppy{
+    display: flex;
+    justify-content: center;
+    margin-right: 240px;
+}
+
+.svg-manny{
+    margin-left: 15px;
+}
+
+.stick-sm{
+    border: 1px solid #C4C4C4;
+    width: 0.3px;
+    height: 15px;
+}
+
+.search-in-send input{
+    background: #F7F7F7;
+border-radius: 5px;
+padding: 10px 140px 10px 12px;
+border: none;
+/* justify-content: center; */
+/* margin: 0 auto; */
+/* text-align: center; */
 }
 
 .btn-invester button{

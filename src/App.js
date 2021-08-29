@@ -14,6 +14,11 @@ import ConvertDft from './pages/ConvertDft';
 import Comingsoon from './pages/Coming-soon';
 import Invest from './pages/Invest';
 import Send from './pages/Send';
+import Dndsend from './pages/Dnd-send';
+import Receivefiat from './pages/Receieve-fiat';
+import Chainlinks from './pages/Chain-links';
+import Linksend from './pages/Link-send';
+import Receivelink from './pages/Receive-Link';
 // import AppContext from './Contexts/context';
 
 
@@ -39,6 +44,11 @@ function App() {
                   <Route path="/comingsoon" component={Comingsoon} />
                   <Route path="/invest" component={Invest} />
                   <Route path="/send" component={Send} />
+                  <Route path="/dndsend" component={Dndsend} />
+                  <Route path="/receivefiat" component={Receivefiat} />
+                  <Route path="/chainlinks" component={Chainlinks} />
+                  <Route path="/linksend" component={Linksend} />
+                  <Route path="/receivelink" component={Receivelink} />
                 </Switch>
             </div>
           {/* </TableContextProvider> */}
