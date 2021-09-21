@@ -13,7 +13,7 @@ const P2ptransfer = () => {
     return(
         <div>
           <div className="whole-welcome">
-            <a href="/fiatbalance" style={{position : "relative", left:"870px", bottom: "250px", zIndex: "9999", fontSize: "12px", color: "#fff", transform: "rotate(270deg)"}}>Fiat Balance</a>
+            {/* <a href="/fiatbalance" style={{position : "relative", left:"870px", bottom: "250px", zIndex: "9999", fontSize: "12px", color: "#fff", transform: "rotate(270deg)"}}>Fiat Balance</a> */}
                <div className="creater">
                     <div style={{display : "flex",marginTop : "30px",marginLeft : "20px"}}>
                         <div>

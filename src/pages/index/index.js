@@ -293,7 +293,7 @@ const Index = () => {
 </svg><br />
 <span>DApp</span>
                         </div>
-                        <a href="/liquidity">
+                        <a href="/pool">
                         <div className="icons-down">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15 12.5001C23.2843 12.5001 30 9.70188 30 6.25006C30 2.79825 23.2843 0 15 0C6.71573 0 0 2.79825 0 6.25006C0 9.70188 6.71573 12.5001 15 12.5001Z" fill="#009506"/>
