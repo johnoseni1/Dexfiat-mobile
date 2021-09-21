@@ -12,7 +12,9 @@ import Profile from './pages/Profile';
 import Liquidity from './pages/liquididty';
 import P2pmarket from './pages/P2pmarket';
 import Swap from './pages/swap-first';
+import Cryptodeposit from './pages/Cryptodeposit';
 import Wallets from './pages/Wallets';
+import Coinlink from './pages/Coinlinks';
 import Pool from './pages/Pool';
 import ConvertDft from './pages/ConvertDft';
 import Comingsoon from './pages/Coming-soon';
@@ -57,6 +59,8 @@ function App() {
                   <Route path="/wallets" component={Wallets} />
                   <Route path="/p2ptransfer" component={P2ptransfer} />
                   <Route path="/p2pmarket" component={P2pmarket} />
+                  <Route path="/coinlink" component={Coinlink} />
+                  <Route path="/cryptodeposit" component={Cryptodeposit} />
                 </Switch>
             </div>
           {/* </TableContextProvider> */}
