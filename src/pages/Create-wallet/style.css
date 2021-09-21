@@ -5,6 +5,19 @@
     height: 100vh;
 }
 
+.createry{
+    background-color: #FFFFFF;
+    justify-content: center;
+    width: 440px;
+    height: 100%;
+}
+.createryer{
+    background-color: #FFFFFF;
+    justify-content: center;
+    width: 440px;
+    height: 100%;
+}
+
 .slider{
     padding-top: 40px;
     text-align: center;

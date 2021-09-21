@@ -7,8 +7,11 @@ import Mnemonic from './pages/Import-Wallet';
 import CreateRecovery from './pages/Create-Recovery';
 import Index from './pages/index';
 import Index2 from './pages/index2';
+import P2ptransfer from './pages/P2ptransfer'
+import Profile from './pages/Profile';
 import Liquidity from './pages/liquididty';
 import Swap from './pages/swap-first';
+import Wallets from './pages/Wallets';
 import Pool from './pages/Pool';
 import ConvertDft from './pages/ConvertDft';
 import Comingsoon from './pages/Coming-soon';
@@ -49,6 +52,10 @@ function App() {
                   <Route path="/chainlinks" component={Chainlinks} />
                   <Route path="/linksend" component={Linksend} />
                   <Route path="/receivelink" component={Receivelink} />
+                  <Route path="/settings" component={Profile} />
+                  <Route path="/wallets" component={Wallets} />
+                  <Route path="/p2ptransfer" component={P2ptransfer} />
+
                 </Switch>
             </div>
           {/* </TableContextProvider> */}

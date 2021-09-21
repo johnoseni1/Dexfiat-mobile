@@ -1,0 +1,60 @@
+.p2p-buy button{
+    padding: 8px 35px;
+    background: #9ebb9f;
+    color: #009506;
+    border: none;
+    opacity: 1;
+    border-radius: 5px;
+}
+
+.p2p-sell button{
+    padding: 8px 35px;
+    background: #f5b787;
+    /* opacity: 0.1; */
+    color: #808080;
+    border: none;
+    opacity: 1;
+    border-radius: 5px;
+}
+
+.input-p2p {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.input-p2p input{
+    justify-content: center;
+    padding-top: 10px;
+    background: #F6F6F6;
+    border: none;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    width: 350px;
+}
+
+.input-p2p .lineman{
+    background: #C4C4C4;
+    height: 30px;
+    width: 2px;
+    left: 320px;
+    bottom: 32px;
+    position: relative;
+}
+
+.select select{
+    position: relative;
+    bottom: 58px;
+    border: none;
+    background: none;
+    font-size: 18px;
+    left: 145px;
+}
+.down-line{
+    background: #C4C4C4;
+    height: 2px;
+    width: 350px;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}

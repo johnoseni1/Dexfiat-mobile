@@ -10,8 +10,8 @@ const Index2 = () => {
     return(
         <div>
         <div className="whole-welcome">
-          <a href="/index" style={{position : "relative", left:"474px",  bottom: "220px", zIndex: "9999", fontSize: "12px", color: "#fff", transform: "rotate(270deg)",}}>Crypto Balance</a>
-              <div className="creater">
+          <a href="/index" style={{position : "relative", left:"470px",  bottom: "220px", zIndex: "9999", fontSize: "12px", color: "#fff", transform: "rotate(270deg)",}}>Crypto Balance</a>
+              <div className="createryer">
                  <div className="">
                     <div className="content">
                         <div className="manny">
@@ -26,7 +26,7 @@ const Index2 = () => {
                         <a href="/invest">
                         <div style={{marginLeft: "50px"}}>
                           <button style={{color: "#009506", fontSize: "15px", backgroundColor: "#ceebcf", border :"none", padding:"15px 18px", borderRadius: "5px"}}>
-<span style={{ position: "relative", bottom: "1px"}}>Invest</span></button>
+<span style={{ position: "relative", bottom: "1px"}}><b>Invest</b></span></button>
                         </div>
                         </a>
                         <div style={{marginLeft: "10px", marginRight : "10px", width: "130px"}}>
@@ -183,6 +183,7 @@ DFT to FIAT</span></button></a>
 </svg><br />
 <span>DApp</span>
                         </div>
+                        <a href="/liquidity">
                         <div className="icons-down">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15 12.5001C23.2843 12.5001 30 9.70188 30 6.25006C30 2.79825 23.2843 0 15 0C6.71573 0 0 2.79825 0 6.25006C0 9.70188 6.71573 12.5001 15 12.5001Z" fill="#009506"/>
@@ -191,6 +192,7 @@ DFT to FIAT</span></button></a>
 </svg><br/>
 <span>Earn</span>
                         </div>
+                        </a>
                         <div className="icons-down">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
