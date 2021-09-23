@@ -446,6 +446,39 @@ margin-top: 30px;
 .icons-down{
     margin-left: 40px;
 }
+
+.icons-down span{
+    font-weight: bold;
+    color: #000;
+    /* text-decoration: none/; */
+}
+
+.icons-downer span{
+    font-weight: bold;
+    color: #000;
+}
+
+.iconer span{
+    font-weight: bold;
+    color: #000;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+.icons-downy svg{
+    /* margin-left: 10px; */
+}
+
+.icons-down svg{
+    position: relative;
+    left: 10px;
+    /* margin-left: 10px; */
+}
+
 .icons-downer{
     margin-left: 40px;
 }
