@@ -4,12 +4,14 @@ import Popup from '../index/Popup';
 import {BiUserCircle} from 'react-icons/bi';
 import Vector from '../../assets/Vector.svg';
 import boy from '../../assets/3rd-boy.png';
-const Index2 = () => {
+const Index2 = props => {
   const [isOpen, setIsOpen] = useState(true);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
   }
+
+
         
     
     return(
@@ -108,7 +110,7 @@ device. <br /><br />
             <div>
             Dexfiat does not store or keep any of your data.
 all infomation entered are encripted and routed Mono.this process is only required to verify transactions. 
-Dexfait CAN NOT tamper/transfer with your fund. 
+Dexfiat CAN NOT tamper with/transfer with your fund. 
             </div><br />
             <div style={{textAlign : "center"}} className="link-btn">
               <button>Yes, Link me</button>
@@ -121,13 +123,7 @@ Dexfait CAN NOT tamper/transfer with your fund.
             </div>
             </a>
              </div>
-             <div>
-               <a href="/fiatbalance">
-               <div style={{position : "relative", left : "60px"}}>
-               <b>Skill</b>
-             </div>
-               </a>
-             </div>
+        
            </div>
           </div>
         </div>
