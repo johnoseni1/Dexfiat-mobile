@@ -5,7 +5,7 @@ import {BiUserCircle} from 'react-icons/bi';
 import Vector from '../../assets/Vector.svg';
 import boy from '../../assets/3rd-boy.png';
 const Index2 = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
