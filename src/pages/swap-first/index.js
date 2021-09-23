@@ -29,9 +29,7 @@ const Swap = () => {
 <span>Pool</span></button></a>
                           </div>
                           <div style={{marginLeft: "10px"}}>
-                            <a href="/pool">
-                            <button style={{color: "#009506", fontSize: "15px", backgroundColor: "#ceebcf", border :"none", padding:"13px 18px", borderRadius: "5px"}}>
-<span>Vote</span></button></a>
+                           
                           </div>
                           <div style={{marginLeft: "10px", width: "120px"}}>
                             <a href="/liquidity">
