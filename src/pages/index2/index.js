@@ -181,7 +181,7 @@ DFT to FIAT</span></button></a>
 </linearGradient>
 </defs>
 </svg><br />
-<span>DApp</span>
+<span>Democracy</span>
                         </div>
                         <a href="/liquidity">
                         <div className="icons-down">

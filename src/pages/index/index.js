@@ -367,7 +367,7 @@ const Index = () => {
 </linearGradient>
 </defs>
 </svg><br />
-<span>DApp</span>
+<span>Democracy</span>
                         </div>
                         <a href="/pool">
                         <div className="icons-down">
