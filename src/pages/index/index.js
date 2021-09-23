@@ -180,7 +180,8 @@ const Index = () => {
 
               </div>
               </a>
-              <div style={{background : "#FFF8E0", padding : "60px", marginLeft : "30px", borderRadius : "15px"}}>
+              <a href="/convertdft">
+              <div style={{background : "#FFF8E0", padding : "45px 60px", marginLeft : "30px", borderRadius : "15px"}}>
               <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M28.7648 32.9549L26.4375 33.6833L24.4266 34.3126H13.8649L11.8125 27.7553L5.0625 6.18761L11.8125 4.07472L19.0195 1.81909L26.4375 25.5193L28.7648 32.9549Z" fill="#379A6B"/>
 <path d="M23.831 30.3732L24.335 31.9836L17.8932 33.9998L17.3892 32.3893L15.7787 32.8934L8.38599 9.27323L9.99642 8.76923L9.49242 7.15872L15.9342 5.14258L16.4383 6.75302L18.0488 6.24895L25.4415 29.8691L23.831 30.3732Z" fill="#44C086"/>
@@ -191,6 +192,7 @@ const Index = () => {
 </svg>
 <div style={{color : "#DAAB02"}}>Fiat</div>
               </div>
+              </a>
             </div>
             <a href="/convertdft">
             <div style={{textAlign : "right",marginRight : "20px", cursor : "pointer"}}>
