@@ -1,16 +1,21 @@
 import React,{ useContext, useEffect, useState } from 'react'; // useEffect,
 import './style.css';
+import Popup from '../index/Popup';
 import {BiUserCircle} from 'react-icons/bi';
 import Vector from '../../assets/Vector.svg';
 import boy from '../../assets/3rd-boy.png';
 const Index2 = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
         
     
     return(
         <div>
         <div className="whole-welcome">
-          <a href="/index" style={{position : "relative", left:"470px",  bottom: "220px", zIndex: "9999", fontSize: "12px", color: "#fff", transform: "rotate(270deg)",}}>Crypto Balance</a>
+          <a href="/index" style={{position : "relative", left:"475px",  bottom: "230px", zIndex: "9999", fontSize: "12px", color: "#fff", transform: "rotate(270deg)",}}>Crypto Balance</a>
               <div className="createryer">
                  <div className="">
                     <div className="content">
@@ -83,7 +88,52 @@ DFT to FIAT</span></button></a>
                     </div>
                   </div>
                   </div>
+                  {isOpen && <Popup
+      content={<>
+        <div>
+          <div>
+            <div style={{textAlign : "center"}}>
+             <b>Will you link to ease your transactions?</b>
+            </div><br />
+            <div>
+            Link existing  bank with dexfiat securely.
+dexfiat deos not store or collect any of your login
+details, your inputs are encrypted and stored on your
+device. <br /><br />
 
+<b>benefit of linking</b><br />
+-Automated peer to peer transaction verification<br />
+-No P2P wating delay (fast transaction)
+            </div><br />
+            <div>
+            Dexfiat does not store or keep any of your data.
+all infomation entered are encripted and routed Mono.this process is only required to verify transactions. 
+Dexfait CAN NOT tamper/transfer with your fund. 
+            </div><br />
+            <div style={{textAlign : "center"}} className="link-btn">
+              <button>Yes, Link me</button>
+            </div><br />
+           <div style={{display : "flex", justifyContent : "center"}}>
+             <div>
+             <a href="/index" style={{textDecoration : "none", color : "#000"}}>
+            <div style={{textAlign: "center"}}>
+              <b>No, back to My Crypto space</b>
+            </div>
+            </a>
+             </div>
+             <div>
+               <a href="/fiatbalance">
+               <div style={{position : "relative", left : "60px"}}>
+               <b>Skill</b>
+             </div>
+               </a>
+             </div>
+           </div>
+          </div>
+        </div>
+      </>}
+      handleClose={togglePopup}
+    />}
                     <div className="sec-info">
                         <span style={{position: "relative", top: "10px"}}>Transaction History</span>
                     </div>

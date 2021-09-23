@@ -19,7 +19,7 @@ const Index = () => {
     return(
         <div>
           <div className="whole-welcome">
-            <a href="/fiatbalance" style={{position : "relative", left:"870px", bottom: "250px", zIndex: "9999", fontSize: "12px", color: "#fff", transform: "rotate(270deg)"}}>Fiat Balance</a>
+            <a href="/fiatbalance" style={{position : "relative", left:"890px", bottom: "250px", zIndex: "9999", fontSize: "12px", color: "#fff", transform: "rotate(270deg)"}}>Fiat Balance</a>
                 <div className="createry">
                    <div className="">
                       <div className="content">
@@ -73,15 +73,14 @@ const Index = () => {
           <div style={{position : "relative", left: "110px", top: "30px", display: "flex" }}>
          <div>
          <svg width="13" height="5" viewBox="0 0 13 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="13" height="5" rx="2.5" transform="matrix(1 0 0 -1 0 5)" fill="#DAAB03"/>
-</svg>
+        <rect width="13" height="5" rx="2.5" transform="matrix(1 0 0 -1 0 5)" fill="#DAAB03"/>
+        </svg>
          </div>
           <div>
           <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="8" height="5" rx="2.5" transform="matrix(1 0 0 -1 0 5)" fill="#C4C4C4"/>
 </svg>
           </div>
-
           </div>
           
                         </div>

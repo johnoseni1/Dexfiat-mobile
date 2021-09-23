@@ -9,3 +9,19 @@
     color: #666;
     margin-left: 40px;
 }
+
+.bank-select select{
+    background: #F6F6F6;
+
+}
+
+.link-btn button{
+    padding: 15px 25px;
+    background-color: #009706;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 19px;
+    /* font-weight: bo; */
+}
+

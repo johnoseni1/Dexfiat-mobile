@@ -507,7 +507,7 @@ box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.1);
     height: 50px;
     width: 440px;
     display: flex;
-    margin-top: 200px;
+    /* margin-top: 200px; */
     padding-top: 20px;
     padding-bottom: 20px;
     background: #FFFFFF;
@@ -545,6 +545,7 @@ box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.1);
 .line-function{
     overflow-y: scroll;
     overflow-x: hidden;
+    height: 350px;
 }
 
 .header-text span{
