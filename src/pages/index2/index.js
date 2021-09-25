@@ -168,7 +168,6 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                       {/* <span style={{marginLeft : "65px", fontSize : "12px", color : "#009706"}}>4% </span> */}
                       </div>
                       <div style={{display : "flex", flexDirection: "column", marginLeft: "140px"}}>
-                        {/* <span style={{marginLeft : "15px"}}>10.5</span> */}
                         <span style={{fontSize: "12px", color: "#333"}}>23-3-2020</span>
                       </div>
                       </div>
