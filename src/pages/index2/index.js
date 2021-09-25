@@ -73,10 +73,10 @@ DFT to FIAT</span></button></a>
 
                           </div></a>
                         <div className="sec-card">
-                      
+                        
         <div className="textty-man">
           <span>Total Balance </span><br />
-          <span style={{fontSize: "30px", fontWeight:"bold", }}>200,000 DNGN</span><br />
+          <span style={{fontSize: "30px", fontWeight:"bold", }}>0 DNGN</span><br />
           <span style={{fontSize : "20px", }}>N200,000</span><br />
         </div><br /><br />
         <div style={{marginTop: "10px"}} className="buttoner-card">

@@ -58,7 +58,7 @@ const ConvertDft = () => {
 </svg>
                             </div>
                             </a>
-                            <a href="/comingsoon">
+                            <a href="/p2p">
                             <div className="payment-method">
                                 <img src={Peer} />
                             </div>
@@ -79,11 +79,7 @@ const ConvertDft = () => {
                             </div>
                             </a>
                             </div>
-                            <a href="/comingsoon">
-                            <div className="payment-methoder">
-                          <img style={{ }} src={Stripe} />
-                            </div>
-                            </a>
+                          
                             <div className="down-manner">
                                 <div className="first-down-icon">
                                 <svg width="36" height="32" viewBox="0 0 36 32" fill="none" xmlns="http://www.w3.org/2000/svg">

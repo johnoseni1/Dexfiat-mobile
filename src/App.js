@@ -8,6 +8,7 @@ import CreateRecovery from './pages/Create-Recovery';
 import Index from './pages/index';
 import Index2 from './pages/index2';
 import P2ptransfer from './pages/P2ptransfer'
+import P2psell from './pages/P2psell'
 import Profile from './pages/Profile';
 import Liquidity from './pages/liquididty';
 import P2pmarket from './pages/P2pmarket';
@@ -38,6 +39,7 @@ function App() {
             <div className="app">
                 <Switch>
                   <Route path="/" exact component={Welcome} />
+                  <Route path="/p2psell" exact component={P2psell} />
                   <Route path="/createwallet" component={CreateWallet} />
                   <Route path="/importwallet" component={Mnemonic} />
                   <Route path="/createrecoveryphrase" component={CreateRecovery} />
