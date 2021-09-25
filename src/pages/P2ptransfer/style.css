@@ -19,25 +19,84 @@
 
 .input-p2p {
     margin-top: 20px;
+    /* background: #E7E7E7AD; */
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.input-p2p input{
+.input-p2p .inputer{
     justify-content: center;
     padding-top: 10px;
-    background: #F6F6F6;
+    background: #E7E7E7AD;
     border: none;
     border-radius: 5px;
     padding-bottom: 10px;
     padding-left: 20px;
-    width: 350px;
+    width: 150px;
+    position: relative;
+    right: 100px;
 }
+
+
+.input-p2p .inputery{
+    justify-content: center;
+    padding-top: 10px;
+    background: #E7E7E7AD;
+    border: none;
+    border-radius: 5px;
+    /* margin-left: 100px; */
+    padding-bottom: 10px;
+    padding-left: 20px;
+    width: 330px;
+    position: relative;
+    /* right: 100px; */
+}
+
+.input-p2p .input{
+    justify-content: center;
+    padding-top: 10px;
+    /* background: none; */
+    background: #E7E7E7AD;
+    border: none;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    width: 150px;
+}
+
+
 
 .input-p2p .lineman{
     background: #C4C4C4;
     height: 30px;
     width: 2px;
-    left: 320px;
+    left: 290px;
+    bottom: 32px;
+    position: relative;
+}
+
+.input-p2p .linemany{
+    background: #C4C4C4;
+    height: 30px;
+    width: 2px;
+    left: 210px;
+    bottom: 32px;
+    position: relative;
+}
+
+.input-p2p .sec-text{
+    font-size: 14px;
+    color: #808080;
+    position: relative;
+    bottom: 65px;
+    left: 80px;
+}
+
+.input-p2p .linemaner{
+    color: #C4C4C4;
+    height: 30px;
+    width: 2px;
+    left: 250px;
     bottom: 32px;
     position: relative;
 }
@@ -47,10 +106,30 @@
     bottom: 58px;
     border: none;
     background: none;
+    width: 100px;
     font-size: 18px;
-    left: 145px;
+    left: 125px;
 }
 .down-line{
+    background: #C4C4C4;
+    height: 2px;
+    width: 350px;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.down-liney{
+    background: #C4C4C4;
+    height: 2px;
+    width: 350px;
+    position: relative;
+    top: 80px;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.down-liner{
     background: #C4C4C4;
     height: 2px;
     width: 350px;

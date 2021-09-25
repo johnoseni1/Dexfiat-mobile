@@ -49,28 +49,46 @@ const P2psell = () => {
                     Dexfiat P2P Dex allows you to sell/withdraw your DNGN product into Naira. (this is applicable to all country listed )
                     </div>
 
-                    <div style={{display : "flex",marginTop : "20px",marginLeft : "20px"}}>
-                        <div style={{background : "#DAAA02",width : "10px", height : "15px"}}>
+                    
 
-                        </div>
-
-                        <div style={{marginLeft : "10px"}}>
-                        Enter amount
-                        </div>
-                    </div>
-
-                    <div className="input-p2p">
-                        <input type="text"  />
+                    <div className="input-p2p" style={{marginTop : "50px"}}>
+                        {/* <div style={{background : "E7E7E7AD", }}> */}
+                        <input className="inputery" type="text" placeholder="Enter Amount" />
                         <div className="lineman"></div>
-                        <div className="select">
+                        <span className="select">
                             <select>
                                 <option>DNGN</option>
                             </select>
+                        </span>
+                        {/* </div> */}
+                    </div>
+                    <div className="down-liner">
+
+                    </div>
+
+                    <div className="input-p2p" style={{}}>
+                        <div>
+                            <div style={{}}>
+                            <input className="inputer" type="text" placeholder="Buyer’s Min quantity" />
+                       <div>
+                       <div className="linemany"></div>
+                       <input className="sec-text input" placeholder="Buyer’s Max quantity" />
+                       </div>
+                            </div>
                         </div>
+                       
                     </div>
                     <div className="down-line">
 
                     </div>
+                    <div className="down-liney">
+
+</div>
+                    <div className="input-p2p" style={{}}>
+                        <input className="inputery" type="text" placeholder="Enter Amount" />
+                      
+                    </div>
+               
 
                     <div style={{display : "flex",marginTop : "50px",marginLeft : "50px"}}>
                         <div style={{background : "#DAAA02",width : "10px", height : "15px"}}>
@@ -78,20 +96,14 @@ const P2psell = () => {
                         </div>
 
                         <div style={{marginLeft : "10px"}}>
-                        You will be auto matched for withdrawal
+                        Your fund will be locked and transaction will be added to the P2P list for matching
                         </div>
                     </div>
 
                     <div style={{justifyContent : "center", textAlign : "center",marginTop : "50px"}}>
-                       <a href="/p2pmarket"> <button style={{padding : "12px 90px", fontSize : "15px",color : "#fff", background : "#009506", border : "none", borderRadius : "5px"}}>Search P2P Buy</button></a>
+                       <a href="/p2pmarket"> <button style={{padding : "15px 120px", fontSize : "15px",color : "#fff", background : "#DF751C", border : "none", borderRadius : "5px"}}>P2P Sell</button></a>
                     </div>
-                    <a href="/p2pmarket">
-                    <div className="left-guyer">
-                            <div style={{marginLeft : "20px"}}>
-        <span style={{marginLeft: "10px"}}>Go to P2P Market</span>
-                            </div>
-                        </div>
-                        </a>
+  
                </div>
           </div>
         </div>
