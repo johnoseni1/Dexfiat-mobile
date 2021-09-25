@@ -79,7 +79,7 @@ const P2ptransfer = () => {
                     </div>
 
                     <div style={{justifyContent : "center", textAlign : "center",marginTop : "50px"}}>
-                        <button style={{padding : "12px 90px", fontSize : "15px",color : "#fff", background : "#009506", border : "none", borderRadius : "5px"}}>Search P2P Buy</button>
+                       <a href="/p2pmarket"> <button style={{padding : "12px 90px", fontSize : "15px",color : "#fff", background : "#009506", border : "none", borderRadius : "5px"}}>Search P2P Buy</button></a>
                     </div>
                     <a href="/p2pmarket">
                     <div className="left-guyer">
