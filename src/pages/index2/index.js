@@ -3,13 +3,27 @@ import './style.css';
 import Popup from '../index/Popup';
 import {BiUserCircle} from 'react-icons/bi';
 import Vector from '../../assets/Vector.svg';
+import './connect';
 import boy from '../../assets/3rd-boy.png';
+import MonoConnect from '@mono.co/connect.js';
 const Index2 = props => {
   const [isOpen, setIsOpen] = useState(true);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
   }
+  const monoConnect = React.useMemo(() => {
+    const monoInstance = new MonoConnect({
+      onClose: () => console.log('Widget closed'),
+      onLoad: () => console.log('Widget loaded successfully'),
+      onSuccess: ({ code }) => console.log(`Linked successfully: ${code}`),
+      key: "test_pk_GZcxyk4xnfd36IQy2iTh"
+    })
+
+    monoInstance.setup()
+    
+    return monoInstance;
+  }, [])
 
 
         
@@ -90,7 +104,7 @@ DFT to FIAT</span></button></a>
                     </div>
                   </div>
                   </div>
-                  {isOpen && <Popup
+                  {/* {isOpen && <Popup
       content={<>
         <div>
           <div>
@@ -112,8 +126,8 @@ device. <br /><br />
 all infomation entered are encripted and routed Mono.this process is only required to verify transactions. 
 Dexfiat CAN NOT tamper with/transfer with your fund. 
             </div><br />
-            <div style={{textAlign : "center"}} className="link-btn">
-              <button>Yes, Link me</button>
+            <div style={{textAlign : "center"}} onClick={props.handleClose} className="link-btn">
+              <button onClick={() => monoConnect.open()}>Yes, Link me</button>
             </div><br />
            <div style={{display : "flex", justifyContent : "center"}}>
              <div>
@@ -129,12 +143,14 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
         </div>
       </>}
       handleClose={togglePopup}
-    />}
+    />} */}
                     <div className="sec-info">
+              <button onClick={() => monoConnect.open()}>Yes, Link me</button>
+
                         <span style={{position: "relative", top: "10px"}}>Transaction History</span>
                     </div>
                     <div>
-                    <div className="">
+                    <div className="">  
                     <div className="line-function">
                       <div className="">
                       <div className="lines">
