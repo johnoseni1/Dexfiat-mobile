@@ -1,14 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react'; // useEffect,
 import './style.css';
+import { Link } from 'react-router-dom';
 import { BiUserCircle } from 'react-icons/bi';
 import mnemonic from '../../assets/mnemonic.svg';
 import leftarrow from '../../assets/leftarrow.svg';
-import Popup from './Popup';
+import Popup from '../../Popup';
 import 'reactjs-popup/dist/index.css';
 import boy from '../../assets/3rd-boy.png';
 // import Vector from '../../assets/Vector.svg';
 
-const Index = () => {
+const Index = ({ history }) => {
+  // Popup 1
   const [isOpen, setIsOpen] = useState(false);
 
   const togglePopup = () => {
@@ -210,12 +212,13 @@ const Index = () => {
                   </div>
                 </div>
                 <div>
-                  <a href='/fiatbalance'>
+                  <Link to='/fiatbalance'>
                     <div className='yellow-card'></div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
+
             <div
               style={{
                 display: 'flex',
@@ -548,6 +551,7 @@ const Index = () => {
                     handleClose={togglePopup}
                   />
                 )}
+
                 <div>
                   <div className='lines'>
                     <div style={{ marginLeft: '45px' }}>
