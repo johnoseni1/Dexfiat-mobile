@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState, Fragment } from 'react'; // useEffect,
 import './style.css';
+import { Link } from 'react-router-dom';
 import Popup from '../../Popup';
 import { AiFillCopy } from 'react-icons/ai';
 import mnemonic from '../../assets/mnemonic.svg';
@@ -7,11 +8,11 @@ import leftarrow from '../../assets/leftarrow.svg';
 // import Vector from '../../assets/Vector.svg';
 
 const CreateRecovery = ({ history }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
-  };
+  // const togglePopup = () => {
+  //   setIsOpen(!isOpen);
+  // };
   return (
     <div>
       <div className='whole-welcome'>
@@ -67,52 +68,11 @@ const CreateRecovery = ({ history }) => {
                 Copy Phrase
               </span>
             </div>
-            {isOpen && (
-              <Popup
-                handleClose={togglePopup}
-                className='cream-box'
-                content={
-                  <Fragment>
-                    <p className='text-center' style={{ fontWeight: 'bold' }}>
-                      Protect your funds
-                    </p>
-                    <p className='small-font'>
-                      -Your Secret Recovery Phrase controls all of your
-                      accounts.
-                    </p>
-                    <p className='small-font'>
-                      -Never share your Secret Recovery Phrase with anyone
-                      <br />
-                      -The Dexfiat team will never ask for your Secret Recovery
-                      Phrase
-                      <br />
-                      -Always keep your Secret Recovery Phrase in a secure and
-                      secret place
-                    </p>
 
-                    <p className='small-font'>
-                      By clicking “Got it” you acknowledge that you have read,
-                      understood and agreed to the terms of use.
-                    </p>
-                    <div className='center'>
-                      <div
-                        onClick={() => {
-                          togglePopup();
-                          history.push('/index');
-                        }}
-                        className='btn-green'
-                      >
-                        Got it
-                      </div>
-                    </div>
-                  </Fragment>
-                }
-              />
-            )}
             <div className='createwallet-btner'>
-              <button onClick={togglePopup} style={{ color: '#fff' }}>
-                Proceed
-              </button>
+              <Link to='/index'>
+                <button style={{ color: '#fff' }}>Proceed</button>
+              </Link>
 
               <br />
               <br />
