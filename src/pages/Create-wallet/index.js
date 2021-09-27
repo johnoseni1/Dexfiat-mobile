@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'; // useEffect,
 import './style.css';
+import { Link } from 'react-router-dom';
 import Popup from '../../Popup';
 import svg1 from '../../assets/svg1.svg';
 import caution from '../../assets/caution.svg';
@@ -127,7 +128,7 @@ const CreateWallet = ({ history }) => {
               <br />
               <br />
               <span>
-                Already have a wallet? <a href='/importwallet'>import</a>
+                Already have a wallet? <Link to='/importwallet'>import</Link>
               </span>
             </div>
           </div>

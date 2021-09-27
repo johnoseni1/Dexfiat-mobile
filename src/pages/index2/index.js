@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'; // useEffect,
 import './style.css';
+import { Link } from 'react-router-dom';
 import Popup from '../../Popup';
 import { BiUserCircle } from 'react-icons/bi';
 import Vector from '../../assets/Vector.svg';
@@ -129,8 +130,8 @@ const Index2 = ({ history }) => {
             handleClose={togglePopup}
           />
         )}
-        <a
-          href='/index'
+        <Link
+          to='/index'
           style={{
             position: 'relative',
             left: '475px',
@@ -142,7 +143,7 @@ const Index2 = ({ history }) => {
           }}
         >
           Crypto Balance
-        </a>
+        </Link>
         <div className='createryer'>
           <div className=''>
             <div className='content'>
@@ -169,7 +170,7 @@ const Index2 = ({ history }) => {
                     Dexfiat
                   </span>
                 </div>
-                <a href='/invest'>
+                <Link to='/invest'>
                   <div style={{ marginLeft: '50px' }}>
                     <button
                       style={{
@@ -186,7 +187,7 @@ const Index2 = ({ history }) => {
                       </span>
                     </button>
                   </div>
-                </a>
+                </Link>
                 <div
                   style={{
                     marginLeft: '10px',
@@ -194,7 +195,7 @@ const Index2 = ({ history }) => {
                     width: '130px',
                   }}
                 >
-                  <a href='/convertdft'>
+                  <Link to='/convertdft'>
                     <button
                       style={{
                         color: '#009506',
@@ -253,14 +254,14 @@ const Index2 = ({ history }) => {
                         Convert DFT to FIAT
                       </span>
                     </button>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div style={{ display: 'flex', overflow: 'hidden' }}>
-                <a href='/index'>
+                <Link to='/index'>
                   {' '}
                   <div className='first-na'></div>
-                </a>
+                </Link>
                 <div className='sec-card'>
                   <div className='textty-man'>
                     <span>Total Balance </span>
@@ -275,25 +276,25 @@ const Index2 = ({ history }) => {
                   <br />
                   <br />
                   <div style={{ marginTop: '10px' }} className='buttoner-card'>
-                    <a href='/convertdft'>
+                    <Link to='/convertdft'>
                       <button style={{ width: '130px' }}>
                         Fund wallet/ Sell off
                       </button>
-                    </a>
-                    <a href='/dndsend'>
+                    </Link>
+                    <Link to='/dndsend'>
                       <button style={{ maxWidth: '70px' }}>
                         Send
                         <br />
                         DNGN
                       </button>
-                    </a>
-                    <a href='/receivefiat'>
+                    </Link>
+                    <Link to='/receivefiat'>
                       <button style={{ width: '100px' }}>
                         Receive
                         <br />
                         DNGN
                       </button>
-                    </a>
+                    </Link>
                   </div>
                   <div
                     style={{
@@ -369,11 +370,11 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
             </div><br />
            <div style={{display : "flex", justifyContent : "center"}}>
              <div>
-             <a href="/index" style={{textDecoration : "none", color : "#000"}}>
+             <Link to="/index" style={{textDecoration : "none", color : "#000"}}>
             <div style={{textAlign: "center"}}>
               <b>No, back to My Crypto space</b>
             </div>
-            </a>
+            </Link>
              </div>
         
            </div>
@@ -515,7 +516,7 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                     <br />
                     <span style={{ fontSize: '12px' }}>Wallet</span>
                   </div>
-                  <a href='/p2ptransfer'>
+                  <Link to='/p2ptransfer'>
                     <div className='icons-downer'>
                       <svg
                         width='30'
@@ -557,7 +558,7 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                       <br />
                       <span>P2P Transfer</span>
                     </div>
-                  </a>
+                  </Link>
                   <div className='icons-down'>
                     <svg
                       width='30'
@@ -601,7 +602,7 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                     <br />
                     <span>Democracy</span>
                   </div>
-                  <a href='/pool'>
+                  <Link to='/pool'>
                     <div className='icons-down'>
                       <svg
                         width='30'
@@ -626,8 +627,8 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                       <br />
                       <span>Earn</span>
                     </div>
-                  </a>
-                  <a href='/settings'>
+                  </Link>
+                  <Link to='/settings'>
                     <div className='icons-down'>
                       <svg
                         width='30'
@@ -646,7 +647,7 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                       <br />
                       <span>Profile</span>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

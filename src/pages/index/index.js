@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { BiUserCircle } from 'react-icons/bi';
 import mnemonic from '../../assets/mnemonic.svg';
 import leftarrow from '../../assets/leftarrow.svg';
+import Earn from '../../assets/earn-icon.png';
 import Popup from '../../Popup';
 import 'reactjs-popup/dist/index.css';
 import boy from '../../assets/3rd-boy.png';
@@ -36,8 +37,8 @@ const Index = ({ history }) => {
   return (
     <div>
       <div className='whole-welcome'>
-        <a
-          href='/fiatbalance'
+        <Link
+          to='/fiatbalance'
           style={{
             position: 'relative',
             left: '890px',
@@ -49,7 +50,7 @@ const Index = ({ history }) => {
           }}
         >
           Fiat Balance
-        </a>
+        </Link>
         <div className='createry'>
           <div className=''>
             <div className='content'>
@@ -76,7 +77,7 @@ const Index = ({ history }) => {
                   </span>
                 </div>
                 <div style={{ marginLeft: '100px' }}>
-                  <a href='/liquidity'>
+                  <Link to='/liquidity'>
                     <button
                       style={{
                         color: '#009506',
@@ -117,7 +118,7 @@ const Index = ({ history }) => {
                         Earn
                       </span>
                     </button>
-                  </a>
+                  </Link>
                 </div>
                 <div style={{ marginLeft: '20px', textAlign: 'center' }}>
                   <svg
@@ -174,14 +175,14 @@ const Index = ({ history }) => {
                     <br />
                   </div>
                   <div style={{ marginTop: '10px' }} className='button-card'>
-                    <a href='send'>
+                    <Link to='send'>
                       {' '}
                       <button>Send</button>
-                    </a>
+                    </Link>
                     <button onClick={togglePopup}>Deposit</button>
-                    <a href='/swap'>
+                    <Link to='/swap'>
                       <button>Swap</button>
-                    </a>
+                    </Link>
                   </div>
                   <div
                     style={{
@@ -251,7 +252,7 @@ const Index = ({ history }) => {
             <div className=''>
               <div className='line-function'>
                 <div className=''>
-                  <a href='/chainlinks'>
+                  <Link to='/chainlinks'>
                     <div className='lines'>
                       <div style={{ marginLeft: '45px' }}>
                         <svg
@@ -329,7 +330,7 @@ const Index = ({ history }) => {
                         margin: '10px auto',
                       }}
                     ></div>
-                  </a>
+                  </Link>
                 </div>
 
                 {isOpen && (
@@ -369,7 +370,7 @@ const Index = ({ history }) => {
                               marginBottom: '40px',
                             }}
                           >
-                            <a href='/cryptodeposit'>
+                            <Link to='/cryptodeposit'>
                               <div
                                 style={{
                                   background: '#FFF8E0',
@@ -504,8 +505,8 @@ const Index = ({ history }) => {
 
                                 <div style={{ color: '#DAAB02' }}>Crypto</div>
                               </div>
-                            </a>
-                            <a href='/convertdft'>
+                            </Link>
+                            <Link to='/convertdft'>
                               <div
                                 style={{
                                   background: '#FFF8E0',
@@ -548,9 +549,9 @@ const Index = ({ history }) => {
                                 </svg>
                                 <div style={{ color: '#DAAB02' }}>Fiat</div>
                               </div>
-                            </a>
+                            </Link>
                           </div>
-                          <a href='/convertdft'>
+                          <Link to='/convertdft'>
                             <div
                               style={{
                                 textAlign: 'right',
@@ -560,7 +561,7 @@ const Index = ({ history }) => {
                             >
                               Skip
                             </div>
-                          </a>
+                          </Link>
                         </div>
                       </>
                     }
@@ -996,7 +997,7 @@ const Index = ({ history }) => {
                   <br />
                   <span style={{ fontSize: '12px' }}>Wallet</span>
                 </div>
-                <a href='/p2ptransfer'>
+                <Link to='/p2ptransfer'>
                   <div className='icons-downer'>
                     <svg
                       width='30'
@@ -1038,7 +1039,7 @@ const Index = ({ history }) => {
                     <br />
                     <span>P2P Transfer</span>
                   </div>
-                </a>
+                </Link>
                 <div className='icons-down'>
                   <svg
                     width='30'
@@ -1078,7 +1079,7 @@ const Index = ({ history }) => {
                   <br />
                   <span>Democracy</span>
                 </div>
-                <a href='/pool'>
+                <Link to='/pool'>
                   <div className='icons-down'>
                     <svg
                       width='30'
@@ -1103,8 +1104,8 @@ const Index = ({ history }) => {
                     <br />
                     <span>Earn</span>
                   </div>
-                </a>
-                <a href='/settings'>
+                </Link>
+                <Link to='/settings'>
                   <div className='icons-down'>
                     <svg
                       width='30'
@@ -1123,7 +1124,7 @@ const Index = ({ history }) => {
                     <br />
                     <span>Profile</span>
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
