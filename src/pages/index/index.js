@@ -22,7 +22,16 @@ const Index = ({ history }) => {
 
   const togglePopup2 = () => {
     setIsOpen2(!isOpen2);
+    localStorage.setItem('popup-index1-status', '1');
   };
+
+  useEffect(() => {
+    const popupStatus = localStorage.getItem('popup-index1-status');
+
+    if (popupStatus === '1') {
+      setIsOpen2(false);
+    }
+  }, []);
 
   return (
     <div>

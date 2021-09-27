@@ -7,24 +7,27 @@ import './connect';
 import boy from '../../assets/3rd-boy.png';
 import MonoConnect from '@mono.co/connect.js';
 const Index2 = ({ history }) => {
-  // const [isOpen, setIsOpen] = useState(true);
+  // popup
+  const [isOpen, setIsOpen] = useState(true);
 
-  // const togglePopup = () => {
-  //   setIsOpen(!isOpen);
-  // };
-
-  // popup 2
-  const [isOpen2, setIsOpen2] = useState(true);
-
-  const togglePopup2 = () => {
-    setIsOpen2(!isOpen2);
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+    localStorage.setItem('popup-index2-status', '1');
   };
+
+  useEffect(() => {
+    const popupStatus = localStorage.getItem('popup-index2-status');
+
+    if (popupStatus === '1') {
+      setIsOpen(false);
+    }
+  }, []);
 
   // CHeckbox
   const [checked, setChecked] = useState(false);
 
   const onContinue = () => {
-    togglePopup2();
+    togglePopup();
     monoConnect.open();
   };
   const monoConnect = React.useMemo(() => {
@@ -43,7 +46,7 @@ const Index2 = ({ history }) => {
   return (
     <div>
       <div className='whole-welcome'>
-        {isOpen2 && (
+        {isOpen && (
           <Popup
             className='index-box'
             content={
@@ -123,7 +126,7 @@ const Index2 = ({ history }) => {
                 </div>
               </>
             }
-            handleClose={togglePopup2}
+            handleClose={togglePopup}
           />
         )}
         <a
