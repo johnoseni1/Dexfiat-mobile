@@ -121,19 +121,23 @@ code {
 }
 
 .index-box {
-   /* text-align: center; */
-   position: relative;
-   left: 33px;
-   width: 20%;
-   margin: 0 auto;
-   height: auto;
-   min-height: 60vh;
-   margin-top: calc(100vh - 85vh - 20px);
-   background: #fff;
-   border-radius: 4px;
-   padding: 20px;
-   border: 1px solid #999;
-   overflow: auto;
+  /* text-align: center; */
+  position: relative;
+  left: 33px;
+  width: 20%;
+  margin: 0 auto;
+  height: auto;
+  min-height: 55vh;
+  margin-top: calc(100vh - 85vh - 20px);
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid #999;
+  overflow: auto;
+}
+
+.index-box.cream {
+  background: #fff8e0;
 }
 
 .boxer {
@@ -183,8 +187,6 @@ code {
   font-size: 20px;
 }
 
-
-
 /* CHECKBOX */
 /* The container */
 .checkbox-container {
@@ -216,7 +218,7 @@ code {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
 }
 
 /* On mouse-over, add a grey background color */
@@ -253,7 +255,6 @@ code {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-
 
 .center {
   display: flex;
