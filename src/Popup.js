@@ -1,11 +1,13 @@
-import React from "react";
+import React from 'react';
 
-const Popup = props => {
+const Popup = ({ className = 'box', handleClose, content }) => {
   return (
-    <div className="popup-box">
-      <div className="box">
-        <span className="close-icon" onClick={props.handleClose}>x</span>
-        {props.content}
+    <div className='popup-box'>
+      <div className={className}>
+        <span className='close-icon' onClick={handleClose}>
+          x
+        </span>
+        {content}
       </div>
     </div>
   );

@@ -1,114 +1,112 @@
-.creater{
-    background-color: #FFFFFF;
-    justify-content: center;
-    width: 440px;
-    height: 100vh;
+.creater {
+  background-color: #ffffff;
+  justify-content: center;
+  width: 440px;
+  height: 100vh;
 }
 
-.createrty{
-    background-color: #FFFFFF;
-    justify-content: center;
-    width: 440px;
-    height: 100vh;
+.createrty {
+  background-color: #ffffff;
+  justify-content: center;
+  width: 440px;
+  height: 100vh;
 }
 
-
-.createry{
-    background-color: #FFFFFF;
-    justify-content: center;
-    width: 440px;
-    height: 100%;
+.createry {
+  background-color: #ffffff;
+  justify-content: center;
+  width: 440px;
+  height: 100%;
 }
-.createryer{
-    background-color: #FFFFFF;
-    justify-content: center;
-    width: 440px;
-    height: 100%;
-}
-
-.slider{
-    padding-top: 40px;
-    text-align: center;
-    /* justify-content: center; */
-    /* margin: 0 auto; */
+.createryer {
+  background-color: #ffffff;
+  justify-content: center;
+  width: 440px;
+  height: 100%;
 }
 
-img:hover{
-    cursor: pointer;
+.slider {
+  padding-top: 40px;
+  text-align: center;
+  /* justify-content: center; */
+  /* margin: 0 auto; */
 }
 
-.slider span{
-    color: #808080;
-    font-size: 12px;
-    padding-left: 20px;
-    padding-right: 20px;
-    position: relative;
-    bottom: 6px;
+img:hover {
+  cursor: pointer;
+}
+
+.slider span {
+  color: #808080;
+  font-size: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  bottom: 6px;
 }
 
 .createwallet-btn {
-    justify-content: center;
-    text-align: center;
-    margin-top: 200px;
-    /* padding: 11px 40px; */
+  justify-content: center;
+  text-align: center;
+  margin-top: 200px;
+  /* padding: 11px 40px; */
 }
 
-.createwallet-btn button{
-    padding: 11px 90px;
-    font-size: 18px;
-    background-color: #009506;
-    border: none;
-    border-radius: 9px;
-    color: #fff;
-    font-weight: bold;
+.createwallet-btn button {
+  padding: 11px 90px;
+  font-size: 18px;
+  background-color: #009506;
+  border: none;
+  border-radius: 9px;
+  color: #fff;
+  font-weight: bold;
 }
 
 .createwallet-btn span,
-.createwallet-btn a{
-    color: #009706;
-    font-weight: bold;
-    text-decoration: none;
-
+.createwallet-btn a {
+  color: #009706;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-  
-  /* Popup style */
-  .popup-box {
-    position: fixed;
-    /* background: #00000050; */
-    width: 100%;
-    height: 100vh;
-    z-index: 999999999;
-    top: 0;
-    left: 0;
-  }
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 
-  .checkman input{
-      background-color: #C4C4C4;
-      /* width: 0px; */
-  }
-  
-  .box {
-      /* text-align: center; */
-    position: relative;
-    width: 20%;
-    margin: 0 auto;
-    height: auto;
-    max-height: 70vh;
-    margin-top: calc(100vh - 85vh - 20px);
-    background: #FEE55A;
-    border-radius: 4px;
-    padding: 20px;
-    border: 1px solid #999;
-    overflow: auto;
-  }
+/* Popup style */
+.popup-box {
+  position: fixed;
+  /* background: #00000050; */
+  width: 100%;
+  height: 100vh;
+  z-index: 999999999;
+  top: 0;
+  left: 0;
+}
 
-  .boxer {
-    /* text-align: center; */
+.checkman input {
+  background-color: #c4c4c4;
+  /* width: 0px; */
+}
+
+.box {
+  /* text-align: center; */
+  position: relative;
+  width: 20%;
+  margin: 0 auto;
+  height: auto;
+  min-height: 60vh;
+  margin-top: calc(100vh - 85vh - 20px);
+  background: #fee55a;
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid #999;
+  overflow: auto;
+}
+
+.boxer {
+  /* text-align: center; */
   position: relative;
   width: 20%;
   margin: 0 auto;
@@ -123,7 +121,7 @@ code {
 }
 
 .boxery {
-    /* text-align: center; */
+  /* text-align: center; */
   position: relative;
   /* width: 15%; */
   margin: 0 auto;
@@ -137,19 +135,110 @@ code {
   border: 1px solid #999;
   overflow: auto;
 }
-  
-  .close-icon {
-    content: 'x';
-    cursor: pointer;
-    position: fixed;
-    right: calc(41% - 30px);
-    top: calc(100vh - 85vh - 33px);
-    background: #ededed;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    line-height: 20px;
-    text-align: center;
-    border: 1px solid #999;
-    font-size: 20px;
-  } 
+
+.close-icon {
+  content: 'x';
+  cursor: pointer;
+  position: fixed;
+  right: calc(41% - 30px);
+  top: calc(100vh - 85vh - 33px);
+  background: #ededed;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
+}
+
+.cream-box {
+  /* text-align: center; */
+  position: relative;
+  width: 20%;
+  margin: 0 auto;
+  height: auto;
+  max-height: 70vh;
+  margin-top: calc(100vh - 85vh - 20px);
+  background: #fff8e0;
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid #999;
+  overflow: auto;
+}
+
+/* CHECKBOX */
+/* The container */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #C4C4C4;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a #009706 background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #009706;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
