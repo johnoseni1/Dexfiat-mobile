@@ -76,7 +76,7 @@ const CreateRecovery = ({ history }) => {
 
               <br />
               <br />
-              {/* <span>Already have a wallet? <a href="/importwallet">import</a></span> */}
+              {/* <span>Already have a wallet? <Link to="/importwallet">import</Link></span> */}
             </div>
           </div>
         </div>
