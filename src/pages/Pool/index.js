@@ -1,6 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'; // useEffect,
 import './style.css';
 import { Link } from 'react-router-dom';
+import Popup from '../../Popup';
+import QuestionMark from '../../assets/question-mark.png';
+import Harmony from '../../assets/harmony.png';
+import WalletConnect from '../../assets/wallet-connect.png';
+import Metamask from '../../assets/metamask.png';
 import { BiUserCircle } from 'react-icons/bi';
 import mnemonic from '../../assets/mnemonic.svg';
 import leftarrow from '../../assets/leftarrow.svg';
@@ -8,11 +13,51 @@ import boy from '../../assets/3rd-boy.png';
 // import Vector from '../../assets/Vector.svg';
 
 const Pool = () => {
+  // POpup 3
+  const [isOpen3, setIsOpen3] = useState(false);
+
+  const togglePopup3 = () => {
+    setIsOpen3(!isOpen3);
+  };
   return (
     <div>
       <div className='whole-welcome'>
         <div className='creater'>
           <div className='contenter'>
+            {isOpen3 && (
+              <Popup
+                closeBtn={true}
+                className='white-box'
+                handleClose={togglePopup3}
+                content={
+                  <>
+                    <div className='wallets'>
+                      <p style={{ marginTop: '40px' }}>Connect your wallet</p>
+                      <div>
+                        <img src={Harmony} alt='' />
+                        <span>Harmony</span>
+                      </div>
+                      <div>
+                        <img
+                          style={{ height: '20px', width: '20px' }}
+                          src={WalletConnect}
+                          alt=''
+                        />
+                        <span>Wallet connect</span>
+                      </div>
+                      <div>
+                        <img src={Metamask} alt='' />
+                        <span>Metamask</span>
+                      </div>
+                      <p className='learn-more'>
+                        <img src={QuestionMark} alt='' />{' '}
+                        <span>Learn how to connect</span>
+                      </p>
+                    </div>
+                  </>
+                }
+              />
+            )}
             <div className='manny'>
               <div style={{ marginLeft: '30px' }}>
                 <svg
@@ -72,21 +117,20 @@ const Pool = () => {
                 </Link>
               </div>
               <div style={{ marginLeft: '10px', width: '120px' }}>
-                <Link to='/liquidity'>
-                  <button
-                    style={{
-                      color: '#009506',
-                      opacity: '0.5',
-                      fontSize: '13px',
-                      backgroundColor: '#DAAA02',
-                      border: 'none',
-                      padding: '7px 13px',
-                      borderRadius: '5px',
-                    }}
-                  >
-                    Connect External Wallet
-                  </button>
-                </Link>
+                <button
+                  onClick={togglePopup3}
+                  style={{
+                    color: '#009506',
+                    opacity: '0.5',
+                    fontSize: '13px',
+                    backgroundColor: '#DAAA02',
+                    border: 'none',
+                    padding: '7px 13px',
+                    borderRadius: '5px',
+                  }}
+                >
+                  Connect External Wallet
+                </button>
               </div>
             </div>
             <div className='sec-manny'>
