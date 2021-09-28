@@ -151,3 +151,34 @@ progress::-moz-progress-bar {
   background: #fff;
   color: #009506;
 }
+
+.trans-speed {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.trans-speed div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #00b006;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+.trans-speed span {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.trans-speed img {
+  height: 14px;
+  width: 14px;
+}
+
+.trans-speed div:nth-child(2) {
+  background: #00b006;
+  color: #fff;
+}

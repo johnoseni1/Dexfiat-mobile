@@ -3,6 +3,7 @@ import './style.css';
 import { Link } from 'react-router-dom';
 import Popup from '../../Popup';
 import Report from '../../assets/report-icon.png';
+import QuestionMark from '../../assets/question-mark.png';
 import { BiUserCircle } from 'react-icons/bi';
 import mnemonic from '../../assets/mnemonic.svg';
 import leftarrow from '../../assets/leftarrow.svg';
@@ -222,7 +223,44 @@ const Swap = () => {
                 content={
                   <>
                     <div>
-                      <div>toggle2</div>
+                      <div>
+                        <p>
+                          Default Transaction Speed (GWEI){' '}
+                          <img src={QuestionMark} alt='' />
+                        </p>
+
+                        <div className='trans-speed'>
+                          <div>
+                            <span>Standard</span>{' '}
+                            <img src={QuestionMark} alt='' />
+                          </div>
+                          <div>
+                            <span>Fast</span> <img src={QuestionMark} alt='' />
+                          </div>
+                          <div>
+                            <span>Instant</span>{' '}
+                            <img src={QuestionMark} alt='' />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <p>
+                          Slippage tolerance <img src={QuestionMark} alt='' />
+                        </p>
+                        <div className='trans-speed'>
+                          <div>
+                            <span>Fast</span> <img src={QuestionMark} alt='' />
+                          </div>
+                          <div>
+                            <span>Instant</span>{' '}
+                            <img src={QuestionMark} alt='' />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div></div>
+                      <div></div>
                     </div>
                   </>
                 }
