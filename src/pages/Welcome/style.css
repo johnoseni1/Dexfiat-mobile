@@ -59,11 +59,12 @@ button:hover {
 .inside-man {
   /* padding-top: 300px; */
   justify-content: center;
-  border-radius: 5px;
+  border-radius: 15px;
   background-color: #509611;
   width: 430px;
   height: 900px;
   text-align: center;
+  box-shadow: 0 0 5px #c0bdbd;
 }
 
 .inside-maner {
