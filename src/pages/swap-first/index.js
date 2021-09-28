@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import Popup from '../../Popup';
 import Report from '../../assets/report-icon.png';
 import QuestionMark from '../../assets/question-mark.png';
+import Harmony from '../../assets/harmony.png';
+import WalletConnect from '../../assets/wallet-connect.png';
+import Metamask from '../../assets/metamask.png';
 import { BiUserCircle } from 'react-icons/bi';
 import mnemonic from '../../assets/mnemonic.svg';
 import leftarrow from '../../assets/leftarrow.svg';
@@ -14,6 +17,10 @@ const Swap = () => {
   const [progress, setProgress] = useState(3);
 
   const [swap, setSwap] = useState('market');
+
+  const onChangeProgress = (value) => {
+    setProgress(value);
+  };
 
   // Popup 1
   const [isOpen, setIsOpen] = useState(false);
@@ -29,8 +36,11 @@ const Swap = () => {
     setIsOpen2(!isOpen2);
   };
 
-  const onChangeProgress = (value) => {
-    setProgress(value);
+  // POpup 3
+  const [isOpen3, setIsOpen3] = useState(false);
+
+  const togglePopup3 = () => {
+    setIsOpen3(!isOpen3);
   };
 
   return (
@@ -78,21 +88,20 @@ const Swap = () => {
               </div>
               <div style={{ marginLeft: '10px' }}></div>
               <div style={{ marginLeft: '10px', width: '120px' }}>
-                <Link to='/liquidity'>
-                  <button
-                    style={{
-                      color: '#009506',
-                      opacity: '0.5',
-                      fontSize: '13px',
-                      backgroundColor: '#DAAA02',
-                      border: 'none',
-                      padding: '7px 11px',
-                      borderRadius: '5px',
-                    }}
-                  >
-                    Connect External Wallet
-                  </button>
-                </Link>
+                <button
+                  onClick={togglePopup3}
+                  style={{
+                    color: '#009506',
+                    opacity: '0.5',
+                    fontSize: '13px',
+                    backgroundColor: '#DAAA02',
+                    border: 'none',
+                    padding: '7px 11px',
+                    borderRadius: '5px',
+                  }}
+                >
+                  Connect External Wallet
+                </button>
               </div>
             </div>
             <div className='sec-manny'>
@@ -248,13 +257,15 @@ const Swap = () => {
                         <p>
                           Slippage tolerance <img src={QuestionMark} alt='' />
                         </p>
-                        <div className='trans-speed'>
-                          <div>
-                            <span>Fast</span> <img src={QuestionMark} alt='' />
+                        <div classname='slippage'>
+                          <div className='slippage-percent'>
+                            <div>0.5%</div>
+                            <div>1%</div>
+                            <div>7%</div>
                           </div>
-                          <div>
-                            <span>Instant</span>{' '}
-                            <img src={QuestionMark} alt='' />
+                          <div className='slippage-input'>
+                            <input type='number' style={{ width: '20px' }} />
+                            <span>%</span>
                           </div>
                         </div>
                       </div>
@@ -265,6 +276,40 @@ const Swap = () => {
                   </>
                 }
                 handleClose={togglePopup2}
+              />
+            )}
+            {isOpen3 && (
+              <Popup
+                closeBtn={true}
+                className='white-box'
+                handleClose={togglePopup3}
+                content={
+                  <>
+                    <div className='wallets'>
+                      <p style={{ marginTop: '40px' }}>Connect your wallet</p>
+                      <div>
+                        <img src={Harmony} alt='' />
+                        <span>Harmony</span>
+                      </div>
+                      <div>
+                        <img
+                          style={{ height: '20px', width: '20px' }}
+                          src={WalletConnect}
+                          alt=''
+                        />
+                        <span>Wallet connect</span>
+                      </div>
+                      <div>
+                        <img src={Metamask} alt='' />
+                        <span>Metamask</span>
+                      </div>
+                      <p className='learn-more'>
+                        <img src={QuestionMark} alt='' />{' '}
+                        <span>Learn how to connect</span>
+                      </p>
+                    </div>
+                  </>
+                }
               />
             )}
             <div
