@@ -9,7 +9,7 @@ import boy from '../../assets/3rd-boy.png';
 import MonoConnect from '@mono.co/connect.js';
 const Index2 = ({ history }) => {
   // popup
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -19,7 +19,9 @@ const Index2 = ({ history }) => {
   useEffect(() => {
     const popupStatus = localStorage.getItem('popup-index2-status');
 
-    if (popupStatus === '1') {
+    if (!popupStatus) {
+      setIsOpen(true);
+    } else {
       setIsOpen(false);
     }
   }, []);

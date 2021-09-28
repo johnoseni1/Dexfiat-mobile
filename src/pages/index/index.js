@@ -19,7 +19,7 @@ const Index = ({ history }) => {
   };
 
   // Popup 2
-  const [isOpen2, setIsOpen2] = useState(true);
+  const [isOpen2, setIsOpen2] = useState(false);
 
   const togglePopup2 = () => {
     setIsOpen2(!isOpen2);
@@ -29,7 +29,9 @@ const Index = ({ history }) => {
   useEffect(() => {
     const popupStatus = localStorage.getItem('popup-index1-status');
 
-    if (popupStatus === '1') {
+    if (!popupStatus) {
+      setIsOpen2(true);
+    } else {
       setIsOpen2(false);
     }
   }, []);
