@@ -13,7 +13,7 @@ const Swap = () => {
 
   const [progress, setProgress] = useState(3);
 
-  const [swap, setSwap] = useState('market');
+  const [swap, setSwap] = useState('limit');
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -201,8 +201,28 @@ const Swap = () => {
             </div>
             <div className='talksinit'>
               <div className='guyna'>
-                <span className='picking'>Market</span>
-                <span className='picker'>Limit</span>
+                <span
+                  className='picking'
+                  onClick={() => {
+                    setSwap('market');
+                  }}
+                  style={{
+                    border: swap === 'market' ? '1px solid #009506' : '0',
+                  }}
+                >
+                  Market
+                </span>
+                <span
+                  className='picker'
+                  onClick={() => {
+                    setSwap('limit');
+                  }}
+                  style={{
+                    border: swap === 'limit' ? '1px solid #009506' : '0',
+                  }}
+                >
+                  Limit
+                </span>
               </div>
               <div className='remain'>
                 <div className='top-guy'>
@@ -296,9 +316,15 @@ const Swap = () => {
               </div>
 
               {swap === 'limit' && (
-                <div>
-                  <div></div>
-                  <div></div>
+                <div className='limit-extension'>
+                  <div className='price'>
+                    <p>Price</p>
+                    <input type='number' />
+                  </div>
+                  <div className='expires'>
+                    <p>Expires in</p>
+                    <input type='text' value='7days' />
+                  </div>
                 </div>
               )}
 
