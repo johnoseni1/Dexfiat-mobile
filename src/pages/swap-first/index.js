@@ -13,7 +13,7 @@ const Swap = () => {
 
   const [progress, setProgress] = useState(3);
 
-  const [swap, setSwap] = useState('limit');
+  const [swap, setSwap] = useState('market');
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
