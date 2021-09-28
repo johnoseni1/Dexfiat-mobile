@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'; // useEffect,
 import './style.css';
 import { Link } from 'react-router-dom';
-import Popup from '../index/Popup';
+import Popup from '../../Popup';
 import { BiUserCircle } from 'react-icons/bi';
 import mnemonic from '../../assets/mnemonic.svg';
 import leftarrow from '../../assets/leftarrow.svg';
@@ -13,7 +13,7 @@ const Swap = () => {
 
   const [progress, setProgress] = useState(3);
 
-  const [swap, setSwap] = useState('limit');
+  const [swap, setSwap] = useState('market');
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -139,47 +139,57 @@ const Swap = () => {
             </div>
             {isOpen && (
               <Popup
+                className='white-box'
                 content={
                   <>
                     <div>
                       <div>
-                        <svg
-                          width='143'
-                          height='143'
-                          viewBox='0 0 143 143'
-                          fill='none'
-                          xmlns='http://www.w3.org/2000/svg'
-                        >
-                          <path
-                            d='M71.5 143C110.988 143 143 110.988 143 71.5C143 32.0116 110.988 0 71.5 0C32.0116 0 0 32.0116 0 71.5C0 110.988 32.0116 143 71.5 143Z'
-                            fill='#009506'
-                          />
-                          <path
-                            d='M131.675 33L68 98.0109L68.1125 105H71.0375L140 50.1957C137.975 44.0941 135.162 38.2142 131.675 33Z'
-                            fill='#076D0B'
-                          />
-                          <path
-                            d='M141.745 29.7043L129.135 17.251C127.461 15.583 124.671 15.583 122.886 17.251L68.9865 72.7346L45.6638 49.8296C43.9898 48.1617 41.2001 48.1617 39.4148 49.8296L28.2555 60.8374C26.5815 62.5054 26.5815 65.2851 28.2555 66.953L65.5273 103.757C66.5317 104.757 67.8708 105.091 69.2098 104.98C70.5489 105.091 71.8879 104.757 72.8924 103.757L141.745 35.9308C143.418 34.1516 143.418 31.3719 141.745 29.7043Z'
-                            fill='#F2F1EF'
-                          />
-                          <path
-                            d='M72.8248 103.757L141.743 35.9979C143.419 34.3316 143.419 31.5546 141.743 29.8883L139.733 28L69.027 97.0925L29.9323 59.2139L28.2567 60.8802C26.5811 62.5465 26.5811 65.3235 28.2567 66.9898L65.5644 103.758C66.5698 104.758 67.9101 105.091 69.2505 104.98C70.4791 105.09 71.8194 104.757 72.8248 103.757Z'
-                            fill='#E6E5E3'
-                          />
-                        </svg>
+                        <div className='top-section'>
+                          <svg
+                            width='143'
+                            height='143'
+                            viewBox='0 0 143 143'
+                            fill='none'
+                            xmlns='http://www.w3.org/2000/svg'
+                          >
+                            <path
+                              d='M71.5 143C110.988 143 143 110.988 143 71.5C143 32.0116 110.988 0 71.5 0C32.0116 0 0 32.0116 0 71.5C0 110.988 32.0116 143 71.5 143Z'
+                              fill='#009506'
+                            />
+                            <path
+                              d='M131.675 33L68 98.0109L68.1125 105H71.0375L140 50.1957C137.975 44.0941 135.162 38.2142 131.675 33Z'
+                              fill='#076D0B'
+                            />
+                            <path
+                              d='M141.745 29.7043L129.135 17.251C127.461 15.583 124.671 15.583 122.886 17.251L68.9865 72.7346L45.6638 49.8296C43.9898 48.1617 41.2001 48.1617 39.4148 49.8296L28.2555 60.8374C26.5815 62.5054 26.5815 65.2851 28.2555 66.953L65.5273 103.757C66.5317 104.757 67.8708 105.091 69.2098 104.98C70.5489 105.091 71.8879 104.757 72.8924 103.757L141.745 35.9308C143.418 34.1516 143.418 31.3719 141.745 29.7043Z'
+                              fill='#F2F1EF'
+                            />
+                            <path
+                              d='M72.8248 103.757L141.743 35.9979C143.419 34.3316 143.419 31.5546 141.743 29.8883L139.733 28L69.027 97.0925L29.9323 59.2139L28.2567 60.8802C26.5811 62.5465 26.5811 65.3235 28.2567 66.9898L65.5644 103.758C66.5698 104.758 67.9101 105.091 69.2505 104.98C70.4791 105.09 71.8194 104.757 72.8248 103.757Z'
+                              fill='#E6E5E3'
+                            />
+                          </svg>
 
-                        <div>Swap Successful</div>
-                        <div>click to view transaction on the blockchain</div>
-                        <div style={{ background: '#FFF8E0' }}>
-                          <div>Earn from liquidity pool fees</div>
-                          <div>Provide Liquidity?</div>
-                          <div style={{ display: 'flex' }}>
+                          <div style={{ margin: '10px 0', color: '#494949' }}>
+                            Swap Successful
+                          </div>
+                          <div style={{ fontSize: '12px', color: '#009706' }}>
+                            click to view transaction on the blockchain
+                          </div>
+                        </div>
+
+                        <div className='bottom-section'>
+                          <div style={{ fontWeight: 'bold', color: '#009706' }}>
+                            Earn from liquidity pool fees
+                          </div>
+                          <p style={{ fontSize: '14px', color: '#494949' }}>
+                            Provide Liquidity?
+                          </p>
+                          <div className='two-btns'>
                             <div>
-                              <button>Yes</button>
+                              <Link to='/pool'>Yes</Link>
                             </div>
-                            <div>
-                              <button>No</button>
-                            </div>
+                            <div onClick={togglePopup}>No</div>
                           </div>
                         </div>
                       </div>
