@@ -62,7 +62,12 @@ a {
 
 .setting {
   margin-top: 50px;
-  margin-left: 200px;
+  margin-left: 25px;
+}
+
+.report {
+  margin-top: 50px;
+  margin-left: 180px;
 }
 
 .sec-color {
@@ -497,7 +502,7 @@ a {
   height: 50px;
   width: 440px;
   display: flex;
- 
+
   padding-top: 20px;
   padding-bottom: 20px;
   background: #ffffff;
