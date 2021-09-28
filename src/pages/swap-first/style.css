@@ -1,5 +1,5 @@
 .boxery {
-    /* text-align: center; */
+  /* text-align: center; */
   position: relative;
   width: 15%;
   margin: 0 auto;
@@ -12,4 +12,55 @@
   /* padding: 20px; */
   border: 1px solid #999;
   overflow: auto;
+}
+
+/* Progress bar */
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5rem;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #e7e7e7;
+  width: 100%;
+  border-radius: 5rem;
+}
+
+progress {
+  /* for FF target directly the element */
+  background-color: #e7e7e7;
+  width: 100%;
+  border-radius: 5rem;
+}
+
+progress::-webkit-progress-value {
+  background-color: #009506 !important;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  border-radius: 5rem;
+}
+
+progress::-moz-progress-bar {
+  /* for FF ::progress-bar is the value bar */
+  background-color: #009506 !important;
+  transition: all 0.7s;
+  border-radius: 5rem;
+}
+
+.percentage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+.percentage div {
+  color: #808080;
+  font-size: 12px;
 }

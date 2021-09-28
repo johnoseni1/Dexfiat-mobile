@@ -11,8 +11,16 @@ import boy from '../../assets/3rd-boy.png';
 const Swap = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const [progress, setProgress] = useState(3);
+
+  const [swap, setSwap] = useState('market');
+
   const togglePopup = () => {
     setIsOpen(!isOpen);
+  };
+
+  const onChangeProgress = (value) => {
+    setProgress(value);
   };
 
   return (
@@ -246,7 +254,55 @@ const Swap = () => {
                 </div>
               </div>
 
-              <div className='remain' style={{ marginTop: '50px' }}>
+              <div style={{ padding: '0 15px' }}>
+                <progress value={progress} max='100'></progress>
+                <div className='percentage'>
+                  <div
+                    onClick={() => {
+                      onChangeProgress(3);
+                    }}
+                  >
+                    0%
+                  </div>
+                  <div
+                    onClick={() => {
+                      onChangeProgress(25);
+                    }}
+                  >
+                    25%
+                  </div>
+                  <div
+                    onClick={() => {
+                      onChangeProgress(50);
+                    }}
+                  >
+                    50%
+                  </div>
+                  <div
+                    onClick={() => {
+                      onChangeProgress(75);
+                    }}
+                  >
+                    75%
+                  </div>
+                  <div
+                    onClick={() => {
+                      onChangeProgress(100);
+                    }}
+                  >
+                    100%
+                  </div>
+                </div>
+              </div>
+
+              {swap === 'limit' && (
+                <div>
+                  <div></div>
+                  <div></div>
+                </div>
+              )}
+
+              <div className='remain' style={{ marginTop: '15px' }}>
                 <div className='top-guy'>
                   <span style={{ marginRight: '180px' }}>You Send</span>
                   {/* <span style={{marginLeft: "90px"}}>Balance:0.23329</span> */}
