@@ -139,8 +139,12 @@ progress::-moz-progress-bar {
 
 .two-btns div:first-child {
   background: #009506;
-  color: #fff;
+
   margin-right: 5px;
+}
+
+.two-btns div:first-child > * {
+  color: #fff;
 }
 
 .two-btns div:last-child {

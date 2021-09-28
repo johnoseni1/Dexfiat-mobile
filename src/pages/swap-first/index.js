@@ -186,8 +186,10 @@ const Swap = () => {
                             Provide Liquidity?
                           </p>
                           <div className='two-btns'>
-                            <div>Yes</div>
-                            <div>No</div>
+                            <div>
+                              <Link to='/pool'>Yes</Link>
+                            </div>
+                            <div onClick={togglePopup}>No</div>
                           </div>
                         </div>
                       </div>
