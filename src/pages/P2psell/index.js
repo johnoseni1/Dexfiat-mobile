@@ -162,7 +162,7 @@ const P2psell = () => {
               marginTop: '50px',
             }}
           >
-            <Link to='/p2pmarket'>
+            <Link to='/p2pmarketbuy'>
               {' '}
               <button
                 style={{

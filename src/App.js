@@ -12,7 +12,8 @@ import P2ptransfer from './pages/P2ptransfer';
 import P2psell from './pages/P2psell';
 import Profile from './pages/Profile';
 import Liquidity from './pages/liquididty';
-import P2pmarket from './pages/P2pmarket';
+import P2pmarketbuy from './pages/P2pmarketbuy';
+import P2pmarketsell from './pages/P2pmarketsell';
 import Swap from './pages/swap-first';
 import Cryptodeposit from './pages/Cryptodeposit';
 import Wallets from './pages/Wallets';
@@ -60,7 +61,8 @@ function App() {
           <Route path='/settings' component={Profile} />
           <Route path='/wallets' component={Wallets} />
           <Route path='/p2ptransfer' component={P2ptransfer} />
-          <Route path='/p2pmarket' component={P2pmarket} />
+          <Route path='/p2pmarketbuy' component={P2pmarketbuy} />
+          <Route path='/p2pmarketsell' component={P2pmarketsell} />
           <Route path='/coinlink' component={Coinlink} />
           <Route path='/cryptodeposit' component={Cryptodeposit} />
         </Switch>

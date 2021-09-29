@@ -136,7 +136,7 @@ const P2ptransfer = () => {
               marginTop: '50px',
             }}
           >
-            <Link to='/p2pmarket'>
+            <Link to='/p2pmarketbuy'>
               {' '}
               <button
                 style={{

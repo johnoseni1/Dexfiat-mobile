@@ -1,0 +1,21 @@
+.buy-sell-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.seller-btn,
+.buyer-btn {
+  height: 44px;
+  width: 102px;
+  /* border: 1px solid #fff; */
+  box-shadow: 0 0 5px #fff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
