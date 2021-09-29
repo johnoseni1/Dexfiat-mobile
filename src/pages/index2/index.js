@@ -322,7 +322,7 @@ const Index2 = ({ history }) => {
                     <span>Total Balance </span>
                     <br />
                     <span style={{ fontSize: '30px', fontWeight: 'bold' }}>
-                      0 DNGN
+                      200,000 DNGN
                     </span>
                     <br />
                     <span style={{ fontSize: '20px' }}>N200,000</span>
