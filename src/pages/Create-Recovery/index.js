@@ -7,12 +7,7 @@ import mnemonic from '../../assets/mnemonic.svg';
 import leftarrow from '../../assets/leftarrow.svg';
 // import Vector from '../../assets/Vector.svg';
 
-const CreateRecovery = ({ history }) => {
-  // const [isOpen, setIsOpen] = useState(false);
-
-  // const togglePopup = () => {
-  //   setIsOpen(!isOpen);
-  // };
+const CreateRecovery = () => {
   return (
     <div>
       <div className='whole-welcome'>
@@ -70,7 +65,7 @@ const CreateRecovery = ({ history }) => {
             </div>
 
             <div className='createwallet-btner'>
-              <Link to='/index'>
+              <Link to='/confirmmnemonics'>
                 <button style={{ color: '#fff' }}>Proceed</button>
               </Link>
 

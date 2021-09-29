@@ -1,252 +1,301 @@
-.mnemonic{
-    margin-top: 50px;
+.mnemonic {
+  margin-top: 50px;
 }
 
-.helper{
-    text-align: center;
+.helper {
+  text-align: center;
 }
 
-.arroeleft{
-    margin-top: 30px;
-    margin-right: 160px;
+.arroeleft {
+  margin-top: 30px;
+  margin-right: 160px;
 }
 
-.helper span{
-    color: #009506;
-    font-size: 14px;
-    position: relative;
-    bottom: 3px;
+.helper span {
+  color: #009506;
+  font-size: 14px;
+  position: relative;
+  bottom: 3px;
 }
 
-.little-text{
-    text-align: center;
-    /* width: 500px; */
+.little-text {
+  text-align: center;
+  /* width: 500px; */
 }
 
-.undertextman{
-    margin-left: 60px;
-    font-size: 15px;
-    margin-top: 10px;
+.undertextman {
+  margin-left: 60px;
+  font-size: 15px;
+  margin-top: 10px;
 }
 
-.picky{
-    margin-top: 20px;
-    /* justify-content: center; */
-    text-align: center;
-}
-
-.picky select{
-    padding: 7px 250px 7px 20px;
-    background: #F7F7F7;
-border-radius: 5px;
-border: none;
-font-size: 13px;
-}
-
-.line-down{
-    width: 350px;
-    justify-content: center;
-    margin: 60px auto;
-    height: 1px;
-    border: 1px solid #C4C4C4;
-}
-
-.all-method{
-    /* max-width: 100px; */
-    /* display: flex; */
-}
-
-.mannn{
-    /* position: relative; */
-    display: flex;
-    /* justify-content: center; */
-    /* width: 500px; */
-    /* flex-wrap: wrap; */
-    /* width: 70px; */
-}
-
-.payment-method{
-    background: #FFFFFF;
-box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.1);
-border-radius: 5px;
-padding: 20px;
-width: 70px;
-text-align: center;
-margin-left: 30px;
-margin-top: 50px;
-}
-.payment-methoder{
-    background: #FFFFFF;
-box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.1);
-border-radius: 5px;
-padding: 25px;
-width: 70px;
-text-align: center;
-margin-left: 30px;
-margin-top: 50px;
-}
-
-.down-manner{
-    position: absolute;
-    top: 830px;
-    background: #FFFFFF;
-    padding-top: 10px;
-    width: 440px;
-    justify-content: center;
-    display: flex;
-    height: 60px;
-box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.1);
-}
-
-.payment-method svg{
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.first-down-icon{
-    background: rgba(218, 170, 0, 0.99);
-    width: 50px;
-    height: 40px;
-    opacity: 0.21;
-    border-radius: 5px;
-
-}
-
-.first-down-icon svg{
-    position: relative;
-    left: 8px;
-}
-
-svg:hover{
-    cursor: pointer;
-}
-
-.payment-method img{
-    align-items: center;
-    text-align: center;
-}
-
-.nibo-svg{
-    margin-left: 80px;
-    position: relative;
-    top: 10px;
-}
-
-.pickman{
-    background: #DAAA02;
-    width: 20px;
-    margin-left: 40px;
-    height: 20px;
+.picky {
+  margin-top: 20px;
+  /* justify-content: center; */
+  text-align: center;
 }
 
 .picky select {
-    font-size: 15px;
-    color: #000000;
-    opacity: 0.5;
+  padding: 7px 250px 7px 20px;
+  background: #f7f7f7;
+  border-radius: 5px;
+  border: none;
+  font-size: 13px;
 }
 
-.createwallet-btner button{
-    padding: 11px 90px;
-    font-size: 18px;
-    background-color: #009506;
-    border: none;
-    border-radius: 9px;
-    color: #DAAA02;
-    font-weight: bold;
+.line-down {
+  width: 350px;
+  justify-content: center;
+  margin: 60px auto;
+  height: 1px;
+  border: 1px solid #c4c4c4;
 }
 
-.converty svg{
-    margin-top: 40px;
-    margin-left: 50px;
-
+.all-method {
+  /* max-width: 100px; */
+  /* display: flex; */
 }
 
-.createwallet-btner{
-    text-align: center;
-    margin-top: 50px;
+.mannn {
+  /* position: relative; */
+  display: flex;
+  /* justify-content: center; */
+  /* width: 500px; */
+  /* flex-wrap: wrap; */
+  /* width: 70px; */
+}
+
+.payment-method {
+  background: #ffffff;
+  box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  width: 70px;
+  text-align: center;
+  margin-left: 30px;
+  margin-top: 50px;
+}
+.payment-methoder {
+  background: #ffffff;
+  box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 25px;
+  width: 70px;
+  text-align: center;
+  margin-left: 30px;
+  margin-top: 50px;
+}
+
+.down-manner {
+  position: absolute;
+  top: 830px;
+  background: #ffffff;
+  padding-top: 10px;
+  width: 440px;
+  justify-content: center;
+  display: flex;
+  height: 60px;
+  box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.1);
+}
+
+.payment-method svg {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.first-down-icon {
+  background: rgba(218, 170, 0, 0.99);
+  width: 50px;
+  height: 40px;
+  opacity: 0.21;
+  border-radius: 5px;
+}
+
+.first-down-icon svg {
+  position: relative;
+  left: 8px;
+}
+
+svg:hover {
+  cursor: pointer;
+}
+
+.payment-method img {
+  align-items: center;
+  text-align: center;
+}
+
+.nibo-svg {
+  margin-left: 80px;
+  position: relative;
+  top: 10px;
+}
+
+.pickman {
+  background: #daaa02;
+  width: 20px;
+  margin-left: 40px;
+  height: 20px;
+}
+
+.picky select {
+  font-size: 15px;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.createwallet-btner button {
+  padding: 11px 90px;
+  font-size: 18px;
+  background-color: #009506;
+  border: none;
+  border-radius: 9px;
+  color: #daaa02;
+  font-weight: bold;
+}
+
+.converty svg {
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+.createwallet-btner {
+  text-align: center;
+  margin-top: 50px;
 }
 
 .createwallet-btner span,
-.createwallet-btner a{
-    color: #009706;
-    font-weight: bold;
-    text-decoration: none;
-
+.createwallet-btner a {
+  color: #009706;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-span:hover{
-    cursor: pointer;
+span:hover {
+  cursor: pointer;
 }
 
-.input-phrase span{
-    padding-top: 30px;
-    /* margin-top: 50px; */
-    color: #009506;
-    font-size: 12px;
+.input-phrase span {
+  padding-top: 30px;
+  /* margin-top: 50px; */
+  color: #009506;
+  font-size: 12px;
 }
 
-.input-phraser span{
-    padding-top: 30px;
-    /* margin-top: 50px; */
-    text-align: center;
-    margin: 0 auto;
-    color: #009506;
-    font-size: 12px;
+.input-phraser span {
+  padding-top: 30px;
+  /* margin-top: 50px; */
+  text-align: center;
+  margin: 0 auto;
+  color: #009506;
+  font-size: 12px;
 }
 
-.input-phrase{
-    text-align: center;
+.input-phrase {
+  text-align: center;
 }
 
-
-
-
-.input-phraser{
-    text-align: center;
-    width: 400px;
-    line-height: 40px;
+.input-phraser {
+  text-align: center;
+  width: 400px;
+  line-height: 40px;
 }
 
 .input-phraser input {
-    margin-left: 20px;
-    width: 80px;
-    text-align: center;
-    background: #E5E5E5;
-    opacity: 0.3;
-    border: 1px solid #000000;
-    /* box-sizing: border-box; */
-    border-radius: 5px;
-    padding: 3px 10px;
+  margin-left: 20px;
+  width: 80px;
+  text-align: center;
+  background: #e5e5e5;
+  opacity: 0.3;
+  border: 1px solid #000000;
+  /* box-sizing: border-box; */
+  border-radius: 5px;
+  padding: 3px 10px;
 }
 
-.input-phrase input{
-    padding: 60px;
-    background: rgba(196, 196, 196, 0.17);
-border: 2px solid #000000;
-box-sizing: border-box; 
+.input-phrase textarea {
+  /* height: 155px;
+  width: 342px;
+  padding: 10px;
+  background: rgba(196, 196, 196, 0.17);
+  border: 2px solid #000000;
+  box-sizing: border-box; */
+  border: 2px solid #000000;
+  color: #494949;
+  height: 155px;
+  width: 342px;
+  padding: 10px;
+  background: rgba(196, 196, 196, 0.17);
+  box-sizing: border-box;
 }
 
-.little-text p{
-    color: #494949;
-    font-size: 25px;
+.input-phrase textarea:focus {
+  outline: 0;
+  border: 2px solid #009506;
 }
 
-.little-text span{
-    color: #494949;
-    font-size: 14px;
-
+.little-text p {
+  color: #494949;
+  font-size: 25px;
 }
 
-.helper span:hover{
-    cursor: pointer;
+.little-text span {
+  color: #494949;
+  font-size: 14px;
 }
 
+.helper span:hover {
+  cursor: pointer;
+}
 
+.slidery span {
+  color: #009506;
+  position: relative;
+  bottom: 90px;
+}
 
-.slidery span{
-    color: #009506;
-    position: relative;
-    bottom: 90px;
+.region-wallet-name {
+  padding: 20px 40px;
+}
+
+.region-wallet-name,
+.region,
+.wallet-name-reg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.region {
+  margin-bottom: 30px;
+}
+
+.wallet-name-reg p,
+.region p {
+  text-align: center;
+  color: #494949;
+}
+
+.region p {
+  font-size: 12px;
+}
+
+.wallet-name-reg p {
+  font-size: 14px;
+}
+
+.wallet-name-reg input {
+  height: 28px;
+  width: 253px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  color: #494949;
+}
+
+.wallet-name-reg input:focus {
+  outline: 0;
+  border: 2px solid #009506;
 }

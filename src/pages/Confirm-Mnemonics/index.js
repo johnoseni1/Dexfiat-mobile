@@ -1,12 +1,9 @@
-import React, { useContext, useEffect, useState, Fragment } from 'react'; // useEffect,
+import React from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
-import Popup from '../../Popup';
-import mnemonic from '../../assets/mnemonic.svg';
 import leftarrow from '../../assets/leftarrow.svg';
-// import Vector from '../../assets/Vector.svg';
 
-const Mnemonic = () => {
+const ConfirmMnemonics = () => {
   return (
     <div>
       <div className='whole-welcome'>
@@ -17,15 +14,37 @@ const Mnemonic = () => {
                 <img src={leftarrow} className='arroeleft' alt='back' />
                 <span>Scan Privater key bar code</span>
               </div>
-              <img src={mnemonic} className='mnemonic' alt='svgs' />
+
               <br />
               <br />
               {/* <img src={Polygon2} alt="poly1" /> */}
               {/* <span>Slide</span> */}
               {/* <img src={Polygon1} alt="poly2" /> */}
             </div>
+
+            <br />
+            <div className='little-text'>
+              <p>
+                Confirm Mnemonic
+                <br />
+                <span className='textty'>
+                  Please enter your given backup phrase
+                </span>
+              </p>
+
+              <textarea className='confirm-mnemonics-input' />
+            </div>
+
             <div className='region-wallet-name'>
-              <div className='region'>
+              <div className='wallet-name-reg' style={{ marginBottom: '20px' }}>
+                <p>
+                  Enter your desired wallet name. This will be registered as
+                  your user ID name
+                </p>
+                <input type='text' />
+              </div>
+
+              <div className='region' style={{ marginBottom: '0' }}>
                 <p>Select country / region. Needed for P2P dex integration.</p>
                 <select name='country'>
                   <option value='nigeria'>Nigeria</option>
@@ -34,36 +53,15 @@ const Mnemonic = () => {
                   <option value='canada'>Canada</option>
                 </select>
               </div>
-              <div className='wallet-name-reg'>
-                <p>
-                  Enter your desired wallet name. This will be registered as
-                  your user ID name
-                </p>
-                <input type='text' />
-              </div>
             </div>
-            <br />
-            <div className='little-text'>
-              <p>
-                Enter your Mnemonic
-                <br />
-                <span className='textty'>Please enter your backup phrase</span>
-              </p>
-            </div>
-            <div className='input-phrase'>
-              <textarea />
-              <br />
-              <br />
-              <span>Paste Clipboard</span>
-            </div>
+
             <div className='createwallet-btner'>
               <Link to='/index'>
-                <button>Import wallet</button>
+                <button>Create</button>
               </Link>
 
               <br />
               <br />
-              {/* <span>Already have a wallet? <Link to="/importwallet">import</Link></span> */}
             </div>
           </div>
         </div>
@@ -72,4 +70,4 @@ const Mnemonic = () => {
   );
 };
 
-export default Mnemonic;
+export default ConfirmMnemonics;

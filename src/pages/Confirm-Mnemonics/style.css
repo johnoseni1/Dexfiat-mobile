@@ -1,0 +1,15 @@
+.confirm-mnemonics-input {
+  border: 2px solid #000000;
+  color: #494949;
+  height: 155px;
+  width: 342px;
+  padding: 10px;
+  background: rgba(196, 196, 196, 0.17);
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+
+.confirm-mnemonics-input:focus {
+  outline: 0;
+  border: 2px solid #009506;
+}
