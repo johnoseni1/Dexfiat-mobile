@@ -79,7 +79,7 @@ const Index = ({ history }) => {
                   </span>
                 </div>
                 <div style={{ marginLeft: '100px' }}>
-                  <Link to='/liquidity'>
+                  <Link to='/pool'>
                     <button
                       style={{
                         color: '#009506',
