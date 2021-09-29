@@ -184,6 +184,7 @@ progress::-moz-progress-bar {
   border: 1px solid #00b006;
   padding: 5px 15px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .trans-speed span {
@@ -219,7 +220,7 @@ progress::-moz-progress-bar {
 
 .toggle-bar div {
   height: 24px;
-  
+
   background: #009506;
   border-radius: 15px;
 }

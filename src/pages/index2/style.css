@@ -1,27 +1,53 @@
-.sec-info{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    /* font-size: 18px; */
+.sec-info {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* font-size: 18px; */
 }
 
-.sec-info span{
-    font-size: 14px;
-    color: #666;
-    margin-left: 40px;
+.sec-info span {
+  font-size: 14px;
+  color: #666;
+  margin-left: 40px;
 }
 
-.bank-select select{
-    background: #F6F6F6;
-
+.bank-select select {
+  background: #f6f6f6;
 }
 
-.link-btn button{
-    padding: 15px 25px;
-    background-color: #009706;
-    border: none;
-    border-radius: 15px;
-    color: #fff;
-    font-size: 19px;
-    /* font-weight: bo; */
+.link-btn button {
+  padding: 15px 25px;
+  background-color: #009706;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 19px;
+  /* font-weight: bo; */
 }
 
+.grouped-nav {
+  font-size: 9px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.grouped-nav > * {
+  height: 35px !important;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.grouped-nav > *:first-child {
+  width: 51px;
+}
+
+.grouped-nav > *:nth-child(2) {
+  width: 90px;
+}
+
+.grouped-nav > *:last-child {
+  width: 85px;
+}
