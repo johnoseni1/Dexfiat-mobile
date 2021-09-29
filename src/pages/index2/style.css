@@ -51,3 +51,21 @@
 .grouped-nav > *:last-child {
   width: 85px;
 }
+
+.goto-p2p-mkt {
+  height: 49px;
+  width: 140px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  font-size: 13px;
+  color: #fff;
+  background: #009706;
+  position: absolute;
+  top: 24rem;
+  margin-left: 300px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 3px #000;
+}
