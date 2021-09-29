@@ -16,7 +16,7 @@ const P2psell = () => {
           <div
             style={{ display: 'flex', marginTop: '30px', marginLeft: '20px' }}
           >
-            <Link to='/p2ptransfer'>
+            <Link to='/fiatbalance'>
               <div>
                 <svg
                   width='39'

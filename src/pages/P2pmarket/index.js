@@ -22,7 +22,7 @@ const P2pmarket = () => {
                 color: '#fff',
               }}
             >
-              <Link to='/fiatbalance'>
+              <Link to='/p2ptransfer'>
                 <svg
                   width='39'
                   height='39'

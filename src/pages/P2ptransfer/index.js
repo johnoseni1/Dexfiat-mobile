@@ -16,7 +16,7 @@ const P2ptransfer = () => {
           <div
             style={{ display: 'flex', marginTop: '30px', marginLeft: '20px' }}
           >
-            <Link to='/index'>
+            <Link to='/fiatbalance'>
               <div>
                 <svg
                   width='39'
