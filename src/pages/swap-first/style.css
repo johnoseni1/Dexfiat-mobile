@@ -196,11 +196,6 @@ progress::-moz-progress-bar {
   width: 14px;
 }
 
-.trans-speed div:nth-child(2) {
-  background: #00b006;
-  color: #fff;
-}
-
 .expert-mode,
 .multihops {
   display: flex;

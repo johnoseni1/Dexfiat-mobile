@@ -23,6 +23,38 @@ const Swap = () => {
 
   const [toggleMultihops, setToggleMultihops] = useState(false);
 
+  const [speed, setSpeed] = useState({
+    standard: false,
+    fast: true,
+    instant: false,
+  });
+
+  // Transaction speed
+  const onSetStandard = () => {
+    setSpeed({
+      standard: true,
+      fast: false,
+      instant: false,
+    });
+  };
+
+  const onSetFast = () => {
+    setSpeed({
+      standard: false,
+      fast: true,
+      instant: false,
+    });
+  };
+
+  const onSetInstant = () => {
+    setSpeed({
+      standard: false,
+      fast: false,
+      instant: true,
+    });
+  };
+
+  // Toggle
   const onChangeToggleExpert = () => {
     setToggleExpert(!toggleExpert);
   };
@@ -30,6 +62,8 @@ const Swap = () => {
   const onChangeToggleMultihops = () => {
     setToggleMultihops(!toggleMultihops);
   };
+
+  // Proress
 
   const onChangeProgress = (value) => {
     setProgress(value);
@@ -252,17 +286,52 @@ const Swap = () => {
                         </p>
 
                         <div className='trans-speed'>
-                          <div>
+                          <div
+                            onClick={onSetStandard}
+                            style={{
+                              background: speed.standard ? '#00b006' : '#fff',
+                              color: speed.standard ? '#fff' : '#000',
+                            }}
+                          >
                             <span>Standard</span>{' '}
-                            <img src={QuestionMark} alt='' />
+                            <img
+                              src={
+                                speed.standard
+                                  ? WhiteQuestionMark
+                                  : QuestionMark
+                              }
+                              alt=''
+                            />
                           </div>
-                          <div>
+                          <div
+                            onClick={onSetFast}
+                            style={{
+                              background: speed.fast ? '#00b006' : '#fff',
+                              color: speed.fast ? '#fff' : '#000',
+                            }}
+                          >
                             <span>Fast</span>{' '}
-                            <img src={WhiteQuestionMark} alt='' />
+                            <img
+                              src={
+                                speed.fast ? WhiteQuestionMark : QuestionMark
+                              }
+                              alt=''
+                            />
                           </div>
-                          <div>
+                          <div
+                            onClick={onSetInstant}
+                            style={{
+                              background: speed.instant ? '#00b006' : '#fff',
+                              color: speed.instant ? '#fff' : '#000',
+                            }}
+                          >
                             <span>Instant</span>{' '}
-                            <img src={QuestionMark} alt='' />
+                            <img
+                              src={
+                                speed.instant ? WhiteQuestionMark : QuestionMark
+                              }
+                              alt=''
+                            />
                           </div>
                         </div>
                       </div>
