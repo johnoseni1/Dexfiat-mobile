@@ -486,7 +486,7 @@ const Swap = () => {
                     Max
                   </span>
                   <span className='this-guy'>
-                    <svg
+                    {/* <svg
                       width='16'
                       height='16'
                       viewBox='0 0 16 16'
@@ -513,8 +513,13 @@ const Swap = () => {
                         d='M12.923 3.07129C13.1548 3.81998 13.2798 4.61563 13.2798 5.44051C13.2798 9.85879 9.69807 13.4405 5.27978 13.4405C4.62516 13.4405 3.9891 13.3613 3.38013 13.213C4.60969 14.3034 6.22741 14.966 8.00013 14.966C11.8474 14.966 14.9662 11.8471 14.9662 7.99988C14.9662 6.07479 14.1853 4.3321 12.923 3.07129Z'
                         fill='#D8ECFE'
                       />
-                    </svg>
-                    <span style={{ marginLeft: '10px' }}>Link</span>
+                    </svg> */}
+                    {/* <span style={{ marginLeft: '10px' }}>Link</span> */}
+                    <select id='coin'>
+                      <option value='one'>One</option>
+                      <option value='bnb'>BNB</option>
+                      <option value='btc'>BTC</option>
+                    </select>
                   </span>
                 </div>
               </div>

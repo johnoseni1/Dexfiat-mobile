@@ -221,7 +221,6 @@ const Index2 = ({ history }) => {
                   <div
                     style={{
                       backgroundColor: '#ceebcf',
-                      border: 'none',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -297,13 +296,16 @@ const Index2 = ({ history }) => {
                     onClick={togglePopup3}
                     style={{
                       color: '#DAAB03',
+                      fontWeight: '600',
                       opacity: '0.5',
                       backgroundColor: '#e4edcf',
                       fontSize: '10px',
-                      borderRadius: '5px',
+                      borderRadius: '10px',
                       display: 'flex',
                       flexDirection: 'column',
                       justifyContent: 'center',
+                      // border: '2px solid #aaa8a8',
+                      boxShadow: '0 0 3px #aaa8a8',
                     }}
                   >
                     Connect External
