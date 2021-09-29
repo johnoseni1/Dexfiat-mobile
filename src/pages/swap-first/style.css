@@ -152,6 +152,14 @@ progress::-moz-progress-bar {
   color: #009506;
 }
 
+.swap-report {
+  padding: 40px 20px;
+}
+
+.swap-report > div {
+  margin-bottom: 20px;
+}
+
 .align-center {
   display: flex;
   flex-direction: row;
@@ -191,6 +199,34 @@ progress::-moz-progress-bar {
 .trans-speed div:nth-child(2) {
   background: #00b006;
   color: #fff;
+}
+
+.expert-mode,
+.multihops {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.toggle-bar {
+  height: 29px;
+  width: 62px;
+  border: 1px solid #009506;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2px;
+  cursor: pointer;
+}
+
+.toggle-bar div {
+  height: 24px;
+  width: 16px;
+  background: #009506;
+  border-radius: 15px;
 }
 
 .slippage {
@@ -248,6 +284,27 @@ progress::-moz-progress-bar {
 
 .slippage-input div {
   flex-shrink: 1;
+  color: #808080;
+}
+
+.trans-deadline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trans-deadline input {
+  width: 62px;
+  height: 27px;
+  border-radius: 30px;
+  border: 1px solid #009506;
+  padding: 0 10px;
+}
+
+.trans-deadline input:focus {
+  outline: 0;
+  border: 1px solid #009506;
 }
 
 .wallets {

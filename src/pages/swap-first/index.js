@@ -232,7 +232,7 @@ const Swap = () => {
                 className='white-box'
                 content={
                   <>
-                    <div style={{ padding: '40px 20px' }}>
+                    <div className='swap-report'>
                       <div>
                         <p className='align-center'>
                           <span>Default Transaction Speed (GWEI) </span>
@@ -273,8 +273,34 @@ const Swap = () => {
                         </div>
                       </div>
 
-                      <div></div>
-                      <div></div>
+                      <div className='trans-deadline'>
+                        <p className='align-center'>
+                          <span>Transaction deadline</span>{' '}
+                          <img src={QuestionMark} alt='' />
+                        </p>
+                        <input type='number' placeholder='min' />
+                      </div>
+
+                      <div>
+                        <div className='expert-mode'>
+                          <p className='align-center'>
+                            <span>Expert Mode</span>{' '}
+                            <img src={QuestionMark} alt='' />
+                          </p>
+                          <div className='toggle-bar'>
+                            <div></div>
+                          </div>
+                        </div>
+                        <div className='multihops'>
+                          <p className='align-center'>
+                            <span>Disable Multihops</span>{' '}
+                            <img src={QuestionMark} alt='' />
+                          </p>
+                          <div className='toggle-bar'>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </>
                 }
