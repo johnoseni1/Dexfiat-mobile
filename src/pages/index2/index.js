@@ -727,7 +727,7 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
               </div>
             </div>
           </div>
-          <Link to='/p2pmarket'>
+          <Link to='/p2pmarketsell'>
             <div className='goto-p2p-mkt'>Go to P2P Market</div>
           </Link>
         </div>

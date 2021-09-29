@@ -509,7 +509,7 @@ const Index = ({ history }) => {
                                 <div style={{ color: '#DAAB02' }}>Crypto</div>
                               </div>
                             </Link>
-                            <Link to='/convertdft'>
+                            <Link to='/p2psell'>
                               <div
                                 style={{
                                   background: '#FFF8E0',

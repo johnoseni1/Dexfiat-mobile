@@ -18,7 +18,7 @@ const Coinlink = () => {
                 paddingLeft: '40px',
               }}
             >
-              <Link to='/fiatbalance'>
+              <Link to='/cryptodeposit'>
                 <div>
                   <svg
                     width='27'

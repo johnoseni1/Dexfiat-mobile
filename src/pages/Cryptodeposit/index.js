@@ -16,7 +16,7 @@ const Cryptodeposit = () => {
           <div
             style={{ display: 'flex', marginTop: '30px', marginLeft: '20px' }}
           >
-            <div>
+            <Link to='/index'>
               <svg
                 width='39'
                 height='39'
@@ -29,7 +29,7 @@ const Cryptodeposit = () => {
                   fill='#FFD301'
                 />
               </svg>
-            </div>
+            </Link>
             <div style={{ fontSize: '25px', marginLeft: '20px' }}>
               Crypto Deposit
             </div>
