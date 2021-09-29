@@ -22,7 +22,7 @@ const P2pmarket = () => {
                 color: '#fff',
               }}
             >
-              <div>
+              <Link to='/fiatbalance'>
                 <svg
                   width='39'
                   height='39'
@@ -35,7 +35,7 @@ const P2pmarket = () => {
                     fill='#FFD301'
                   />
                 </svg>
-              </div>
+              </Link>
               <div style={{ fontSize: '25px', marginLeft: '20px' }}>
                 P2P Dex Buy
               </div>

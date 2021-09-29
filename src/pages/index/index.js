@@ -556,7 +556,7 @@ const Index = ({ history }) => {
                           </div>
 
                           <div className='skip'>
-                            <Link to='/convertdft'>Skip</Link>
+                            <div onClick={togglePopup}>Skip</div>
                           </div>
                         </div>
                       </>

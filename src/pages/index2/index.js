@@ -331,20 +331,38 @@ const Index2 = ({ history }) => {
                   <br />
                   <br />
                   <div style={{ marginTop: '10px' }} className='buttoner-card'>
-                    <Link to='/convertdft'>
-                      <button style={{ width: '130px' }}>
-                        Fund wallet/ Sell off
+                    <Link to='/p2psell'>
+                      <button
+                        style={{
+                          width: '100px',
+                          height: '43px',
+                          fontSize: '11px',
+                        }}
+                      >
+                        P2P Buy / Sell
                       </button>
                     </Link>
                     <Link to='/dndsend'>
-                      <button style={{ maxWidth: '70px' }}>
+                      <button
+                        style={{
+                          Width: '120px',
+                          height: '43px',
+                          fontSize: '11px',
+                        }}
+                      >
                         Send
                         <br />
                         DNGN
                       </button>
                     </Link>
                     <Link to='/receivefiat'>
-                      <button style={{ width: '100px' }}>
+                      <button
+                        style={{
+                          width: '120px',
+                          height: '43px',
+                          fontSize: '11px',
+                        }}
+                      >
                         Receive
                         <br />
                         DNGN
@@ -710,7 +728,6 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
           <Link to='/p2pmarket'>
             <div className='goto-p2p-mkt'>Go to P2P Market</div>
           </Link>
-          
         </div>
       </div>
     </div>

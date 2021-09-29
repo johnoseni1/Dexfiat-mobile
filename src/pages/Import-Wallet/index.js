@@ -14,7 +14,9 @@ const Mnemonic = () => {
           <div className='creater'>
             <div className='helper'>
               <div>
-                <img src={leftarrow} className='arroeleft' alt='back' />
+                <Link to='/createwallet'>
+                  <img src={leftarrow} className='arroeleft' alt='back' />
+                </Link>
                 <span>Scan Privater key bar code</span>
               </div>
               <img src={mnemonic} className='mnemonic' alt='svgs' />

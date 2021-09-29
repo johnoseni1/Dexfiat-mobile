@@ -11,7 +11,9 @@ const ConfirmMnemonics = () => {
           <div className='creater'>
             <div className='helper'>
               <div>
-                <img src={leftarrow} className='arroeleft' alt='back' />
+                <Link to='/createrecoveryphrase'>
+                  <img src={leftarrow} className='arroeleft' alt='back' />
+                </Link>
                 <span>Scan Privater key bar code</span>
               </div>
 
