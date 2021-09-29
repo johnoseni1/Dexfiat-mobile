@@ -152,6 +152,16 @@ progress::-moz-progress-bar {
   color: #009506;
 }
 
+.align-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.align-center > *:first-child {
+  margin-right: 5px;
+}
+
 .trans-speed {
   display: flex;
   flex-direction: row;
@@ -164,7 +174,7 @@ progress::-moz-progress-bar {
   align-items: center;
   justify-content: space-between;
   border: 1px solid #00b006;
-  padding: 5px 20px;
+  padding: 5px 15px;
   border-radius: 10px;
 }
 
@@ -187,19 +197,57 @@ progress::-moz-progress-bar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .slippage-percent {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   border: 1px solid #009506;
+  width: 148px;
+  height: 27px;
+  border-radius: 30px;
+  padding: 0 20px;
+}
+
+.slippage-percent div {
+  width: 35px;
+  height: 18px;
+  /* background: #e1ece1; */
+  text-align: center;
+  font-size: 14px;
+  color: #808080;
 }
 
 .slippage-input {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  /* justify-content: space-between; */
+  border: 1px solid #009506;
+  width: 82px;
+  height: 27px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.slippage-input input {
+  width: 50px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding-left: 10px;
+  border: 0;
+  color: #808080;
+}
+
+.slippage-input input:focus {
+  outline: 0;
+}
+
+.slippage-input div {
+  flex-shrink: 1;
 }
 
 .wallets {

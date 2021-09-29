@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Popup from '../../Popup';
 import Report from '../../assets/report-icon.png';
 import QuestionMark from '../../assets/question-mark.png';
+import WhiteQuestionMark from '../../assets/white-question-mark.png';
 import Harmony from '../../assets/harmony.png';
 import WalletConnect from '../../assets/wallet-connect.png';
 import Metamask from '../../assets/metamask.png';
@@ -231,10 +232,10 @@ const Swap = () => {
                 className='white-box'
                 content={
                   <>
-                    <div>
+                    <div style={{ padding: '40px 20px' }}>
                       <div>
-                        <p>
-                          Default Transaction Speed (GWEI){' '}
+                        <p className='align-center'>
+                          <span>Default Transaction Speed (GWEI) </span>
                           <img src={QuestionMark} alt='' />
                         </p>
 
@@ -244,7 +245,8 @@ const Swap = () => {
                             <img src={QuestionMark} alt='' />
                           </div>
                           <div>
-                            <span>Fast</span> <img src={QuestionMark} alt='' />
+                            <span>Fast</span>{' '}
+                            <img src={WhiteQuestionMark} alt='' />
                           </div>
                           <div>
                             <span>Instant</span>{' '}
@@ -254,18 +256,19 @@ const Swap = () => {
                       </div>
 
                       <div>
-                        <p>
-                          Slippage tolerance <img src={QuestionMark} alt='' />
+                        <p className='align-center'>
+                          <span>Slippage tolerance</span>{' '}
+                          <img src={QuestionMark} alt='' />
                         </p>
-                        <div classname='slippage'>
+                        <div className='slippage'>
                           <div className='slippage-percent'>
                             <div>0.5%</div>
                             <div>1%</div>
                             <div>7%</div>
                           </div>
                           <div className='slippage-input'>
-                            <input type='number' style={{ width: '20px' }} />
-                            <span>%</span>
+                            <input type='number' />
+                            <div>%</div>
                           </div>
                         </div>
                       </div>
