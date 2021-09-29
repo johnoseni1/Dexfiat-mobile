@@ -224,7 +224,7 @@ progress::-moz-progress-bar {
 
 .toggle-bar div {
   height: 24px;
-  width: 16px;
+  
   background: #009506;
   border-radius: 15px;
 }

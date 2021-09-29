@@ -19,6 +19,18 @@ const Swap = () => {
 
   const [swap, setSwap] = useState('market');
 
+  const [toggleExpert, setToggleExpert] = useState(false);
+
+  const [toggleMultihops, setToggleMultihops] = useState(false);
+
+  const onChangeToggleExpert = () => {
+    setToggleExpert(!toggleExpert);
+  };
+
+  const onChangeToggleMultihops = () => {
+    setToggleMultihops(!toggleMultihops);
+  };
+
   const onChangeProgress = (value) => {
     setProgress(value);
   };
@@ -287,8 +299,13 @@ const Swap = () => {
                             <span>Expert Mode</span>{' '}
                             <img src={QuestionMark} alt='' />
                           </p>
-                          <div className='toggle-bar'>
-                            <div></div>
+                          <div
+                            className='toggle-bar'
+                            onClick={onChangeToggleExpert}
+                          >
+                            <div
+                              style={{ width: !toggleExpert ? '16px' : '62px' }}
+                            ></div>
                           </div>
                         </div>
                         <div className='multihops'>
@@ -296,8 +313,15 @@ const Swap = () => {
                             <span>Disable Multihops</span>{' '}
                             <img src={QuestionMark} alt='' />
                           </p>
-                          <div className='toggle-bar'>
-                            <div></div>
+                          <div
+                            className='toggle-bar'
+                            onClick={onChangeToggleMultihops}
+                          >
+                            <div
+                              style={{
+                                width: !toggleMultihops ? '16px' : '62px',
+                              }}
+                            ></div>
                           </div>
                         </div>
                       </div>
