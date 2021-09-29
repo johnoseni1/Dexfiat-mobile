@@ -37,7 +37,7 @@
 
 .picky select {
   padding: 7px 250px 7px 20px;
-  background: #f7f7f7;
+  background: #f6f6f6;
   border-radius: 5px;
   border: none;
   font-size: 13px;
@@ -216,12 +216,6 @@ span:hover {
 }
 
 .input-phrase textarea {
-  /* height: 155px;
-  width: 342px;
-  padding: 10px;
-  background: rgba(196, 196, 196, 0.17);
-  border: 2px solid #000000;
-  box-sizing: border-box; */
   border: 2px solid #000000;
   color: #494949;
   height: 155px;

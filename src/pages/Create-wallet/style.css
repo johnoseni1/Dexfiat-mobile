@@ -156,6 +156,10 @@ code {
   background: #fff8e0;
 }
 
+.index-box.white {
+  background: #fff;
+}
+
 .boxer {
   /* text-align: center; */
   position: relative;
@@ -352,7 +356,7 @@ code {
   .cream-box,
   .white-box,
   .index-box {
-    width: 43%;
+    width: 45%;
   }
 }
 

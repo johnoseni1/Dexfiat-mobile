@@ -337,6 +337,7 @@ const Index = ({ history }) => {
 
                 {isOpen && (
                   <Popup
+                    className='index-box white'
                     content={
                       <>
                         <div
@@ -553,17 +554,10 @@ const Index = ({ history }) => {
                               </div>
                             </Link>
                           </div>
-                          <Link to='/convertdft'>
-                            <div
-                              style={{
-                                textAlign: 'right',
-                                marginRight: '20px',
-                                cursor: 'pointer',
-                              }}
-                            >
-                              Skip
-                            </div>
-                          </Link>
+
+                          <div className='skip'>
+                            <Link to='/convertdft'>Skip</Link>
+                          </div>
                         </div>
                       </>
                     }

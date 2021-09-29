@@ -46,12 +46,13 @@ const ConfirmMnemonics = () => {
 
               <div className='region' style={{ marginBottom: '0' }}>
                 <p>Select country / region. Needed for P2P dex integration.</p>
-                <select name='country'>
-                  <option value='nigeria'>Nigeria</option>
-                  <option value='ghana'>Ghana</option>
-                  <option value='usa'>USA</option>
-                  <option value='canada'>Canada</option>
-                </select>
+                <div className='picky'>
+                  <select>
+                    <option>Nigeria | NG</option>
+                    <option>USA | US</option>
+                    <option>Ethopia | ET</option>
+                  </select>
+                </div>
               </div>
             </div>
 
