@@ -192,9 +192,34 @@
   font-size: 17px;
 }
 
+.btn-verifying {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-verifying > div {
+  height: 49px;
+  width: 283px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  background: rgba(0, 0, 0, 0.51);
+  color: #fff;
+  margin: 2rem 0 1rem 0;
+  box-shadow: 0 0 2.5px #fff;
+}
+
+.btn-verifying > div img {
+  margin-right: 0.8rem;
+}
+
 .btn-black div {
   height: 49px;
-  width: 263px;
+  width: 283px;
   border-radius: 15px;
   background: #000000;
   color: #fff;
@@ -217,4 +242,27 @@
 
 .green-pop-attention div:first-child {
   color: #f31e1e;
+}
+
+.verifying-attention {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.verifying-attention div:nth-child(2) {
+  justify-self: flex-start;
+  margin-bottom: 0.7rem;
+}
+
+.verifying-attention div:first-child {
+  color: #daaa02;
+  margin-bottom: 0.3rem;
+}
+
+.verifying-attention div:last-child {
+  color: #f31e1e;
+  cursor: pointer;
 }

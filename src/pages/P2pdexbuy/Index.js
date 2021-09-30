@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'; // useEffect,
 import './style.css';
 import { Link } from 'react-router-dom';
 import Popup from '../../Popup';
+import Verify from '../../assets/verify-icon.png';
 import mnemonic from '../../assets/mnemonic.svg';
 import leftarrow from '../../assets/leftarrow.svg';
 // import Vector from '../../assets/Vector.svg';
@@ -9,10 +10,19 @@ import leftarrow from '../../assets/leftarrow.svg';
 const P2pDexBuy = () => {
   const theme = localStorage.getItem('theme');
 
+  const [verifying, setVerifying] = useState(false);
+
   const [isOpen, setIsOpen] = useState(false);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
+    if (!isOpen) {
+      setVerifying(false);
+    }
+  };
+
+  const onVerify = () => {
+    setVerifying(true);
   };
   return (
     <div>
@@ -154,18 +164,39 @@ const P2pDexBuy = () => {
                         </div>
                       </div>
 
-                      <div class='btn-black'>
-                        <div>I have made payment</div>
-                      </div>
-
-                      <div className='green-pop-attention'>
-                        <div>Attention!</div>
-                        <div>
-                          Please read the P2P term and condition carfully,
-                          Non-compliance may result to fund loss or failed
-                          transaction
+                      {!verifying ? (
+                        <div class='btn-black' onClick={onVerify}>
+                          <div>I have made payment</div>
                         </div>
-                      </div>
+                      ) : (
+                        <div className='btn-verifying'>
+                          <div>
+                            <img src={Verify} alt='' />
+                            <div>Verifing payment</div>
+                          </div>
+                        </div>
+                      )}
+
+                      {!verifying ? (
+                        <div className='green-pop-attention'>
+                          <div>Attention!</div>
+                          <div>
+                            Please read the P2P term and condition carfully,
+                            Non-compliance may result to fund loss or failed
+                            transaction
+                          </div>
+                        </div>
+                      ) : (
+                        <div className='verifying-attention'>
+                          <div>Chillax! </div>
+                          <div>
+                            Your payment will be automatically verified and DNGN
+                            will be reliease to you after validator
+                            confirmation.{' '}
+                          </div>
+                          <div>Cancel trancaction</div>
+                        </div>
+                      )}
                     </div>
                   </>
                 }
