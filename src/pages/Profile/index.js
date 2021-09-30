@@ -10,6 +10,8 @@ import Popup from '../../Popup';
 // import Vector from '../../assets/Vector.svg';
 
 const Profile = ({ history }) => {
+  const theme = localStorage.getItem('theme');
+
   // CHeckbox
   const [checked, setChecked] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -23,8 +25,6 @@ const Profile = ({ history }) => {
     setIsOpen(!isOpen);
     // localStorage.setItem('popup-index2-status', '1');
   };
-
-
 
   const monoConnect = React.useMemo(() => {
     const monoInstance = new MonoConnect({
@@ -42,7 +42,7 @@ const Profile = ({ history }) => {
   return (
     <div>
       <div className='whole-welcome'>
-      {isOpen && (
+        {isOpen && (
           <Popup
             className='index-box'
             content={
@@ -139,7 +139,13 @@ const Profile = ({ history }) => {
         >
           Fiat Balance
         </Link>
-        <div className='creater'>
+        <div
+          className='creater'
+          style={{
+            background: theme === 'light' ? '#fff' : '#333',
+            color: theme === 'light' ? '#000' : '#fff',
+          }}
+        >
           <div
             style={{ display: 'flex', marginTop: '30px', marginLeft: '20px' }}
           >
@@ -196,19 +202,20 @@ const Profile = ({ history }) => {
             </div>
           </Link>
           {/* <Link to='/wallets'> */}
-            <div onClick={togglePopup}
-              style={{
-                background: 'rgba(0, 149, 6, 0.06)',
-                // marginTop: '40px',
-                borderRadius: '9px',
-                paddingTop: '10px',
-                cursor: 'pointer ',
-                paddingBottom: '10px',
-                paddingLeft: '90px',
-              }}
-            >
-              Link your account to mono
-            </div>
+          <div
+            onClick={togglePopup}
+            style={{
+              background: 'rgba(0, 149, 6, 0.06)',
+              // marginTop: '40px',
+              borderRadius: '9px',
+              paddingTop: '10px',
+              cursor: 'pointer ',
+              paddingBottom: '10px',
+              paddingLeft: '90px',
+            }}
+          >
+            Link your account to mono
+          </div>
           {/* </Link> */}
           <div className='line-btw'></div>
           <div

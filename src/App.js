@@ -31,6 +31,12 @@ import Receivelink from './pages/Receive-Link';
 // import AppContext from './Contexts/context';
 
 function App() {
+  const theme = localStorage.getItem('theme');
+
+  if (!theme) {
+    localStorage.setItem('theme', 'light');
+  }
+
   return (
     <Router>
       {/* <PaymentContextProvider> */}

@@ -8,6 +8,7 @@ import boy from '../../assets/3rd-boy.png';
 // import Vector from '../../assets/Vector.svg';
 
 const Wallets = () => {
+  const theme = localStorage.getItem('theme');
   return (
     <div>
       <div className='whole-welcome'>
@@ -25,7 +26,13 @@ const Wallets = () => {
         >
           Fiat Balance
         </Link>
-        <div className='creater'>
+        <div
+          className='creater'
+          style={{
+            background: theme === 'light' ? '#fff' : '#333',
+            color: theme === 'light' ? '#000' : '#fff',
+          }}
+        >
           <div
             style={{ display: 'flex', marginTop: '30px', marginLeft: '20px' }}
           >

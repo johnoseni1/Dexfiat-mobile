@@ -13,6 +13,8 @@ import boy from '../../assets/3rd-boy.png';
 // import Vector from '../../assets/Vector.svg';
 
 const Pool = () => {
+  const theme = localStorage.getItem('theme');
+
   // POpup 3
   const [isOpen3, setIsOpen3] = useState(false);
 
@@ -22,7 +24,13 @@ const Pool = () => {
   return (
     <div>
       <div className='whole-welcome'>
-        <div className='creater'>
+        <div
+          className='creater'
+          style={{
+            background: theme === 'light' ? '#fff' : '#333',
+            color: theme === 'light' ? '#000' : '#fff',
+          }}
+        >
           <div className='contenter'>
             {isOpen3 && (
               <Popup

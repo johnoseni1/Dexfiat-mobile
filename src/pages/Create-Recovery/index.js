@@ -8,11 +8,18 @@ import leftarrow from '../../assets/leftarrow.svg';
 // import Vector from '../../assets/Vector.svg';
 
 const CreateRecovery = () => {
+  const theme = localStorage.getItem('theme');
   return (
     <div>
       <div className='whole-welcome'>
         <div>
-          <div className='creater'>
+          <div
+            className='creater'
+            style={{
+              background: theme === 'light' ? '#fff' : '#333',
+              color: theme === 'light' ? '#000' : '#fff',
+            }}
+          >
             <div className='helper'>
               <div>
                 <Link to='/createwallet'>

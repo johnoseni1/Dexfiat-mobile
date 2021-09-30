@@ -9,6 +9,8 @@ import Polygon2 from '../../assets/Polygon2.svg';
 // import Vector from '../../assets/Vector.svg';
 
 const CreateWallet = ({ history }) => {
+  const theme = localStorage.getItem('theme');
+  
   const [isOpen, setIsOpen] = useState(false);
 
   const [checked, setChecked] = useState(false);
@@ -113,7 +115,13 @@ const CreateWallet = ({ history }) => {
               handleClose={togglePopup}
             />
           )}
-          <div className='creater'>
+          <div
+            className='creater'
+            style={{
+              background: theme === 'light' ? '#fff' : '#333',
+              color: theme === 'light' ? '#000' : '#fff',
+            }}
+          >
             <div className='slider'>
               <img src={svg1} alt='svgs' />
               <br />

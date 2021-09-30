@@ -11,7 +11,9 @@ import Vector from '../../assets/Vector.svg';
 import './connect';
 import boy from '../../assets/3rd-boy.png';
 import MonoConnect from '@mono.co/connect.js';
+
 const Index2 = ({ history }) => {
+  const theme = localStorage.getItem('theme');
   // popup
   const [isOpen, setIsOpen] = useState(false);
 
@@ -191,7 +193,13 @@ const Index2 = ({ history }) => {
         >
           Crypto Balance
         </Link>
-        <div className='createryer'>
+        <div
+          className='createryer'
+          style={{
+            background: theme === 'light' ? '#fff' : '#333',
+            color: theme === 'light' ? '#000' : '#fff',
+          }}
+        >
           <div className=''>
             <div className='content'>
               <div className='manny'>
@@ -729,7 +737,7 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
               </div>
             </div>
           </div>
-          <Link to='/p2pmarketsell'>
+          <Link to='/p2pmarketbuy'>
             <div className='goto-p2p-mkt'>Go to P2P Market</div>
           </Link>
         </div>

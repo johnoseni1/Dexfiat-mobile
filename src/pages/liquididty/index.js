@@ -13,6 +13,8 @@ import boy from '../../assets/3rd-boy.png';
 // import Vector from '../../assets/Vector.svg';
 
 const Liquidity = () => {
+  const theme = localStorage.getItem('theme');
+
   // POpup 3
   const [isOpen3, setIsOpen3] = useState(false);
 
@@ -23,7 +25,13 @@ const Liquidity = () => {
   return (
     <div>
       <div className='whole-welcome'>
-        <div className='creater'>
+        <div
+          className='creater'
+          style={{
+            background: theme === 'light' ? '#fff' : '#333',
+            color: theme === 'light' ? '#000' : '#fff',
+          }}
+        >
           <div className='contenter'>
             {isOpen3 && (
               <Popup
@@ -33,7 +41,7 @@ const Liquidity = () => {
                 content={
                   <>
                     <div className='wallets'>
-                      <p style={{ marginTop: '40px' }}>Connect your wallet</p>
+                      <p style={{ marginTop: '40px', color: '#000' }}>Connect your wallet</p>
                       <div>
                         <img src={Harmony} alt='' />
                         <span>Harmony</span>

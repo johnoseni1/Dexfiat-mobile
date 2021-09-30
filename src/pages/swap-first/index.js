@@ -15,6 +15,8 @@ import boy from '../../assets/3rd-boy.png';
 // import Vector from '../../assets/Vector.svg';
 
 const Swap = () => {
+  const theme = localStorage.getItem('theme');
+
   const [progress, setProgress] = useState(3);
 
   const [swap, setSwap] = useState('market');
@@ -93,7 +95,13 @@ const Swap = () => {
   return (
     <div>
       <div className='whole-welcome'>
-        <div className='creater'>
+        <div
+          className='creater'
+          style={{
+            background: theme === 'light' ? '#fff' : '#333',
+            color: theme === 'light' ? '#000' : '#fff',
+          }}
+        >
           <div className='contenter'>
             <div className='manny'>
               <div style={{ marginLeft: '30px' }}>

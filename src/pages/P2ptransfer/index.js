@@ -8,11 +8,18 @@ import boy from '../../assets/3rd-boy.png';
 // import Vector from '../../assets/Vector.svg';
 
 const P2ptransfer = () => {
+  const theme = localStorage.getItem('theme');
   return (
     <div>
       <div className='whole-welcome'>
         {/* <Link to="/fiatbalance" style={{position : "relative", left:"870px", bottom: "250px", zIndex: "9999", fontSize: "12px", color: "#fff", transform: "rotate(270deg)"}}>Fiat Balance</Link> */}
-        <div className='creater'>
+        <div
+          className='creater'
+          style={{
+            background: theme === 'light' ? '#fff' : '#333',
+            color: theme === 'light' ? '#000' : '#fff',
+          }}
+        >
           <div
             style={{ display: 'flex', marginTop: '30px', marginLeft: '20px' }}
           >
@@ -152,7 +159,7 @@ const P2ptransfer = () => {
               </button>
             </Link>
           </div>
-          <Link to='/p2pmarket'>
+          <Link to='/p2pmarketbuy'>
             <div className='left-guyer'>
               <div style={{ marginLeft: '20px' }}>
                 <span style={{ marginLeft: '10px' }}>Go to P2P Market</span>

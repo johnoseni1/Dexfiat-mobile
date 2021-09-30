@@ -345,6 +345,7 @@ progress::-moz-progress-bar {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  color: #000;
 }
 
 .learn-more span {
