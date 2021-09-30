@@ -181,8 +181,8 @@ const Index2 = ({ history }) => {
           to='/index'
           style={{
             position: 'relative',
-            left: '475px',
-            bottom: '230px',
+            left: '445px',
+            bottom: '210px',
             zIndex: '9999',
             fontSize: '12px',
             color: '#fff',
@@ -321,13 +321,16 @@ const Index2 = ({ history }) => {
                 </Link>
                 <div className='sec-card'>
                   <div className='textty-man'>
-                    <span>Total Balance </span>
-                    <br />
+                   <div>
+                   <span>Total Balance </span>
+                   <span style={{marginLeft : "100px"}}>UID: DN93044903</span>
+                   </div>
+                    {/* <br /> */}
                     <span style={{ fontSize: '30px', fontWeight: 'bold' }}>
-                      200,000 DNGN
+                      0 DNGN
                     </span>
                     <br />
-                    <span style={{ fontSize: '20px' }}>N200,000</span>
+                    <span style={{ fontSize: '20px' }}>₦0</span>
                     <br />
                   </div>
                   <br />
