@@ -10,7 +10,7 @@ import Polygon2 from '../../assets/Polygon2.svg';
 
 const CreateWallet = ({ history }) => {
   const theme = localStorage.getItem('theme');
-  
+
   const [isOpen, setIsOpen] = useState(false);
 
   const [checked, setChecked] = useState(false);

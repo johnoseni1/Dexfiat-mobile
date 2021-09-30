@@ -162,3 +162,59 @@
 .trade-info > div > div:last-child {
   justify-self: flex-end;
 }
+
+.trade-info-popup {
+  margin: 1.5rem 0.3rem 2rem 0.3rem;
+  color: #fff;
+  font-size: 14px;
+}
+
+.trade-info-popup b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.trade-info-details > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.btn-black {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn-black div {
+  height: 49px;
+  width: 263px;
+  border-radius: 15px;
+  background: #000000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0 1rem 0;
+  box-shadow: 0 0 2.5px #fff;
+}
+
+.green-pop-attention {
+  font-size: 12px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 1.7rem;
+}
+
+.green-pop-attention div:first-child {
+  color: #f31e1e;
+}

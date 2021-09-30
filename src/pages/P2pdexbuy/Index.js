@@ -1,12 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react'; // useEffect,
 import './style.css';
 import { Link } from 'react-router-dom';
+import Popup from '../../Popup';
 import mnemonic from '../../assets/mnemonic.svg';
 import leftarrow from '../../assets/leftarrow.svg';
 // import Vector from '../../assets/Vector.svg';
 
 const P2pDexBuy = () => {
   const theme = localStorage.getItem('theme');
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div>
       <div className='whole-welcome'>
@@ -83,7 +90,7 @@ const P2pDexBuy = () => {
               <div>----NGN</div>
             </div>
 
-            <div className='payment-btn'>
+            <div className='payment-btn' onClick={togglePopup}>
               <div>Make Payment</div>
             </div>
 
@@ -110,6 +117,60 @@ const P2pDexBuy = () => {
                 <div>Bank Transfer</div>
               </div>
             </div>
+
+            {isOpen && (
+              <Popup
+                closeBtn={true}
+                className='green-box'
+                handleClose={togglePopup}
+                content={
+                  <>
+                    <div className='trade-info-popup'>
+                      <b>Trade Information</b>
+                      <div className='trade-info-details'>
+                        <div>
+                          <div>Payment window</div>
+                          <div>15 minutes</div>
+                        </div>
+                        <div>
+                          <div>Buyer’s Nickname</div>
+                          <div>Smart</div>
+                        </div>
+                        <div>
+                          <div>Payment method</div>
+                          <div>Bank Transfer</div>
+                        </div>
+                        <div>
+                          <div>Bank</div>
+                          <div>GTB</div>
+                        </div>
+                        <div>
+                          <div>Account number</div>
+                          <div>1254789653</div>
+                        </div>
+                        <div>
+                          <div>User ID</div>
+                          <div>DNSMART4903</div>
+                        </div>
+                      </div>
+
+                      <div class='btn-black'>
+                        <div>I have made payment</div>
+                      </div>
+
+                      <div className='green-pop-attention'>
+                        <div>Attention!</div>
+                        <div>
+                          Please read the P2P term and condition carfully,
+                          Non-compliance may result to fund loss or failed
+                          transaction
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                }
+              ></Popup>
+            )}
           </div>
         </div>
       </div>
