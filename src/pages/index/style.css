@@ -573,7 +573,7 @@ a {
 }
 
 .button-card button {
-  padding: 8px 20px;
+  padding: 8px 10px;
   border-radius: 5px;
   color: #fff;
   background-color: #37ad3b;
@@ -620,7 +620,7 @@ a {
 }
 
 .buttoner-card button {
-  padding: 8px 20px;
+  padding: 8px 5px;
   border-radius: 5px;
   color: #fff;
   background-color: rgba(216, 184, 70, 0.99);
@@ -664,12 +664,12 @@ a {
 }
 
 .green-card svg {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   /* margin-top: ; */
 }
 
 .sec-card svg {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   /* margin-top: ; */
 }
 

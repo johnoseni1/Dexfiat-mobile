@@ -4,22 +4,70 @@ import { Link } from 'react-router-dom';
 import Popup from '../../Popup';
 import QuestionMark from '../../assets/question-mark.png';
 import Harmony from '../../assets/harmony.png';
-import WalletConnect from '../../assets/wallet-connect.png';
+// import WalletConnect from '../../assets/wallet-connect.png';
 import Metamask from '../../assets/metamask.png';
+import WalletConnect from "@walletconnect/client";
+import QRCodeModal from "@walletconnect/qrcode-modal";
 import { BiUserCircle } from 'react-icons/bi';
+import userWallet from './userWallet';
+import initializeContract from './contract';
 import Vector from '../../assets/Vector.svg';
 import './connect';
 import boy from '../../assets/3rd-boy.png';
-import MonoConnect from '@mono.co/connect.js';
+
 const Index2 = ({ history }) => {
   // popup
   const [isOpen, setIsOpen] = useState(false);
 
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
-    localStorage.setItem('popup-index2-status', '1');
-  };
 
+  async function initWallet(){
+    const wallet = new userWallet();
+    await wallet.signin();
+    const contract = await initializeContract();
+    console.log(contract)
+    const result = await contract.methods.getCount().call()
+    console.log(result.toString())
+}
+
+   async function walletConnect () {
+    const connector = new WalletConnect({
+      bridge: "https://bridge.walletconnect.org", // Required
+      qrcodeModal: QRCodeModal,
+    });
+   
+
+  if (!connector.connected) {
+    // create new session
+    connector.createSession();
+  }
+  
+  // Subscribe to connection events
+  connector.on("connect", (error, payload) => {
+    if (error) {
+      throw error;
+    }
+  
+    // Get provided accounts and chainId
+    const { accounts, chainId } = payload.params[0];
+  });
+  
+  connector.on("session_update", (error, payload) => {
+    if (error) {
+      throw error;
+    }
+  
+    // Get updated accounts and chainId
+    const { accounts, chainId } = payload.params[0];
+  });
+  
+  connector.on("disconnect", (error, payload) => {
+    if (error) {
+      throw error;
+    }
+  
+    // Delete connector
+  });
+}
   // POpup 3
   const [isOpen3, setIsOpen3] = useState(false);
 
@@ -40,109 +88,11 @@ const Index2 = ({ history }) => {
   // CHeckbox
   const [checked, setChecked] = useState(false);
 
-  const onContinue = () => {
-    togglePopup();
-    monoConnect.open();
-  };
-  const monoConnect = React.useMemo(() => {
-    const monoInstance = new MonoConnect({
-      onClose: () => console.log('Widget closed'),
-      onLoad: () => console.log('Widget loaded successfully'),
-      onSuccess: ({ code }) => console.log(`Linked successfully: ${code}`),
-      key: 'test_pk_GZcxyk4xnfd36IQy2iTh',
-    });
-
-    monoInstance.setup();
-
-    return monoInstance;
-  }, []);
 
   return (
     <div>
       <div className='whole-welcome'>
-        {isOpen && (
-          <Popup
-            className='index-box'
-            content={
-              <>
-                <p
-                  className='text-center small-font'
-                  style={{ fontWeight: 'bold' }}
-                >
-                  Will you like to ease your transactions?
-                </p>
-                <p className='small-font'>
-                  Link existing bank with dexfiat securely. dexfiat deos not
-                  store or collect any of your login details, your inputs are
-                  encrypted and stored on your device.
-                </p>
-                <p className='small-font' style={{ fontWeight: 'bold' }}>
-                  Benefit of linking
-                </p>
-                <p className='small-font'>
-                  -Automated peer to peer transaction verification
-                  <br />
-                  -No P2P wating delay (fast transaction)
-                </p>
-
-                <p className='small-font'>
-                  Dexfiat does not store or keep any of your data. all
-                  infomation entered are encripted and routed Mono.
-                  <br />
-                  This process is only required to verify transactions. Dexfiat
-                  CAN NOT tamper with/transfer your funds.
-                </p>
-                <div className='center' style={{ marginTop: '2rem' }}>
-                  <button
-                    onClick={onContinue}
-                    style={{
-                      background: '#549E20',
-                      color: '#fff',
-                      padding: '13px 50px',
-                      fontSize: '17px',
-                      borderRadius: '5px',
-
-                      border: 'none',
-                    }}
-                  >
-                    Yes, link me.
-                  </button>
-                  <label
-                    className='checkbox-container'
-                    style={{ marginTop: '1rem' }}
-                  >
-                    <span style={{ fontSize: '14px', fontWeight: 'bold' }}>
-                      done, don’t show again
-                    </span>
-                    <input
-                      type='checkbox'
-                      onClick={() => {
-                        setChecked(!checked);
-                      }}
-                    />
-                    <span className='checkmark'></span>
-                  </label>
-                  <p
-                    style={{
-                      fontSize: '14px',
-                      fontWeight: 'bold',
-                    }}
-                  >
-                    <div
-                      onClick={() => {
-                        history.push('/index');
-                      }}
-                      style={{ color: '#DAAB03', cursor: 'pointer' }}
-                    >
-                      No, back to My Crypto space
-                    </div>
-                  </p>
-                </div>
-              </>
-            }
-            handleClose={togglePopup}
-          />
-        )}
+     
         {isOpen3 && (
           <Popup
             closeBtn={true}
@@ -152,11 +102,11 @@ const Index2 = ({ history }) => {
               <>
                 <div className='wallets'>
                   <p style={{ marginTop: '40px' }}>Connect your wallet</p>
-                  <div>
+                  <div onClick={initWallet}>
                     <img src={Harmony} alt='' />
                     <span>Harmony</span>
                   </div>
-                  <div>
+                  <div onClick={walletConnect}>
                     <img
                       style={{ height: '20px', width: '20px' }}
                       src={WalletConnect}
@@ -164,7 +114,7 @@ const Index2 = ({ history }) => {
                     />
                     <span>Wallet connect</span>
                   </div>
-                  <div>
+                  <div >
                     <img src={Metamask} alt='' />
                     <span>Metamask</span>
                   </div>
@@ -181,8 +131,8 @@ const Index2 = ({ history }) => {
           to='/index'
           style={{
             position: 'relative',
-            left: '475px',
-            bottom: '230px',
+            left: '445px',
+            bottom: '210px',
             zIndex: '9999',
             fontSize: '12px',
             color: '#fff',
@@ -301,10 +251,11 @@ const Index2 = ({ history }) => {
                       fontWeight: '600',
                       opacity: '0.5',
                       backgroundColor: '#e4edcf',
-                      fontSize: '10px',
+                      fontSize: '9px',
                       borderRadius: '10px',
                       display: 'flex',
                       flexDirection: 'column',
+                      // padding: '0 5px',
                       justifyContent: 'center',
                       // border: '2px solid #aaa8a8',
                       boxShadow: '0 0 3px #aaa8a8',
@@ -323,13 +274,16 @@ const Index2 = ({ history }) => {
                 </Link>
                 <div className='sec-card'>
                   <div className='textty-man'>
-                    <span>Total Balance </span>
-                    <br />
+                   <div>
+                   <span>Total Balance </span>
+                   <span style={{marginLeft : "100px"}}>UID: DN93044903</span>
+                   </div>
+                    {/* <br /> */}
                     <span style={{ fontSize: '30px', fontWeight: 'bold' }}>
-                      200,000 DNGN
+                      0 DNGN
                     </span>
                     <br />
-                    <span style={{ fontSize: '20px' }}>N200,000</span>
+                    <span style={{ fontSize: '20px' }}>₦0</span>
                     <br />
                   </div>
                   <br />
@@ -338,40 +292,74 @@ const Index2 = ({ history }) => {
                     <Link to='/p2psell'>
                       <button
                         style={{
-                          width: '100px',
+                          width: '120px',
                           height: '43px',
                           fontSize: '11px',
+                          backgroundColor: '#6DA005'
                         }}
                       >
-                        P2P Buy / Sell
+                        <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4209 5.37505L15.2617 0.215788C14.9738 -0.0720013 14.5071 -0.0719149 14.2193 0.215961C14.0812 0.354155 14.0036 0.541494 14.0035 0.736909V2.94802H8.84426C8.43719 2.94802 8.10721 3.278 8.10721 3.68507C8.10721 4.09213 8.43719 4.42211 8.84426 4.42211H14.7406C15.1476 4.42211 15.4776 4.09213 15.4776 3.68507V2.51607L18.8577 5.89613L15.4776 9.27618V8.10723C15.4776 7.70016 15.1476 7.37018 14.7406 7.37018H6.63316V5.15908C6.63307 4.75201 6.303 4.42211 5.89598 4.4222C5.7006 4.42224 5.51322 4.49985 5.37503 4.638L0.21581 9.79726C-0.0719365 10.0851 -0.0719365 10.5516 0.21581 10.8394L5.37507 15.9987C5.51327 16.1369 5.70069 16.2146 5.89615 16.2147C5.99301 16.215 6.08902 16.1959 6.17841 16.1586C6.45376 16.0445 6.63324 15.7757 6.63316 15.4776V13.2665H11.7924C12.1995 13.2665 12.5295 12.9365 12.5295 12.5294C12.5295 12.1224 12.1995 11.7924 11.7924 11.7924H5.89615C5.48908 11.7924 5.1591 12.1224 5.1591 12.5294V13.6984L1.77904 10.3183L5.1591 6.93828V8.10723C5.1591 8.5143 5.48908 8.84428 5.89615 8.84428H14.0035V11.0554C14.0036 11.4625 14.3337 11.7924 14.7407 11.7923C14.9361 11.7922 15.1235 11.7146 15.2617 11.5765L20.4209 6.41721C20.7086 6.12937 20.7086 5.66284 20.4209 5.37505Z" fill="white"/>
+</svg>
+
+                      <span style={{marginLeft:  "5px", }}>P2P Buy / Sell</span>
                       </button>
                     </Link>
                     <Link to='/dndsend'>
                       <button
                         style={{
-                          Width: '120px',
+                          Width: '130px',
                           height: '43px',
                           fontSize: '11px',
                         }}
                       >
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.0098 0.523028L20.0084 0.523543L0.739939 7.52176C0.6696 7.54899 0.609152 7.59667 0.566395 7.65854C0.52313 7.72115 0.5 7.79535 0.5 7.8713C0.5 7.94725 0.52313 8.02145 0.566395 8.08406C0.609666 8.14667 0.671055 8.19475 0.742476 8.22181L0.750589 8.22489L0.750561 8.22496L7.96932 11.1039L13.2904 5.77255L13.6437 5.41853L13.9976 5.772L15.2328 7.00568L15.587 7.35945L15.2328 7.71322L9.8862 13.0533L12.7768 20.2627L12.7772 20.2636C12.8049 20.3333 12.8531 20.3931 12.9154 20.4353L20.0098 0.523028ZM20.0098 0.523028C20.0771 0.498358 20.1501 0.493385 20.2201 0.508711C20.2881 0.523582 20.3505 0.556948 20.4005 0.604978C20.4473 0.655627 20.4792 0.71815 20.4927 0.785676C20.5067 0.85527 20.5005 0.927389 20.475 0.993647L20.4749 0.993615L20.4717 1.00247L13.4635 20.2515L13.4632 20.2525M20.0098 0.523028L13.4632 20.2525M13.4632 20.2525C13.4374 20.3236 13.3906 20.3855 13.3289 20.4297C13.2684 20.473 13.1965 20.4975 13.1221 20.5L13.4632 20.2525Z" fill="#009506" fill-opacity="0.7"/>
+<path d="M20.0098 0.523028L20.0084 0.523543L0.739939 7.52176C0.6696 7.54899 0.609152 7.59667 0.566395 7.65854C0.52313 7.72115 0.5 7.79535 0.5 7.8713C0.5 7.94725 0.52313 8.02145 0.566395 8.08406C0.609666 8.14667 0.671055 8.19475 0.742476 8.22181L0.750589 8.22489L0.750561 8.22496L7.96932 11.1039L13.2904 5.77255L13.6437 5.41853L13.9976 5.772L15.2328 7.00568L15.587 7.35945L15.2328 7.71322L9.8862 13.0533L12.7768 20.2627L12.7772 20.2636C12.8049 20.3333 12.8531 20.3931 12.9154 20.4353L20.0098 0.523028ZM20.0098 0.523028C20.0771 0.498358 20.1501 0.493385 20.2201 0.508711C20.2881 0.523582 20.3505 0.556948 20.4005 0.604978C20.4473 0.655627 20.4792 0.71815 20.4927 0.785676C20.5067 0.85527 20.5005 0.927389 20.475 0.993647L20.4749 0.993615L20.4717 1.00247L13.4635 20.2515L13.4632 20.2525M20.0098 0.523028L13.4632 20.2525M13.4632 20.2525C13.4374 20.3236 13.3906 20.3855 13.3289 20.4297C13.2684 20.473 13.1965 20.4975 13.1221 20.5L13.4632 20.2525Z" stroke="#FEE55A"/>
+<path d="M20.0098 0.523028L20.0084 0.523543L0.739939 7.52176C0.6696 7.54899 0.609152 7.59667 0.566395 7.65854C0.52313 7.72115 0.5 7.79535 0.5 7.8713C0.5 7.94725 0.52313 8.02145 0.566395 8.08406C0.609666 8.14667 0.671055 8.19475 0.742476 8.22181L0.750589 8.22489L0.750561 8.22496L7.96932 11.1039L13.2904 5.77255L13.6437 5.41853L13.9976 5.772L15.2328 7.00568L15.587 7.35945L15.2328 7.71322L9.8862 13.0533L12.7768 20.2627L12.7772 20.2636C12.8049 20.3333 12.8531 20.3931 12.9154 20.4353L20.0098 0.523028ZM20.0098 0.523028C20.0771 0.498358 20.1501 0.493385 20.2201 0.508711C20.2881 0.523582 20.3505 0.556948 20.4005 0.604978C20.4473 0.655627 20.4792 0.71815 20.4927 0.785676C20.5067 0.85527 20.5005 0.927389 20.475 0.993647L20.4749 0.993615L20.4717 1.00247L13.4635 20.2515L13.4632 20.2525M20.0098 0.523028L13.4632 20.2525M13.4632 20.2525C13.4374 20.3236 13.3906 20.3855 13.3289 20.4297C13.2684 20.473 13.1965 20.4975 13.1221 20.5L13.4632 20.2525Z" stroke="url(#paint0_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="10.5" y1="0" x2="10.5" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+
+                        <span style={{marginLeft : "3px", position : "relative", bottom : "8px", textAlign : "center",}}>
                         Send
                         <br />
-                        DNGN
+                        <span style={{marginLeft : "10px"}}>DNGN</span>
+                        </span>
                       </button>
                     </Link>
                     <Link to='/receivefiat'>
                       <button
                         style={{
-                          width: '120px',
+                          Width: '130px',
                           height: '43px',
                           fontSize: '11px',
                         }}
                       >
+  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.99021 20.477L0.991613 20.4765L20.2601 13.4782C20.3304 13.451 20.3908 13.4033 20.4336 13.3415C20.4769 13.2789 20.5 13.2046 20.5 13.1287C20.5 13.0528 20.4769 12.9785 20.4336 12.9159C20.3903 12.8533 20.3289 12.8052 20.2575 12.7782L20.2494 12.7751L20.2494 12.775L13.0307 9.89608L7.70963 15.2274L7.35629 15.5815L7.0024 15.228L5.76721 13.9943L5.41302 13.6405L5.76721 13.2868L11.1138 7.94667L8.2232 0.737297L8.22284 0.736416C8.19505 0.666725 8.14691 0.606873 8.08455 0.564682L0.99021 20.477ZM0.99021 20.477C0.922911 20.5016 0.849932 20.5066 0.779881 20.4913C0.71191 20.4764 0.649508 20.4431 0.599531 20.395C0.552713 20.3444 0.520802 20.2818 0.507278 20.2143C0.493343 20.1447 0.499498 20.0726 0.525043 20.0064L0.525127 20.0064L0.528349 19.9975L7.53648 0.748526L7.53684 0.747547M0.99021 20.477L7.53684 0.747547M7.53684 0.747547C7.56259 0.676352 7.60937 0.614523 7.67113 0.570274C7.73157 0.526968 7.80355 0.502514 7.87794 0.500027L7.53684 0.747547Z" fill="#FEE55A"/>
+<path d="M0.99021 20.477L0.991613 20.4765L20.2601 13.4782C20.3304 13.451 20.3908 13.4033 20.4336 13.3415C20.4769 13.2789 20.5 13.2046 20.5 13.1287C20.5 13.0528 20.4769 12.9785 20.4336 12.9159C20.3903 12.8533 20.3289 12.8052 20.2575 12.7782L20.2494 12.7751L20.2494 12.775L13.0307 9.89608L7.70963 15.2274L7.35629 15.5815L7.0024 15.228L5.76721 13.9943L5.41302 13.6405L5.76721 13.2868L11.1138 7.94667L8.2232 0.737297L8.22284 0.736416C8.19505 0.666725 8.14691 0.606873 8.08455 0.564682L0.99021 20.477ZM0.99021 20.477C0.922911 20.5016 0.849932 20.5066 0.779881 20.4913C0.71191 20.4764 0.649508 20.4431 0.599531 20.395C0.552713 20.3444 0.520802 20.2818 0.507278 20.2143C0.493343 20.1447 0.499498 20.0726 0.525043 20.0064L0.525127 20.0064L0.528349 19.9975L7.53648 0.748526L7.53684 0.747547M0.99021 20.477L7.53684 0.747547M7.53684 0.747547C7.56259 0.676352 7.60937 0.614523 7.67113 0.570274C7.73157 0.526968 7.80355 0.502514 7.87794 0.500027L7.53684 0.747547Z" stroke="#FEE55A"/>
+<path d="M0.99021 20.477L0.991613 20.4765L20.2601 13.4782C20.3304 13.451 20.3908 13.4033 20.4336 13.3415C20.4769 13.2789 20.5 13.2046 20.5 13.1287C20.5 13.0528 20.4769 12.9785 20.4336 12.9159C20.3903 12.8533 20.3289 12.8052 20.2575 12.7782L20.2494 12.7751L20.2494 12.775L13.0307 9.89608L7.70963 15.2274L7.35629 15.5815L7.0024 15.228L5.76721 13.9943L5.41302 13.6405L5.76721 13.2868L11.1138 7.94667L8.2232 0.737297L8.22284 0.736416C8.19505 0.666725 8.14691 0.606873 8.08455 0.564682L0.99021 20.477ZM0.99021 20.477C0.922911 20.5016 0.849932 20.5066 0.779881 20.4913C0.71191 20.4764 0.649508 20.4431 0.599531 20.395C0.552713 20.3444 0.520802 20.2818 0.507278 20.2143C0.493343 20.1447 0.499498 20.0726 0.525043 20.0064L0.525127 20.0064L0.528349 19.9975L7.53648 0.748526L7.53684 0.747547M0.99021 20.477L7.53684 0.747547M7.53684 0.747547C7.56259 0.676352 7.60937 0.614523 7.67113 0.570274C7.73157 0.526968 7.80355 0.502514 7.87794 0.500027L7.53684 0.747547Z" stroke="url(#paint0_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="10.5" y1="21" x2="10.5" y2="0" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+
+
+                        <span style={{marginLeft : "3px", position : "relative", bottom : "8px", textAlign : "center",}}>
                         Receive
                         <br />
-                        DNGN
+                        <span style={{marginLeft : "10px"}}>DNGN</span>
+                        </span>
                       </button>
-                    </Link>
+                    </Link> 
                   </div>
                   <div
                     style={{
@@ -470,6 +458,12 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                 <div className='line-function'>
                   <div className=''>
                     <div className='lines'>
+                      <div style={{marginTop: "30px",fontSize : "14px", textAlign: 'center',color : "#999", paddingLeft: "40px", paddingRight : "40px",}}>
+                        Sorry Connect to your harmony wallet to connect to
+                        get and view transactions
+                      </div>
+                    </div>
+                    {/* <div className='lines'>
                       <div style={{ marginLeft: '45px' }}>
                         <svg
                           width='27'
@@ -489,9 +483,9 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                           -N200,000
                         </span>
                         {/* <span style={{fontSize: "12px", color: "#333", marginLeft: "10px"}}>$27.77</span> */}
-                      </div>
-                      <div>
-                        {/* <span style={{marginLeft : "65px", fontSize : "12px", color : "#009706"}}>4% </span> */}
+                      {/* </div> */}
+                      {/* <div>
+                        <span style={{marginLeft : "65px", fontSize : "12px", color : "#009706"}}>4% </span>
                       </div>
                       <div
                         style={{
@@ -504,19 +498,19 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                           23-3-2020
                         </span>
                       </div>
-                    </div>
-                    <div
+                    </div>  */}
+                    {/* <div
                       style={{
                         backgroundColor: '#E7E7E7',
                         height: '2px',
                         width: '340px',
                         margin: '10px auto',
                       }}
-                    ></div>
+                    ></div> */}
                   </div>
 
                   <div>
-                    <div className='lines'>
+                    {/* <div className='lines'>
                       <div style={{ marginLeft: '45px' }}>
                         <svg
                           width='27'
@@ -536,10 +530,10 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                           +N400,000
                         </span>
                         {/* <span style={{fontSize: "12px", color: "#333", marginLeft: "10px"}}>$27.77</span> */}
-                      </div>
+                      {/* </div>
                       <div>
                         {/* <span style={{marginLeft : "65px", fontSize : "12px", color : "#009706"}}>4% </span> */}
-                      </div>
+                      {/* </div>
                       <div
                         style={{
                           display: 'flex',
@@ -548,11 +542,11 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                         }}
                       >
                         {/* <span style={{marginLeft : "15px"}}>10.5</span> */}
-                        <span style={{ fontSize: '12px', color: '#333' }}>
+                        {/* <span style={{ fontSize: '12px', color: '#333' }}>
                           23-3-2020
                         </span>
                       </div>
-                    </div>
+                      </div> */}
                     <div
                       style={{
                         backgroundColor: '#E7E7E7',
@@ -679,30 +673,16 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                     <br />
                     <span>Democracy</span>
                   </div>
-                  <Link to='/pool'>
+                  <Link to='https://bridge.harmony.one'>
                     <div className='icons-down'>
-                      <svg
-                        width='30'
-                        height='30'
-                        viewBox='0 0 30 30'
-                        fill='none'
-                        xmlns='http://www.w3.org/2000/svg'
-                      >
-                        <path
-                          d='M15 12.5001C23.2843 12.5001 30 9.70188 30 6.25006C30 2.79825 23.2843 0 15 0C6.71573 0 0 2.79825 0 6.25006C0 9.70188 6.71573 12.5001 15 12.5001Z'
-                          fill='#009506'
-                        />
-                        <path
-                          d='M26.5553 14.2269C23.4243 15.5314 19.3206 16.2499 15 16.2499C10.6794 16.2499 6.57568 15.5314 3.44473 14.2269C2.01187 13.6299 0.884004 12.9513 0 12.2316V14.8748C0 16.5443 1.56018 18.1139 4.39342 19.2943C7.22648 20.4748 10.9933 21.125 15 21.125C19.0067 21.125 22.7735 20.4749 25.6066 19.2943C28.4397 18.1139 30 16.5443 30 14.8748V12.2316C29.116 12.9513 27.9881 13.6297 26.5553 14.2269Z'
-                          fill='#009506'
-                        />
-                        <path
-                          d='M26.5553 22.8519C23.4244 24.1564 19.3206 24.875 15 24.875C10.6794 24.875 6.57562 24.1564 3.44473 22.8518C2.01182 22.2548 0.883945 21.5765 0 20.8567V23.75C0 27.2017 6.71572 30 15 30C23.2843 30 30 27.2017 30 23.7499V20.8568C29.1161 21.5764 27.9882 22.2549 26.5553 22.8519Z'
-                          fill='#009506'
-                        />
-                      </svg>
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.21" width="30" height="30" rx="5" fill="#009506"/>
+<path d="M20.5236 15.9824C20.8392 15.9824 21.095 15.6626 21.095 15.2681C21.095 14.8736 20.8392 14.5538 20.5236 14.5538C20.208 14.5538 19.9521 14.8736 19.9521 15.2681C19.9521 15.6626 20.208 15.9824 20.5236 15.9824Z" fill="#009706"/>
+<path d="M10 17V13.91C9.28 13.58 8.61 13.18 8 12.71V17H10ZM8 21H6V19H4V17H6V10H8V11.43C9.8 13 12.27 14 15 14C17.73 14 20.2 13 22 11.43V10H24V17H26V19H24V21H22V19H8V21ZM20 13.91V17H22V12.71C21.39 13.18 20.72 13.58 20 13.91ZM19 17V14.32C18.36 14.55 17.69 14.72 17 14.84V17H19ZM16 17V14.96L15 15L14 14.96V17H16ZM13 17V14.84C12.31 14.72 11.64 14.55 11 14.32V17H13Z" fill="black"/>
+</svg>
+
                       <br />
-                      <span>Earn</span>
+                      <span>Bridge</span>
                     </div>
                   </Link>
                   <Link to='/settings'>

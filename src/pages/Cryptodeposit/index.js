@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'; // useEffect,
 import './style.css';
 import { Link } from 'react-router-dom';
 import { BiUserCircle } from 'react-icons/bi';
-import Harmony from '../../assets/Harmony.png';
+import Harmony from '../../assets/harmony.png';
 import Kusama from '../../assets/kusama.png';
 import Uniswap from '../../assets/uniswap.png';
 // import Vector from '../../assets/Vector.svg';
