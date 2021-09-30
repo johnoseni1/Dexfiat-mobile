@@ -43,14 +43,16 @@ const P2pDexSell = () => {
             </div>
 
             <div className='buy-method'>
-              <div className='with-fiat'>
-                <div>Sell with Fiat</div>
-                <div></div>
-              </div>
+              <Link to='/p2pdexbuy'>
+                <div className='with-fiat'>
+                  <div>Buy with Fiat</div>
+                  <div></div>
+                </div>
+              </Link>
 
-              <Link to='convertdft'>
+              <Link to='/convertdft'>
                 <div className='with-crypto'>
-                  <div>Sell with Crypto</div>
+                  <div>Buy with Crypto</div>
                   <div></div>
                 </div>
               </Link>
