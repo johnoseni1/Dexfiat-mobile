@@ -126,6 +126,10 @@
   margin: 2rem 0;
 }
 
+.payment-btn.sell div {
+  background: #df751c;
+}
+
 .attention {
   font-size: 12px;
   color: #daaa02;
