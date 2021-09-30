@@ -198,10 +198,11 @@ const Index2 = ({ history }) => {
                       fontWeight: '600',
                       opacity: '0.5',
                       backgroundColor: '#e4edcf',
-                      fontSize: '10px',
+                      fontSize: '9px',
                       borderRadius: '10px',
                       display: 'flex',
                       flexDirection: 'column',
+                      // padding: '0 5px',
                       justifyContent: 'center',
                       // border: '2px solid #aaa8a8',
                       boxShadow: '0 0 3px #aaa8a8',
@@ -404,6 +405,12 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                 <div className='line-function'>
                   <div className=''>
                     <div className='lines'>
+                      <div style={{marginTop: "30px",fontSize : "14px", textAlign: 'center',color : "#999", paddingLeft: "40px", paddingRight : "40px",}}>
+                        Sorry Connect to your harmony wallet to connect to
+                        get and view transactions
+                      </div>
+                    </div>
+                    {/* <div className='lines'>
                       <div style={{ marginLeft: '45px' }}>
                         <svg
                           width='27'
@@ -423,9 +430,9 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                           -N200,000
                         </span>
                         {/* <span style={{fontSize: "12px", color: "#333", marginLeft: "10px"}}>$27.77</span> */}
-                      </div>
-                      <div>
-                        {/* <span style={{marginLeft : "65px", fontSize : "12px", color : "#009706"}}>4% </span> */}
+                      {/* </div> */}
+                      {/* <div>
+                        <span style={{marginLeft : "65px", fontSize : "12px", color : "#009706"}}>4% </span>
                       </div>
                       <div
                         style={{
@@ -438,19 +445,19 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                           23-3-2020
                         </span>
                       </div>
-                    </div>
-                    <div
+                    </div>  */}
+                    {/* <div
                       style={{
                         backgroundColor: '#E7E7E7',
                         height: '2px',
                         width: '340px',
                         margin: '10px auto',
                       }}
-                    ></div>
+                    ></div> */}
                   </div>
 
                   <div>
-                    <div className='lines'>
+                    {/* <div className='lines'>
                       <div style={{ marginLeft: '45px' }}>
                         <svg
                           width='27'
@@ -470,10 +477,10 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                           +N400,000
                         </span>
                         {/* <span style={{fontSize: "12px", color: "#333", marginLeft: "10px"}}>$27.77</span> */}
-                      </div>
+                      {/* </div>
                       <div>
                         {/* <span style={{marginLeft : "65px", fontSize : "12px", color : "#009706"}}>4% </span> */}
-                      </div>
+                      {/* </div>
                       <div
                         style={{
                           display: 'flex',
@@ -482,11 +489,11 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                         }}
                       >
                         {/* <span style={{marginLeft : "15px"}}>10.5</span> */}
-                        <span style={{ fontSize: '12px', color: '#333' }}>
+                        {/* <span style={{ fontSize: '12px', color: '#333' }}>
                           23-3-2020
                         </span>
                       </div>
-                    </div>
+                      </div> */}
                     <div
                       style={{
                         backgroundColor: '#E7E7E7',
