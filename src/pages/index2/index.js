@@ -10,15 +10,12 @@ import { BiUserCircle } from 'react-icons/bi';
 import Vector from '../../assets/Vector.svg';
 import './connect';
 import boy from '../../assets/3rd-boy.png';
-import MonoConnect from '@mono.co/connect.js';
+
 const Index2 = ({ history }) => {
   // popup
   const [isOpen, setIsOpen] = useState(false);
 
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
-    localStorage.setItem('popup-index2-status', '1');
-  };
+
 
   // POpup 3
   const [isOpen3, setIsOpen3] = useState(false);
@@ -40,109 +37,11 @@ const Index2 = ({ history }) => {
   // CHeckbox
   const [checked, setChecked] = useState(false);
 
-  const onContinue = () => {
-    togglePopup();
-    monoConnect.open();
-  };
-  const monoConnect = React.useMemo(() => {
-    const monoInstance = new MonoConnect({
-      onClose: () => console.log('Widget closed'),
-      onLoad: () => console.log('Widget loaded successfully'),
-      onSuccess: ({ code }) => console.log(`Linked successfully: ${code}`),
-      key: 'test_pk_GZcxyk4xnfd36IQy2iTh',
-    });
-
-    monoInstance.setup();
-
-    return monoInstance;
-  }, []);
 
   return (
     <div>
       <div className='whole-welcome'>
-        {isOpen && (
-          <Popup
-            className='index-box'
-            content={
-              <>
-                <p
-                  className='text-center small-font'
-                  style={{ fontWeight: 'bold' }}
-                >
-                  Will you like to ease your transactions?
-                </p>
-                <p className='small-font'>
-                  Link existing bank with dexfiat securely. dexfiat deos not
-                  store or collect any of your login details, your inputs are
-                  encrypted and stored on your device.
-                </p>
-                <p className='small-font' style={{ fontWeight: 'bold' }}>
-                  Benefit of linking
-                </p>
-                <p className='small-font'>
-                  -Automated peer to peer transaction verification
-                  <br />
-                  -No P2P wating delay (fast transaction)
-                </p>
-
-                <p className='small-font'>
-                  Dexfiat does not store or keep any of your data. all
-                  infomation entered are encripted and routed Mono.
-                  <br />
-                  This process is only required to verify transactions. Dexfiat
-                  CAN NOT tamper with/transfer your funds.
-                </p>
-                <div className='center' style={{ marginTop: '2rem' }}>
-                  <button
-                    onClick={onContinue}
-                    style={{
-                      background: '#549E20',
-                      color: '#fff',
-                      padding: '13px 50px',
-                      fontSize: '17px',
-                      borderRadius: '5px',
-
-                      border: 'none',
-                    }}
-                  >
-                    Yes, link me.
-                  </button>
-                  <label
-                    className='checkbox-container'
-                    style={{ marginTop: '1rem' }}
-                  >
-                    <span style={{ fontSize: '14px', fontWeight: 'bold' }}>
-                      done, don’t show again
-                    </span>
-                    <input
-                      type='checkbox'
-                      onClick={() => {
-                        setChecked(!checked);
-                      }}
-                    />
-                    <span className='checkmark'></span>
-                  </label>
-                  <p
-                    style={{
-                      fontSize: '14px',
-                      fontWeight: 'bold',
-                    }}
-                  >
-                    <div
-                      onClick={() => {
-                        history.push('/index');
-                      }}
-                      style={{ color: '#DAAB03', cursor: 'pointer' }}
-                    >
-                      No, back to My Crypto space
-                    </div>
-                  </p>
-                </div>
-              </>
-            }
-            handleClose={togglePopup}
-          />
-        )}
+     
         {isOpen3 && (
           <Popup
             closeBtn={true}
