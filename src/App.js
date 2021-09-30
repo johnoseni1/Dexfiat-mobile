@@ -10,6 +10,7 @@ import Index from './pages/index';
 import Index2 from './pages/index2';
 import P2ptransfer from './pages/P2ptransfer';
 import P2psell from './pages/P2psell';
+import P2pDexBuy from './pages/P2pdexbuy/Index';
 import Profile from './pages/Profile';
 import Liquidity from './pages/liquididty';
 import P2pmarketbuy from './pages/P2pmarketbuy';
@@ -69,6 +70,8 @@ function App() {
           <Route path='/p2ptransfer' component={P2ptransfer} />
           <Route path='/p2pmarketbuy' component={P2pmarketbuy} />
           <Route path='/p2pmarketsell' component={P2pmarketsell} />
+          <Route path='/p2pdexbuy' component={P2pDexBuy} />
+          {/* <Route path='/p2pdexsell' component={P2pDexSell} /> */}
           <Route path='/coinlink' component={Coinlink} />
           <Route path='/cryptodeposit' component={Cryptodeposit} />
         </Switch>

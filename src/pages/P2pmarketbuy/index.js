@@ -108,21 +108,25 @@ const P2pmarketBuy = () => {
                 <div style={{ fontSize: '14px' }}>Min: N5,000.00</div>
               </div>
 
-              <div style={{ marginLeft: '70px' }}>
-                <button
-                  style={{
-                    background: '#009506',
-                    padding: '12px 40px',
-                    borderRadius: '14px',
-                    border: 'none',
-                    color: '#fff',
-                  }}
-                >
-                  Buy
-                </button>
-              </div>
+              <Link to='p2pdexbuy'>
+                <div style={{ marginLeft: '70px' }}>
+                  <button
+                    style={{
+                      background: '#009506',
+                      padding: '12px 40px',
+                      borderRadius: '14px',
+                      border: 'none',
+                      color: '#fff',
+                    }}
+                  >
+                    Buy
+                  </button>
+                </div>
+              </Link>
+
               <div></div>
             </div>
+
             <div className='down-line'></div>
 
             <div
@@ -155,19 +159,21 @@ const P2pmarketBuy = () => {
                 <div style={{ fontSize: '14px' }}>Min: N100,000.00</div>
               </div>
 
-              <div style={{ marginLeft: '70px' }}>
-                <button
-                  style={{
-                    background: '#009506',
-                    padding: '12px 40px',
-                    borderRadius: '14px',
-                    border: 'none',
-                    color: '#fff',
-                  }}
-                >
-                  Buy
-                </button>
-              </div>
+              <Link to='p2pdexbuy'>
+                <div style={{ marginLeft: '70px' }}>
+                  <button
+                    style={{
+                      background: '#009506',
+                      padding: '12px 40px',
+                      borderRadius: '14px',
+                      border: 'none',
+                      color: '#fff',
+                    }}
+                  >
+                    Buy
+                  </button>
+                </div>
+              </Link>
               <div></div>
             </div>
             <div className='down-line'></div>
@@ -201,20 +207,21 @@ const P2pmarketBuy = () => {
                 <div style={{ fontSize: '20px' }}>300,000.20 DNGN</div>
                 <div style={{ fontSize: '14px' }}>Min: N100,000.00</div>
               </div>
-
-              <div style={{ marginLeft: '70px' }}>
-                <button
-                  style={{
-                    background: '#009506',
-                    padding: '12px 40px',
-                    borderRadius: '14px',
-                    border: 'none',
-                    color: '#fff',
-                  }}
-                >
-                  Buy
-                </button>
-              </div>
+              <Link to='p2pdexbuy'>
+                <div style={{ marginLeft: '70px' }}>
+                  <button
+                    style={{
+                      background: '#009506',
+                      padding: '12px 40px',
+                      borderRadius: '14px',
+                      border: 'none',
+                      color: '#fff',
+                    }}
+                  >
+                    Buy
+                  </button>
+                </div>
+              </Link>
               <div></div>
             </div>
             <div className='down-line'></div>
@@ -248,20 +255,21 @@ const P2pmarketBuy = () => {
                 <div style={{ fontSize: '20px' }}>240,000,000.00 DNGN</div>
                 <div style={{ fontSize: '14px' }}>Min: N100,000.00</div>
               </div>
-
-              <div style={{ marginLeft: '70px' }}>
-                <button
-                  style={{
-                    background: '#009506',
-                    padding: '12px 40px',
-                    borderRadius: '14px',
-                    border: 'none',
-                    color: '#fff',
-                  }}
-                >
-                  Buy
-                </button>
-              </div>
+              <Link to='p2pdexbuy'>
+                <div style={{ marginLeft: '70px' }}>
+                  <button
+                    style={{
+                      background: '#009506',
+                      padding: '12px 40px',
+                      borderRadius: '14px',
+                      border: 'none',
+                      color: '#fff',
+                    }}
+                  >
+                    Buy
+                  </button>
+                </div>
+              </Link>
               <div></div>
             </div>
             <div className='down-line'></div>
@@ -295,20 +303,21 @@ const P2pmarketBuy = () => {
                 <div style={{ fontSize: '20px' }}>600,000.00 DNGN</div>
                 <div style={{ fontSize: '14px' }}>Min: N200,000.00</div>
               </div>
-
-              <div style={{ marginLeft: '70px' }}>
-                <button
-                  style={{
-                    background: '#009506',
-                    padding: '12px 40px',
-                    borderRadius: '14px',
-                    border: 'none',
-                    color: '#fff',
-                  }}
-                >
-                  Buy
-                </button>
-              </div>
+              <Link to='p2pdexbuy'>
+                <div style={{ marginLeft: '70px' }}>
+                  <button
+                    style={{
+                      background: '#009506',
+                      padding: '12px 40px',
+                      borderRadius: '14px',
+                      border: 'none',
+                      color: '#fff',
+                    }}
+                  >
+                    Buy
+                  </button>
+                </div>
+              </Link>
               {/* <div></div> */}
             </div>
           </div>
