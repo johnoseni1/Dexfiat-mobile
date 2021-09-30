@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 import Popup from '../../Popup';
 import QuestionMark from '../../assets/question-mark.png';
 import Harmony from '../../assets/harmony.png';
-import WalletConnect from '../../assets/wallet-connect.png';
+// import WalletConnect from '../../assets/wallet-connect.png';
 import Metamask from '../../assets/metamask.png';
+import WalletConnect from "@walletconnect/client";
+import QRCodeModal from "@walletconnect/qrcode-modal";
 import { BiUserCircle } from 'react-icons/bi';
 import Vector from '../../assets/Vector.svg';
 import './connect';
@@ -15,8 +17,45 @@ const Index2 = ({ history }) => {
   // popup
   const [isOpen, setIsOpen] = useState(false);
 
+   async function walletConnect () {
+    const connector = new WalletConnect({
+      bridge: "https://bridge.walletconnect.org", // Required
+      qrcodeModal: QRCodeModal,
+    });
+   
 
-
+  if (!connector.connected) {
+    // create new session
+    connector.createSession();
+  }
+  
+  // Subscribe to connection events
+  connector.on("connect", (error, payload) => {
+    if (error) {
+      throw error;
+    }
+  
+    // Get provided accounts and chainId
+    const { accounts, chainId } = payload.params[0];
+  });
+  
+  connector.on("session_update", (error, payload) => {
+    if (error) {
+      throw error;
+    }
+  
+    // Get updated accounts and chainId
+    const { accounts, chainId } = payload.params[0];
+  });
+  
+  connector.on("disconnect", (error, payload) => {
+    if (error) {
+      throw error;
+    }
+  
+    // Delete connector
+  });
+}
   // POpup 3
   const [isOpen3, setIsOpen3] = useState(false);
 
@@ -55,7 +94,7 @@ const Index2 = ({ history }) => {
                     <img src={Harmony} alt='' />
                     <span>Harmony</span>
                   </div>
-                  <div>
+                  <div onClick={walletConnect}>
                     <img
                       style={{ height: '20px', width: '20px' }}
                       src={WalletConnect}
