@@ -25,7 +25,7 @@ const Chainlinks = () => {
                 paddingLeft: '40px',
               }}
             >
-              <div>
+              <Link to='/index'>
                 <svg
                   width='27'
                   height='23'
@@ -38,7 +38,7 @@ const Chainlinks = () => {
                     fill='#FFD301'
                   />
                 </svg>
-              </div>
+              </Link>
 
               <div style={{ marginLeft: '30px' }}>
                 <svg
