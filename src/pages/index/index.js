@@ -1086,7 +1086,7 @@ const Index = ({ history }) => {
                   <br />
                   <span>Democracy</span>
                 </div>
-                <Link to='/pool'>
+                <Link to='https://bridge.harmony.one'>
                   <div className='icons-down'>
                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect opacity="0.21" width="30" height="30" rx="5" fill="#009506"/>

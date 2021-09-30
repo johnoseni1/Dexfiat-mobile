@@ -9,6 +9,8 @@ import Metamask from '../../assets/metamask.png';
 import WalletConnect from "@walletconnect/client";
 import QRCodeModal from "@walletconnect/qrcode-modal";
 import { BiUserCircle } from 'react-icons/bi';
+import userWallet from './userWallet';
+import initializeContract from './contract';
 import Vector from '../../assets/Vector.svg';
 import './connect';
 import boy from '../../assets/3rd-boy.png';
@@ -16,6 +18,16 @@ import boy from '../../assets/3rd-boy.png';
 const Index2 = ({ history }) => {
   // popup
   const [isOpen, setIsOpen] = useState(false);
+
+
+  async function initWallet(){
+    const wallet = new userWallet();
+    await wallet.signin();
+    const contract = await initializeContract();
+    console.log(contract)
+    const result = await contract.methods.getCount().call()
+    console.log(result.toString())
+}
 
    async function walletConnect () {
     const connector = new WalletConnect({
@@ -90,7 +102,7 @@ const Index2 = ({ history }) => {
               <>
                 <div className='wallets'>
                   <p style={{ marginTop: '40px' }}>Connect your wallet</p>
-                  <div>
+                  <div onClick={initWallet}>
                     <img src={Harmony} alt='' />
                     <span>Harmony</span>
                   </div>
@@ -102,7 +114,7 @@ const Index2 = ({ history }) => {
                     />
                     <span>Wallet connect</span>
                   </div>
-                  <div>
+                  <div >
                     <img src={Metamask} alt='' />
                     <span>Metamask</span>
                   </div>
@@ -659,7 +671,7 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                     <br />
                     <span>Democracy</span>
                   </div>
-                  <Link to='/pool'>
+                  <Link to='https://bridge.harmony.one'>
                     <div className='icons-down'>
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect opacity="0.21" width="30" height="30" rx="5" fill="#009506"/>
