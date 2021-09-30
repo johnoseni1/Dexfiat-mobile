@@ -206,6 +206,11 @@ a {
   margin-left: 20px;
 }
 
+.form-for-transfer .inputer:focus {
+  outline: 0;
+  border: 2px solid #009706;
+}
+
 .form-for-transfer .input {
   border: 1px solid #009706;
   box-sizing: border-box;
@@ -213,6 +218,11 @@ a {
   padding: 13px 1px 13px 10px;
   margin-top: 5px;
   margin-left: 20px;
+}
+
+.form-for-transfer .input:focus {
+  outline: 0;
+  border: 2px solid #009706;
 }
 
 .btn-invest button {

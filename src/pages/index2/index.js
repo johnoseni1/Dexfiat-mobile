@@ -218,19 +218,21 @@ const Index2 = ({ history }) => {
                   </span>
                 </div>
                 <div className='grouped-nav'>
-                  <div
-                    style={{
-                      backgroundColor: '#ceebcf',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      borderRadius: '5px',
-                    }}
-                  >
-                    <Link style={{ color: '#009506' }} to='/invest'>
+                  <Link to='/invest'>
+                    <div
+                      style={{
+                        backgroundColor: '#ceebcf',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: '5px',
+                        color: '#009506',
+                        height: '35px',
+                      }}
+                    >
                       <b>Invest</b>
-                    </Link>
-                  </div>
+                    </div>
+                  </Link>
                   <div>
                     <Link to='/convertdft'>
                       <button

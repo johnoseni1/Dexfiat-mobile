@@ -1,0 +1,16 @@
+.convert-btn {
+  background: #daaa02;
+  color: #fff;
+  height: 49px;
+  width: 347px;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 0 0 3px #888;
+  margin-top: 10px;
+}
+
+.down-paragraph {
+  margin: 60px;
+  color: #808080;
+  font-size: 12px;
+}
