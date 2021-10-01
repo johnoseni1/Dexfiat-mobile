@@ -6,8 +6,11 @@ import Report from '../../assets/report-icon.png';
 import QuestionMark from '../../assets/question-mark.png';
 import WhiteQuestionMark from '../../assets/white-question-mark.png';
 import Harmony from '../../assets/harmony.png';
-import WalletConnect from '../../assets/wallet-connect.png';
+// import WalletConnect from '../../assets/wallet-connect.png';
+import WalletConnect from "@walletconnect/client";
+import './connect';
 import Metamask from '../../assets/metamask.png';
+import QRCodeModal from "@walletconnect/qrcode-modal";
 import { BiUserCircle } from 'react-icons/bi';
 import mnemonic from '../../assets/mnemonic.svg';
 import leftarrow from '../../assets/leftarrow.svg';
@@ -30,6 +33,46 @@ const Swap = () => {
     fast: true,
     instant: false,
   });
+
+  async function walletConnect () {
+    const connector = new WalletConnect({
+      bridge: "https://bridge.walletconnect.org", // Required
+      qrcodeModal: QRCodeModal,
+    });
+   
+
+  if (!connector.connected) {
+    // create new session
+    connector.createSession();
+  }
+  
+  // Subscribe to connection events
+  connector.on("connect", (error, payload) => {
+    if (error) {
+      throw error;
+    }
+  
+    // Get provided accounts and chainId
+    const { accounts, chainId } = payload.params[0];
+  });
+  
+  connector.on("session_update", (error, payload) => {
+    if (error) {
+      throw error;
+    }
+  
+    // Get updated accounts and chainId
+    const { accounts, chainId } = payload.params[0];
+  });
+  
+  connector.on("disconnect", (error, payload) => {
+    if (error) {
+      throw error;
+    }
+  
+    // Delete connector
+  });
+}
 
   // Transaction speed
   const onSetStandard = () => {
@@ -421,10 +464,9 @@ const Swap = () => {
                         <img src={Harmony} alt='' />
                         <span>Harmony</span>
                       </div>
-                      <div>
+                      <div onClick={walletConnect}>
                         <img
                           style={{ height: '20px', width: '20px' }}
-                          src={WalletConnect}
                           alt=''
                         />
                         <span>Wallet connect</span>
