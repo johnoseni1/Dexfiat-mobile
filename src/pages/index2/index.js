@@ -8,7 +8,7 @@ import Harmony from '../../assets/harmony.png';
 import Metamask from '../../assets/metamask.png';
 import { BiUserCircle } from 'react-icons/bi';
 import Vector from '../../assets/Vector.svg';
-import './connect';
+// import './connect';
 import WalletConnect from "@walletconnect/client";
 // import './connect';
 // import Metamask from '../../assets/metamask.png';
@@ -483,7 +483,7 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                   <div className=''>
                   <div className='lines'>
                       <div style={{marginTop: "30px",fontSize : "14px", textAlign: 'center',color : "#999", paddingLeft: "40px", paddingRight : "40px",}}>
-                        Sorry Connect to your <Link to="/swap">wallet </Link>to connect to 
+                        Sorry Connect to your <Link to="/swap">wallet </Link>to able to 
                         get and view your balance & transactions
                       </div>
                     </div>
