@@ -5,12 +5,14 @@ import Popup from '../../Popup';
 import Report from '../../assets/report-icon.png';
 import QuestionMark from '../../assets/question-mark.png';
 // import './init';
+import Web3 from "web3";
+import abi from '../utils/abi.json'
 // import hmy from './init';
 // import initWallet from './init';
 import userWallet from './userWallet';
 import WhiteQuestionMark from '../../assets/white-question-mark.png';
-// import Harmony from '../../assets/harmony.png';
-// import WalletConnect from '../../assets/wallet-connect.png';
+import Harmonyer from '../../assets/harmony.png';
+import WalletConnecter from '../../assets/wallet-connect.png';
 import WalletConnect from "@walletconnect/client";
 import './connect';
 import Metamask from '../../assets/metamask.png';
@@ -38,6 +40,73 @@ const Swap = () => {
   const [progress, setProgress] = useState(3);
 
   const [swap, setSwap] = useState('market');
+
+  const [InputedAddress, setInputedAddress] = useState("");
+  const [secondHeader, setSecondHeader] = useState('second-header')
+  const [message, setMessage] = useState("Connect wallet and enter an address");
+
+  const [contractData, setContractData] = useState({
+    bnbBalance: 0,
+    tikiBalance: 0,
+    totalBNB: 0,
+    processedIndex: 0,
+    myPayOut: 0
+})
+
+const tikiTokenContractAddress = "0xCBDdfb1309c22d30859e960B24A6862B72077134"
+const web3 = new Web3(Web3.givenProvider);
+let everTikiContract = new web3.eth.Contract(abi, tikiTokenContractAddress);
+
+const connectWallet = async () => {
+    if(!window.ethereum || !window.web3) return;
+
+    const [address] = await window.ethereum.request({ method: 'eth_requestAccounts' });
+
+    console.log(address)
+}
+
+// HANDLE CHANGE WHEN ADDRESS IS PASTED INTO INPUT FEILD
+const handleChange = (e) => {
+
+    setInputedAddress(e.target.value);
+
+    if(!web3.utils.isAddress(e.target.value)) return;
+
+
+   getDetailsByAddress(e.target.value);
+}
+
+
+
+
+const getDetailsByAddress = async (address) => {
+
+    const bnbBal = await web3.eth.getBalance(address);
+    const tikiHolding = await everTikiContract.methods.dividendTokenBalanceOf(address).call()
+    const accountDividendInfo = await everTikiContract.methods.getAccountDividendsInfo(address).call()
+    const totalDividendsDistributed = await everTikiContract.methods.getTotalDividendsDistributed().call()
+    const lastProcessedIndex = await everTikiContract.methods.getLastProcessedIndex().call()
+
+    setContractData({
+        bnbBalance: web3.utils.fromWei(bnbBal.toString(), 'ether'),
+        tikiBalance: web3.utils.fromWei(tikiHolding.toString(), 'ether'),
+        totalBNB: web3.utils.fromWei(totalDividendsDistributed.toString(), 'ether'),
+        processedIndex: lastProcessedIndex,
+        myPayOut: accountDividendInfo[1]
+    })
+
+    setMessage(`${address} | BNB in your wallet: ${web3.utils.fromWei(bnbBal.toString(), 'ether')} ($0.00) - YOU NEED TO HOLD MORE THAN 10K TIKI TO RECEIVE DIVIDENDS`)
+    setSecondHeader("second-header-2")
+
+
+    console.log("tiki holding: ", tikiHolding.toString());
+    console.log("bnb balance: ", bnbBal);
+    console.log(" account div: ", accountDividendInfo[1].toString());
+    console.log("total dividends distributed: ", totalDividendsDistributed);
+    console.log("Last processed index: ", lastProcessedIndex);
+
+
+}
   
   const initializeContract = async (wallet)=>{
     let contract = require("./contracts/Counter.json");
@@ -505,17 +574,17 @@ async function initWallet () {
                     <div className='wallets'>
                       <p style={{ marginTop: '40px' }}>Connect your wallet</p>
                       <div onClick={initWallet}>
-                        <img src={Harmony} alt='' />
+                        <img src={Harmonyer} alt='' />
                         <span>Harmony</span>
                       </div>
                       <div onClick={walletConnect}>
-                        <img
+                        <img src={WalletConnecter}
                           style={{ height: '20px', width: '20px' }}
                           alt=''
                         />
                         <span>Wallet connect</span>
                       </div>
-                      <div>
+                      <div onClick={connectWallet}>
                         <img src={Metamask} alt='' />
                         <span>Metamask</span>
                       </div>

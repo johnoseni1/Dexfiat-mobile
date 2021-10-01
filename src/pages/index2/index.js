@@ -483,8 +483,8 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                   <div className=''>
                   <div className='lines'>
                       <div style={{marginTop: "30px",fontSize : "14px", textAlign: 'center',color : "#999", paddingLeft: "40px", paddingRight : "40px",}}>
-                        Sorry Connect to your <Link to="/swap">harmony wallet </Link>to connect to 
-                        get and view transactions
+                        Sorry Connect to your <Link to="/swap">wallet </Link>to connect to 
+                        get and view your balance & transactions
                       </div>
                     </div>
                     <div
