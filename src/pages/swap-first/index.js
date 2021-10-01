@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom';
 import Popup from '../../Popup';
 import Report from '../../assets/report-icon.png';
 import QuestionMark from '../../assets/question-mark.png';
+// import './init';
+// import hmy from './init';
+// import initWallet from './init';
+import userWallet from './userWallet';
 import WhiteQuestionMark from '../../assets/white-question-mark.png';
-import Harmony from '../../assets/harmony.png';
+// import Harmony from '../../assets/harmony.png';
 // import WalletConnect from '../../assets/wallet-connect.png';
 import WalletConnect from "@walletconnect/client";
 import './connect';
@@ -16,13 +20,52 @@ import mnemonic from '../../assets/mnemonic.svg';
 import leftarrow from '../../assets/leftarrow.svg';
 import boy from '../../assets/3rd-boy.png';
 // import Vector from '../../assets/Vector.svg';
-
+const { Harmony } = require('@harmony-js/core');
+const { BN } = require('@harmony-js/crypto');
+const { ChainType } = require('@harmony-js/utils');
+const {	toWei, } = require('@harmony-js/utils');
+const hmy =  new Harmony(
+  // let's assume we deploy smart contract to this end-point URL
+  'https://api.s0.b.hmny.io',
+  {
+    chainType: ChainType.Harmony,
+    chainId: 2,
+  },
+);
 const Swap = () => {
   const theme = localStorage.getItem('theme');
 
   const [progress, setProgress] = useState(3);
 
   const [swap, setSwap] = useState('market');
+  const initializeContract = async (wallet)=>{
+    let contract = require("./contracts/Counter.json");
+    // contract = JSON.parse(contract)
+    const abi = contract.abi;
+    const contractAddress = contract.networks['2'].address;
+    const contractInstance = hmy.contracts.createContract(abi,contractAddress);
+    return contractInstance    
+}
+let contract;
+
+
+async function initWallet () {
+    const wallet = new userWallet();
+    await wallet.signin();
+    const unattachedContract = await initializeContract();
+    contract = wallet.attachToContract(unattachedContract);
+    const result = await contract.methods.getCount().call()
+    console.log(result.toString())
+
+    const one = new BN('1')
+    let options = {
+		gasPrice: 1000000000,
+		gasLimit: 210000,
+		value: toWei(one, hmy.utils.Units.one),
+    };
+    
+    const increment = await contract.methods.addMoney().send(options)
+}
 
   const [toggleExpert, setToggleExpert] = useState(false);
 
@@ -460,7 +503,7 @@ const Swap = () => {
                   <>
                     <div className='wallets'>
                       <p style={{ marginTop: '40px' }}>Connect your wallet</p>
-                      <div>
+                      <div onClick={initWallet}>
                         <img src={Harmony} alt='' />
                         <span>Harmony</span>
                       </div>
