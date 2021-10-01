@@ -4,11 +4,15 @@ import { Link } from 'react-router-dom';
 import Popup from '../../Popup';
 import QuestionMark from '../../assets/question-mark.png';
 import Harmony from '../../assets/harmony.png';
-import WalletConnect from '../../assets/wallet-connect.png';
+// import WalletConnect from '../../assets/wallet-connect.png';
 import Metamask from '../../assets/metamask.png';
 import { BiUserCircle } from 'react-icons/bi';
 import Vector from '../../assets/Vector.svg';
 import './connect';
+import WalletConnect from "@walletconnect/client";
+// import './connect';
+// import Metamask from '../../assets/metamask.png';
+import QRCodeModal from "@walletconnect/qrcode-modal";
 import boy from '../../assets/3rd-boy.png';
 import MonoConnect from '@mono.co/connect.js';
 

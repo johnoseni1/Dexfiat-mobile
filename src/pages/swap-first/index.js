@@ -38,6 +38,7 @@ const Swap = () => {
   const [progress, setProgress] = useState(3);
 
   const [swap, setSwap] = useState('market');
+  
   const initializeContract = async (wallet)=>{
     let contract = require("./contracts/Counter.json");
     // contract = JSON.parse(contract)
