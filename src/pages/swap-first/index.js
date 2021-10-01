@@ -53,7 +53,7 @@ const Swap = () => {
     myPayOut: 0
 })
 
-const tikiTokenContractAddress = "0xCBDdfb1309c22d30859e960B24A6862B72077134"
+const tikiTokenContractAddress = "0x6ee20e2c7046cdADfACA37bf04D25188A9446E84"
 const web3 = new Web3(Web3.givenProvider);
 let everTikiContract = new web3.eth.Contract(abi, tikiTokenContractAddress);
 
