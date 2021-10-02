@@ -50,5 +50,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "A decentralized Crypto and fiat Gateway",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/Dexfiat/Dexfiat-mobile.git"
+  },
+  "keywords": [],
+  "author": "Dexfiat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dexfiat/Dexfiat-mobile/issues"
+  },
+  "homepage": "https://github.com/Dexfiat/Dexfiat-mobile#readme"
 }
