@@ -6,21 +6,24 @@ import QuestionMark from '../../assets/question-mark.png';
 import Harmony from '../../assets/harmony.png';
 // import WalletConnect from '../../assets/wallet-connect.png';
 import Metamask from '../../assets/metamask.png';
+// import { v4 as uuidv4 } from 'uuid';
+
 import { BiUserCircle } from 'react-icons/bi';
 import Vector from '../../assets/Vector.svg';
-// import './connect';
+import './connect';
 import WalletConnect from "@walletconnect/client";
 // import './connect';
 // import Metamask from '../../assets/metamask.png';
 import QRCodeModal from "@walletconnect/qrcode-modal";
 import boy from '../../assets/3rd-boy.png';
 import MonoConnect from '@mono.co/connect.js';
+const short = require('short-uuid');
 
 const Index2 = ({ history }) => {
   const theme = localStorage.getItem('theme');
   // popup
   const [isOpen, setIsOpen] = useState(false);
-
+  
   const togglePopup = () => {
     setIsOpen(!isOpen);
     localStorage.setItem('popup-index2-status', '1');
@@ -335,7 +338,7 @@ const Index2 = ({ history }) => {
                 <div className='sec-card'>
                   <div className='textty-man'>
                     <span>Total Balance </span>
-                    <span style={{marginLeft : "100px"}}>UID: DN93044903</span>
+                    <span style={{marginLeft : "40px"}}>UID: DN{short.generate()}</span>
                     <br />
                     <span style={{ fontSize: '30px', fontWeight: 'bold' }}>
                       0 DNGN
@@ -501,34 +504,36 @@ Dexfiat CAN NOT tamper with/transfer with your fund.
                   <div></div>
                 </div>
                 <div className='bottom-nav'>
-                  <div className='iconer'>
-                    <svg
+                <Link to="/index">
+              <div className='iconer'>
+                  <svg
+                    width='30'
+                    height='30'
+                    viewBox='0 0 30 30'
+                    fill='none'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <rect
+                      opacity='0.21'
                       width='30'
                       height='30'
-                      viewBox='0 0 30 30'
-                      fill='none'
-                      xmlns='http://www.w3.org/2000/svg'
-                    >
-                      <rect
-                        opacity='0.21'
-                        width='30'
-                        height='30'
-                        rx='5'
-                        fill='#DAAA00'
-                        fill-opacity='0.99'
-                      />
-                      <path
-                        d='M23.381 11.8194V9.55367C23.381 8.37209 22.6119 7.41081 21.6667 7.41081H19.4554L15.7606 3.30555C15.5441 3.06498 15.2178 3.06498 15.0013 3.30555L11.3065 7.41085H9.85713C8.2817 7.41085 7 9.01298 7 10.9823V19.5537C7 21.523 8.2817 23.1251 9.85713 23.1251H21.6666C22.6119 23.1251 23.3809 22.1638 23.3809 20.9823V18.7165C24.046 18.4217 24.5238 17.6277 24.5238 16.6965V13.8394C24.5238 12.9082 24.046 12.1143 23.381 11.8194ZM15.381 4.79507L17.7351 7.41085H13.0268L15.381 4.79507ZM22.2381 20.9823C22.2381 21.3761 21.9817 21.6966 21.6666 21.6966H9.85713C8.91187 21.6966 8.14285 20.7353 8.14285 19.5537V10.9823C8.14285 9.80069 8.91187 8.83941 9.85713 8.83941H21.6666C21.9817 8.83941 22.2381 9.15985 22.2381 9.55371V11.6966H20.5238C18.9484 11.6966 17.6667 13.2987 17.6667 15.268C17.6667 17.2373 18.9484 18.8394 20.5238 18.8394H22.2381V20.9823ZM23.381 16.6965C23.381 17.0904 23.1246 17.4108 22.8095 17.4108H20.5238C19.5785 17.4108 18.8095 16.4496 18.8095 15.268C18.8095 14.0864 19.5785 13.1251 20.5238 13.1251H22.8095C23.1246 13.1251 23.381 13.4456 23.381 13.8394V16.6965Z'
-                        fill='#009706'
-                      />
-                      <path
-                        d='M20.5236 15.9824C20.8392 15.9824 21.095 15.6626 21.095 15.2681C21.095 14.8736 20.8392 14.5538 20.5236 14.5538C20.208 14.5538 19.9521 14.8736 19.9521 15.2681C19.9521 15.6626 20.208 15.9824 20.5236 15.9824Z'
-                        fill='#009706'
-                      />
-                    </svg>
-                    <br />
-                    <span style={{ fontSize: '12px' }}>Wallet</span>
-                  </div>
+                      rx='5'
+                      fill='#DAAA00'
+                      fill-opacity='0.99'
+                    />
+                    <path
+                      d='M23.381 11.8194V9.55367C23.381 8.37209 22.6119 7.41081 21.6667 7.41081H19.4554L15.7606 3.30555C15.5441 3.06498 15.2178 3.06498 15.0013 3.30555L11.3065 7.41085H9.85713C8.2817 7.41085 7 9.01298 7 10.9823V19.5537C7 21.523 8.2817 23.1251 9.85713 23.1251H21.6666C22.6119 23.1251 23.3809 22.1638 23.3809 20.9823V18.7165C24.046 18.4217 24.5238 17.6277 24.5238 16.6965V13.8394C24.5238 12.9082 24.046 12.1143 23.381 11.8194ZM15.381 4.79507L17.7351 7.41085H13.0268L15.381 4.79507ZM22.2381 20.9823C22.2381 21.3761 21.9817 21.6966 21.6666 21.6966H9.85713C8.91187 21.6966 8.14285 20.7353 8.14285 19.5537V10.9823C8.14285 9.80069 8.91187 8.83941 9.85713 8.83941H21.6666C21.9817 8.83941 22.2381 9.15985 22.2381 9.55371V11.6966H20.5238C18.9484 11.6966 17.6667 13.2987 17.6667 15.268C17.6667 17.2373 18.9484 18.8394 20.5238 18.8394H22.2381V20.9823ZM23.381 16.6965C23.381 17.0904 23.1246 17.4108 22.8095 17.4108H20.5238C19.5785 17.4108 18.8095 16.4496 18.8095 15.268C18.8095 14.0864 19.5785 13.1251 20.5238 13.1251H22.8095C23.1246 13.1251 23.381 13.4456 23.381 13.8394V16.6965Z'
+                      fill='#009706'
+                    />
+                    <path
+                      d='M20.5236 15.9824C20.8392 15.9824 21.095 15.6626 21.095 15.2681C21.095 14.8736 20.8392 14.5538 20.5236 14.5538C20.208 14.5538 19.9521 14.8736 19.9521 15.2681C19.9521 15.6626 20.208 15.9824 20.5236 15.9824Z'
+                      fill='#009706'
+                    />
+                  </svg>
+                  <br />
+                  <span style={{ fontSize: '12px' }}>Wallet</span>
+                </div>
+              </Link>
                   <Link to='/p2ptransfer'>
                     <div className='icons-downer'>
                       <svg

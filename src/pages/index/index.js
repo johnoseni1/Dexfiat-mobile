@@ -1041,7 +1041,8 @@ const Index = ({ history }) => {
               </div>
               <div></div>
               <div className='bottom-nav'>
-                <div className='iconer'>
+              <Link to="/index">
+              <div className='iconer'>
                   <svg
                     width='30'
                     height='30'
@@ -1069,6 +1070,7 @@ const Index = ({ history }) => {
                   <br />
                   <span style={{ fontSize: '12px' }}>Wallet</span>
                 </div>
+              </Link>
                 <Link to='/p2ptransfer'>
                   <div className='icons-downer'>
                     <svg
