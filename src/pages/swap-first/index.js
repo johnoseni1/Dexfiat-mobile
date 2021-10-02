@@ -72,7 +72,6 @@ const handleChange = (e) => {
 
     if(!web3.utils.isAddress(e.target.value)) return;
 
-
    getDetailsByAddress(e.target.value);
 }
 

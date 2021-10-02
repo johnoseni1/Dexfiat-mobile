@@ -6,7 +6,7 @@ import QuestionMark from '../../assets/question-mark.png';
 import Harmony from '../../assets/harmony.png';
 // import WalletConnect from '../../assets/wallet-connect.png';
 import Metamask from '../../assets/metamask.png';
-// import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 import { BiUserCircle } from 'react-icons/bi';
 import Vector from '../../assets/Vector.svg';
